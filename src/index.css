@@ -116,7 +116,11 @@
   }
 
   .animate-glow-pulse {
-    animation: glowPulse 3s ease-in-out infinite;
+    animation: glowPulse 40s ease-in-out infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounceSlow 10s ease-in-out infinite;
   }
 }
 
@@ -142,9 +146,18 @@
 
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(38 75% 55% / 0.2);
+    box-shadow: 0 0 15px hsl(38 75% 55% / 0.1);
   }
   50% {
-    box-shadow: 0 0 40px hsl(38 75% 55% / 0.4);
+    box-shadow: 0 0 60px hsl(38 75% 55% / 0.6);
+  }
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }

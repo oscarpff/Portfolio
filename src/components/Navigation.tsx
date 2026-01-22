@@ -5,6 +5,7 @@ const navItems = [
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
+  { label: "CV", href: "#cv" },
 ];
 
 const Navigation = () => {
@@ -27,7 +28,7 @@ const Navigation = () => {
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="font-display text-2xl font-semibold text-gradient-gold">
-          Portfolio
+          Oscarpf
         </a>
 
         {/* Desktop navigation */}

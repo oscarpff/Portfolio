@@ -17,14 +17,13 @@ const Hero = () => {
       
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="animate-fade-up">
-          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-6">
-            Narrative Designer
-          </p>
-          
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold mb-6 leading-tight">
-            Crafting Worlds
-            <span className="block text-gradient-gold">Through Words</span>
+            Óscar Pérez Fernández
           </h1>
+          
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 leading-tight">
+            Crafting Worlds <span className="text-gradient-gold">Through Words</span>  
+          </h2>
           
           <p className="font-body text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
             Quest design, world-building, and character narratives that bring 
@@ -39,15 +38,15 @@ const Hero = () => {
               <a href="#contact">Get in Touch</a>
             </Button>
           </div>
+          
+          {/* Scroll indicator */}
+          <button 
+            onClick={scrollToWork}
+            className="mt-12 text-muted-foreground hover:text-gold transition-colors duration-300"
+          >
+            <ChevronDown size={32} />
+          </button>
         </div>
-        
-        {/* Scroll indicator */}
-        <button 
-          onClick={scrollToWork}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-gold transition-colors duration-300 animate-bounce"
-        >
-          <ChevronDown size={32} />
-        </button>
       </div>
       
       {/* Bottom fade */}
