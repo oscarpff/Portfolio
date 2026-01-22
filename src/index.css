@@ -116,7 +116,7 @@
   }
 
   .animate-glow-pulse {
-    animation: glowPulse 3s ease-in-out infinite;
+    animation: glowPulse 5s ease-in-out infinite;
   }
 }
 
@@ -147,4 +147,8 @@
   50% {
     box-shadow: 0 0 40px hsl(38 75% 55% / 0.4);
   }
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 5s ease-in-out infinite;
 }
