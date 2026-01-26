@@ -10,9 +10,7 @@ const SplitLanding = () => {
       {/* Narrative Design Side */}
       <Link
         to="/narrative"
-        className={`relative flex-1 flex items-center justify-center transition-all duration-500 ease-out cursor-pointer group ${
-          hoveredSide === "narrative" ? "flex-[1.5]" : hoveredSide === "cyber" ? "flex-[0.5]" : "flex-1"
-        }`}
+        className="relative flex-1 flex items-center justify-center cursor-pointer group overflow-hidden"
         onMouseEnter={() => setHoveredSide("narrative")}
         onMouseLeave={() => setHoveredSide(null)}
       >
@@ -24,8 +22,8 @@ const SplitLanding = () => {
         <div className="absolute bottom-1/3 right-1/4 w-48 h-48 rounded-full bg-gold-glow/5 blur-2xl" />
         
         {/* Content */}
-        <div className={`relative z-10 text-center px-8 transition-all duration-500 ${
-          hoveredSide === "cyber" ? "opacity-40 scale-95" : "opacity-100"
+        <div className={`relative z-10 text-center px-8 transition-all duration-300 ${
+          hoveredSide === "cyber" ? "opacity-40 scale-95" : hoveredSide === "narrative" ? "scale-105" : "opacity-100"
         }`}>
           <div className={`mb-6 inline-flex p-4 rounded-full border border-gold/30 bg-gold/5 transition-all duration-300 ${
             hoveredSide === "narrative" ? "scale-110 border-gold/60 bg-gold/10 shadow-lg shadow-gold/20" : ""
@@ -66,12 +64,16 @@ const SplitLanding = () => {
         />
       </div>
 
+      {/* Central Neutral Zone */}
+      <div 
+        className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-32 z-25 cursor-default"
+        onMouseEnter={() => setHoveredSide(null)}
+      />
+
       {/* Cybersecurity Side */}
       <Link
         to="/cybersecurity"
-        className={`relative flex-1 flex items-center justify-center transition-all duration-500 ease-out cursor-pointer group ${
-          hoveredSide === "cyber" ? "flex-[1.5]" : hoveredSide === "narrative" ? "flex-[0.5]" : "flex-1"
-        }`}
+        className="relative flex-1 flex items-center justify-center cursor-pointer group overflow-hidden"
         onMouseEnter={() => setHoveredSide("cyber")}
         onMouseLeave={() => setHoveredSide(null)}
       >
@@ -90,8 +92,8 @@ const SplitLanding = () => {
         />
         
         {/* Content */}
-        <div className={`relative z-10 text-center px-8 transition-all duration-500 ${
-          hoveredSide === "narrative" ? "opacity-40 scale-95" : "opacity-100"
+        <div className={`relative z-10 text-center px-8 transition-all duration-300 ${
+          hoveredSide === "narrative" ? "opacity-40 scale-95" : hoveredSide === "cyber" ? "scale-105" : "opacity-100"
         }`}>
           <div className={`mb-6 inline-flex p-4 rounded-full border border-cyber/30 bg-cyber/5 transition-all duration-300 ${
             hoveredSide === "cyber" ? "scale-110 border-cyber/60 bg-cyber/10 shadow-lg shadow-cyber/20" : ""
@@ -126,7 +128,7 @@ const SplitLanding = () => {
 
       {/* Center name badge */}
       <div className="absolute top-8 left-1/2 -translate-x-1/2 z-30">
-        <h1 className="font-display text-xl md:text-2xl font-semibold text-foreground/90 whitespace-nowrap">
+        <h1 className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground/90 whitespace-nowrap">
           Óscar Pérez Fernández
         </h1>
       </div>
