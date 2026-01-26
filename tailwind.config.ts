@@ -56,6 +56,13 @@ export default {
           dim: "hsl(var(--gold-dim))",
           glow: "hsl(var(--gold-glow))",
         },
+        cyber: {
+          DEFAULT: "hsl(var(--cyber))",
+          dim: "hsl(var(--cyber-dim))",
+          glow: "hsl(var(--cyber-glow))",
+          dark: "hsl(var(--cyber-dark))",
+        },
+        terminal: "hsl(var(--terminal))",
         parchment: "hsl(var(--parchment))",
         ink: {
           DEFAULT: "hsl(var(--ink))",

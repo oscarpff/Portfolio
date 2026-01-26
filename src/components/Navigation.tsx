@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navItems = [
   { label: "Work", href: "#work" },
@@ -27,9 +28,9 @@ const Navigation = () => {
       }`}
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-display text-2xl font-semibold text-gradient-gold">
+        <Link to="/" className="font-display text-2xl font-semibold text-gradient-gold">
           Oscarpf
-        </a>
+        </Link>
 
         {/* Desktop navigation */}
         <ul className="hidden md:flex items-center gap-8">
