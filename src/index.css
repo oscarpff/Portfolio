@@ -36,7 +36,7 @@
 
     --radius: 0.5rem;
 
-    /* Custom tokens */
+    /* Custom tokens - Narrative (Gold) */
     --gold: 38 75% 55%;
     --gold-dim: 38 50% 35%;
     --gold-glow: 38 80% 65%;
@@ -44,15 +44,25 @@
     --ink: 220 25% 12%;
     --ink-light: 220 20% 18%;
     
+    /* Custom tokens - Cybersecurity (Electric Blue) */
+    --cyber: 200 100% 50%;
+    --cyber-dim: 200 80% 35%;
+    --cyber-glow: 195 100% 60%;
+    --cyber-dark: 210 50% 8%;
+    --terminal: 160 100% 45%;
+    
     /* Gradients */
     --gradient-gold: linear-gradient(135deg, hsl(38 75% 55%), hsl(28 70% 45%));
     --gradient-dark: linear-gradient(180deg, hsl(220 20% 6%), hsl(220 25% 4%));
     --gradient-card: linear-gradient(145deg, hsl(220 18% 12%), hsl(220 20% 8%));
+    --gradient-cyber: linear-gradient(135deg, hsl(200 100% 50%), hsl(180 80% 40%));
+    --gradient-cyber-card: linear-gradient(145deg, hsl(210 50% 12%), hsl(210 55% 8%));
     
     /* Shadows */
     --shadow-gold: 0 0 30px hsl(38 75% 55% / 0.15);
     --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
     --shadow-elevated: 0 20px 60px hsl(0 0% 0% / 0.5);
+    --shadow-cyber: 0 0 30px hsl(200 100% 50% / 0.2);
 
     /* Font families */
     --font-display: 'Cormorant Garamond', serif;
@@ -90,6 +100,28 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .text-gradient-cyber {
+    background: linear-gradient(135deg, hsl(var(--cyber-glow)), hsl(var(--cyber)), hsl(var(--cyber-dim)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient-cyber {
+    border: 1px solid transparent;
+    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                linear-gradient(135deg, hsl(var(--cyber) / 0.5), hsl(var(--cyber) / 0.1)) border-box;
+  }
+
+  .glow-cyber {
+    box-shadow: var(--shadow-cyber);
+  }
+
+  .card-cyber {
+    background: var(--gradient-cyber-card);
+    box-shadow: var(--shadow-card);
   }
 
   .border-gradient-gold {

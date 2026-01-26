@@ -18,6 +18,8 @@ const buttonVariants = cva(
         gold: "bg-gradient-to-r from-gold to-gold-dim text-background font-semibold hover:shadow-lg hover:shadow-gold/30 hover:scale-105",
         goldOutline: "border border-gold/50 text-gold hover:bg-gold/10 hover:border-gold",
         hero: "bg-gradient-to-r from-gold-glow via-gold to-gold-dim text-background font-semibold text-base px-8 py-6 hover:shadow-xl hover:shadow-gold/40 hover:scale-105",
+        cyber: "bg-gradient-to-r from-cyber-glow via-cyber to-cyber-dim text-background font-semibold text-base px-8 py-6 hover:shadow-xl hover:shadow-cyber/40 hover:scale-105",
+        cyberOutline: "border border-cyber/50 text-cyber hover:bg-cyber/10 hover:border-cyber",
       },
       size: {
         default: "h-10 px-4 py-2",
