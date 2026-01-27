@@ -1,5 +1,5 @@
 import CyberNavigation from "@/components/cyber/CyberNavigation";
-import CyberHero from "@/components/cyber/CyberHero";
+import FeaturedWriteups from "@/components/cyber/FeaturedWriteups";
 import WriteupSection from "@/components/cyber/WriteupSection";
 import ProjectsSection from "@/components/cyber/ProjectsSection";
 import SkillsSection from "@/components/cyber/SkillsSection";
@@ -11,7 +11,7 @@ const CybersecurityPortfolio = () => {
   return (
     <div className="min-h-screen bg-background">
       <CyberNavigation />
-      <CyberHero />
+      <FeaturedWriteups />
       <WriteupSection />
       <ProjectsSection />
       <SkillsSection />

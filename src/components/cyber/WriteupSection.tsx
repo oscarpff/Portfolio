@@ -56,38 +56,34 @@ const WriteupSection = () => {
     : writeups.filter(w => w.platform === activePlatform);
 
   return (
-    <section id="writeups" className="py-24 md:py-32">
+    <section id="writeups" className="py-16 md:py-20">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-up">
-          <p className="text-cyber font-mono text-sm tracking-[0.3em] uppercase mb-4">
-            CTF Writeups
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold">
-            Machine <span className="text-gradient-cyber">Writeups</span>
-          </h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Documenting my journey through various CTF platforms, learning new techniques and methodologies.
-          </p>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8">
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl font-semibold">
+              All <span className="text-gradient-cyber">Writeups</span>
+            </h2>
+            <p className="mt-2 text-muted-foreground text-sm">
+              Filter by platform to explore more.
+            </p>
+          </div>
+          {/* Platform filters */}
+          <div className="flex flex-wrap gap-2">
+            {platforms.map((platform) => (
+              <button
+                key={platform}
+                onClick={() => setActivePlatform(platform)}
+                className={`px-4 py-1.5 rounded-full font-mono text-xs transition-all duration-300 ${
+                  activePlatform === platform
+                    ? "bg-cyber text-background"
+                    : "bg-secondary text-secondary-foreground hover:bg-cyber/20 hover:text-cyber"
+                }`}
+              >
+                {platform}
+              </button>
+            ))}
+          </div>
         </div>
-
-        {/* Platform filters */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {platforms.map((platform) => (
-            <button
-              key={platform}
-              onClick={() => setActivePlatform(platform)}
-              className={`px-5 py-2 rounded-full font-mono text-sm transition-all duration-300 ${
-                activePlatform === platform
-                  ? "bg-cyber text-background"
-                  : "bg-secondary text-secondary-foreground hover:bg-cyber/20 hover:text-cyber"
-              }`}
-            >
-              {platform}
-            </button>
-          ))}
-        </div>
-
-        {/* Writeup cards grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredWriteups.map((writeup, index) => (
             <WriteupCard key={writeup.title} {...writeup} index={index} />
