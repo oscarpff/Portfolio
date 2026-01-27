@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
+import FeaturedWorks from "@/components/FeaturedWorks";
 import WorkSection from "@/components/WorkSection";
 import AboutSection from "@/components/AboutSection";
 import CVSection from "@/components/CVSection";
@@ -10,7 +10,7 @@ const NarrativePortfolio = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <Hero />
+      <FeaturedWorks />
       <WorkSection />
       <AboutSection />
       <ContactSection />
