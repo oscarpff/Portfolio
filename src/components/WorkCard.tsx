@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronRight, ExternalLink } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface WorkCardProps {
@@ -9,9 +9,11 @@ interface WorkCardProps {
   excerpt?: string;
   index: number;
   link?: string;
+  logo?: string;
+  logoAlt?: string;
 }
 
-const WorkCard = ({ title, category, description, excerpt, index, link }: WorkCardProps) => {
+const WorkCard = ({ title, category, description, excerpt, index, link, logo, logoAlt }: WorkCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleClick = (e: React.MouseEvent) => {
@@ -28,17 +30,10 @@ const WorkCard = ({ title, category, description, excerpt, index, link }: WorkCa
         <span className="text-gold text-xs tracking-[0.2em] uppercase font-body">
           {category}
         </span>
-        {link ? (
-          <ExternalLink 
-            className="text-muted-foreground transition-transform duration-300 group-hover:translate-x-1" 
-            size={20} 
-          />
-        ) : (
-          <ChevronRight 
-            className={`text-muted-foreground transition-transform duration-300 ${isExpanded ? 'rotate-90' : 'group-hover:translate-x-1'}`} 
-            size={20} 
-          />
-        )}
+        <ChevronRight 
+          className="text-muted-foreground transition-transform duration-300 group-hover:translate-x-1" 
+          size={20} 
+        />
       </div>
       
       <h3 className="font-display text-2xl md:text-3xl font-semibold mb-3 group-hover:text-gold transition-colors duration-300">
@@ -69,7 +64,18 @@ const WorkCard = ({ title, category, description, excerpt, index, link }: WorkCa
       {/* Show "View project" hint if there's a link */}
       {link && (
         <div className="mt-4 text-sm text-gold/70 font-body flex items-center gap-2">
-          View full project <ExternalLink size={14} />
+          View full project <ChevronRight size={14} />
+        </div>
+      )}
+      
+      {/* Organization logo badge - subtle bottom-right */}
+      {logo && (
+        <div className="absolute bottom-4 right-4 opacity-60 group-hover:opacity-80 transition-opacity duration-300">
+          <img 
+            src={logo} 
+            alt={logoAlt || "Organization logo"}
+            className="h-7 w-auto"
+          />
         </div>
       )}
     </>
@@ -79,7 +85,7 @@ const WorkCard = ({ title, category, description, excerpt, index, link }: WorkCa
     return (
       <Link 
         to={link}
-        className="block group card-elevated border-gradient-gold rounded-lg p-6 md:p-8 cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:glow-gold"
+        className="block group card-elevated border-gradient-gold rounded-lg p-6 md:p-8 cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:glow-gold relative"
         style={{ animationDelay: `${index * 100}ms` }}
       >
         {CardContent}
@@ -89,7 +95,7 @@ const WorkCard = ({ title, category, description, excerpt, index, link }: WorkCa
 
   return (
     <article 
-      className="group card-elevated border-gradient-gold rounded-lg p-6 md:p-8 cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:glow-gold"
+      className="group card-elevated border-gradient-gold rounded-lg p-6 md:p-8 cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:glow-gold relative"
       style={{ animationDelay: `${index * 100}ms` }}
       onClick={handleClick}
     >

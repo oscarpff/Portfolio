@@ -4,11 +4,13 @@ import WorkCard from "./WorkCard";
 
 const featuredWorks = [
   {
-    title: "Side Quest System - FOQUES",
+    title: "Quest Design - FOQUES (TVM)",
     category: "Quest Design & System Design",
     description: "A complete side quest system for FOQUES featuring 12 interconnected quests with branching narratives, moral choices, and consequence-based storytelling.",
     excerpt: "The snow crunches under Kari's paws. Before her lies a wounded lynx—her natural predator—trapped and desperate. The enemy of my enemy is my friend. But can she trust him? Every choice ripples through time, shaping allies, enemies, and the very landscape itself...",
     link: "/narrative/foques-quest-system",
+    logo: "/TVM_Logo_Text.PNG",
+    logoAlt: "TTV Media Studio",
   },
   {
     title: "The Hollow Crown",

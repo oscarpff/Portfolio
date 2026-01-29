@@ -35,11 +35,21 @@ const FoquesQuestSystem = () => {
             </div>
             
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-4">
-              Side Quest System - <span className="text-gradient-gold">FOQUES</span>
+              Quest Design - <span className="text-gradient-gold">FOQUES (TVM)</span>
             </h1>
             
+            {/* Studio Credit */}
+            <div className="flex items-center gap-3 mb-6">
+              <span className="text-sm text-muted-foreground font-body">Developed for</span>
+              <img 
+                src="/TVM_Logo_Text.PNG" 
+                alt="TTV Media Studio" 
+                className="h-20 opacity-80"
+              />
+            </div>
+            
             <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl">
-              A comprehensive quest design system featuring interconnected narratives, moral choices with lasting consequences, and psychological horror elements set in the forests of Northern Canada.
+              A comprehensive quest design system for the game "FOQUES", featuring interconnected narratives, moral choices with lasting consequences, and psychological horror elements set in the forests of Northern Canada.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-6">
@@ -119,13 +129,13 @@ const FoquesQuestSystem = () => {
             <h2 className="font-display text-3xl font-semibold mb-6">Core Narrative</h2>
             <div className="card-elevated border-gradient-gold rounded-lg p-8">
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                Players control <strong className="text-foreground">Kari</strong>, a fox navigating the infected forests of Northern Canada alongside <strong className="text-foreground">Whisker</strong>, her owl companion. The world is threatened by <strong className="text-foreground">The Stain</strong>—a corruption that transforms living creatures into monstrous versions of themselves.
+                Players control <strong className="text-foreground">Kari</strong>, a fox navigating the infected forests of Northern Canada alongside <strong className="text-foreground">Whisker</strong>, her owl companion. The world is threatened by <strong className="text-foreground">The Stain</strong>, a corruption that transforms living creatures into monstrous versions of themselves.
               </p>
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                The quest system explores the theme: <em className="text-gold">"The enemy of my enemy is my friend."</em> When Kari encounters Raaz, a wounded lynx who once killed her sister, she must choose between revenge and survival. This decision creates a narrative ripple effect that impacts future quests, character relationships, and even the environment itself.
+                The quest system explores themes like: <em className="text-gold">"The enemy of my enemy is my friend"</em> and the <em className="text-gold">"Butterfly Effect"</em> ; small choices that compound into major consequences. When Kari encounters Raaz, a wounded lynx who once killed her sister, she must choose between revenge and survival. That decision sends a ripple through future quests, character relationships, and even the environment itself.
               </p>
               <p className="text-muted-foreground font-body leading-relaxed">
-                Unlike traditional quest design, consequences here are not binary good/bad outcomes. Helping an enemy may save lives but create new conflicts. Abandoning someone may haunt the player through hallucinations and environmental changes. Every choice asks: <em>What is the cost of survival?</em>
+                Unlike traditional quest design, consequences here are not binary good/bad outcomes. Helping an enemy may save lives but create new conflicts. Abandoning someone may haunt the player through hallucinations and environmental changes. Every choice asks: <em className="text-gold">What is the cost of survival?</em>
               </p>
             </div>
           </section>
@@ -187,7 +197,7 @@ const FoquesQuestSystem = () => {
                     className="border-gold/30 text-gold hover:bg-gold/10"
                   >
                     <BookOpen className="w-4 h-4 mr-2" />
-                    {expandedQuest === "quest1" ? "Hide Full Narrative" : "View Full Narrative"}
+                    {expandedQuest === "quest1" ? "Hide Full Narrative & Characters" : "View Full Narrative & Characters"}
                   </Button>
                 </div>
 
@@ -275,7 +285,7 @@ const FoquesQuestSystem = () => {
                     className="w-full border-gold/30 text-gold hover:bg-gold/10"
                   >
                     <FileText className="w-4 h-4 mr-2" />
-                    Ver Diagrama de Decisiones
+                    View Decision Flowchart
                   </Button>
                 </div>
               </div>
@@ -336,7 +346,7 @@ const FoquesQuestSystem = () => {
                     className="border-gold/30 text-gold hover:bg-gold/10"
                   >
                     <BookOpen className="w-4 h-4 mr-2" />
-                    {expandedQuest === "quest2" ? "Hide Full Narrative" : "View Full Narrative"}
+                    {expandedQuest === "quest2" ? "Hide Full Narrative & Characters" : "View Full Narrative & Characters"}
                   </Button>
                 </div>
 
@@ -424,7 +434,7 @@ const FoquesQuestSystem = () => {
                     className="w-full border-gold/30 text-gold hover:bg-gold/10"
                   >
                     <FileText className="w-4 h-4 mr-2" />
-                    Ver Diagrama de Decisiones
+                    View Decision Flowchart
                   </Button>
                 </div>
               </div>
@@ -485,7 +495,7 @@ const FoquesQuestSystem = () => {
                 { 
                   title: "The White Hare", 
                   theme: "Predator instinct vs. gratitude",
-                  synopsis: "Starving and weak, Kari collapses—a white hare saves her with kindness. When Kari recovers, she must choose between hunting it for survival or honoring the debt. Whisker watches in judgment."
+                  synopsis: "Starving and weak, Kari collapses. A white hare saves her with kindness. When Kari recovers, she must choose between hunting it for survival or honoring the debt. Whisker watches in judgment."
                 },
                 { 
                   title: "Whisker's Call", 
@@ -500,7 +510,7 @@ const FoquesQuestSystem = () => {
                 { 
                   title: "The Caribou Crossing", 
                   theme: "Leadership and collective survival",
-                  synopsis: "A panicked herd blocks the path, some showing infection. Kari can guide them to safety, using stealth to protect them, or slip through alone—affecting how animals perceive her throughout the game."
+                  synopsis: "A panicked herd blocks the path, some showing infection. Kari can guide them to safety, using stealth to protect them, or slip through alone, affecting how animals perceive her throughout the game."
                 },
                 { 
                   title: "The Broken Wing", 
@@ -574,7 +584,7 @@ const FoquesQuestSystem = () => {
             <h2 className="font-display text-3xl font-semibold mb-6">Reflection</h2>
             <div className="card-elevated border-gradient-gold rounded-lg p-8">
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                This project taught me that <strong className="text-foreground">narrative design is not just writing—it's integration</strong>. It's about understanding how story, environment, and mechanics can work together to create emotional impact. Players don't read character descriptions; they discover personalities through gameplay interactions and consequences.
+                This project taught me that <strong className="text-foreground">narrative design is not just writing, but integration</strong>. It's about understanding how story, environment, and mechanics can work together to create emotional impact. Players don't read character descriptions; they discover personalities through gameplay interactions and consequences.
               </p>
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
                 The story I developed is both beautiful and tragic. On a personal level, it made me reflect on the value of time, of life itself, and of the Earth we inhabit. It reminded me of the importance of teamwork and building bonds, and of how sometimes setting aside differences can be the key to survival.
@@ -583,16 +593,6 @@ const FoquesQuestSystem = () => {
                 I'm grateful to the FOQUES team for giving me the opportunity to grow as a narrative designer and for valuing the work I contributed to this project.
               </p>
             </div>
-          </section>
-
-          {/* CTA */}
-          <section className="text-center py-12">
-            <Button asChild size="lg" className="bg-gold hover:bg-gold/90">
-              <a href="/projects/oscarpf_OPF_Documentation.pdf" download>
-                <Download className="w-5 h-5 mr-2" />
-                Download Complete Documentation
-              </a>
-            </Button>
           </section>
         </div>
       </main>
