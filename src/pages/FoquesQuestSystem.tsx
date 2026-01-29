@@ -1,0 +1,637 @@
+import { ArrowLeft, Download, FileText, Users, GitBranch, MapPin, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import PDFModal from "@/components/PDFModal";
+import { quest1Narrative, quest2Narrative } from "@/data/questNarratives";
+import { quest1Characters, quest2Characters, QuestCharacter } from "@/data/questCharacters";
+
+const FoquesQuestSystem = () => {
+  const [expandedQuest, setExpandedQuest] = useState<string | null>(null);
+  const [pdfModalOpen, setPdfModalOpen] = useState<string | null>(null);
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      
+      <main className="pt-24 pb-16">
+        <div className="container mx-auto px-6 max-w-5xl">
+          {/* Back button */}
+          <Link to="/narrative" className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors mb-8">
+            <ArrowLeft className="w-4 h-4" />
+            <span className="text-sm font-body">Back to Portfolio</span>
+          </Link>
+
+          {/* Header */}
+          <header className="mb-12">
+            <div className="flex flex-wrap gap-2 mb-4">
+              <Badge variant="outline" className="border-gold/30 text-gold">Quest Design</Badge>
+              <Badge variant="outline" className="border-gold/30 text-gold">System Design</Badge>
+              <Badge variant="outline" className="border-gold/30 text-gold">Branching Narrative</Badge>
+              <Badge variant="outline" className="border-gold/30 text-gold">2025</Badge>
+            </div>
+            
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-4">
+              Side Quest System - <span className="text-gradient-gold">FOQUES</span>
+            </h1>
+            
+            <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl">
+              A comprehensive quest design system featuring interconnected narratives, moral choices with lasting consequences, and psychological horror elements set in the forests of Northern Canada.
+            </p>
+
+            <div className="flex flex-wrap gap-4 mt-6">
+              <Button asChild className="bg-gold hover:bg-gold/90">
+                <a href="/projects/oscarpf_OPF_Documentation.pdf" download>
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Full Documentation
+                </a>
+              </Button>
+            </div>
+          </header>
+
+          {/* Project Overview */}
+          <section className="mb-16">
+            <h2 className="font-display text-3xl font-semibold mb-6">Project Overview</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="card-elevated border-gradient-gold rounded-lg p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 rounded-lg bg-gold/10">
+                    <GitBranch className="w-6 h-6 text-gold" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold mb-2">12 Interconnected Quests</h3>
+                    <p className="text-muted-foreground text-sm font-body leading-relaxed">
+                      2 fully developed main quests with multiple branching paths, plus 10 additional quest concepts exploring themes of survival, trust, and consequence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-elevated border-gradient-gold rounded-lg p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 rounded-lg bg-gold/10">
+                    <Users className="w-6 h-6 text-gold" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold mb-2">Complex Character System</h3>
+                    <p className="text-muted-foreground text-sm font-body leading-relaxed">
+                      Multiple NPCs with detailed profiles, emotional arcs, and dynamic relationships that shift based on player choices.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-elevated border-gradient-gold rounded-lg p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 rounded-lg bg-gold/10">
+                    <MapPin className="w-6 h-6 text-gold" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold mb-2">Environmental Storytelling</h3>
+                    <p className="text-muted-foreground text-sm font-body leading-relaxed">
+                      Setting as narrative vessel: corrupted forests, hallucinogenic spores, and The Stain as both threat and storytelling device.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-elevated border-gradient-gold rounded-lg p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 rounded-lg bg-gold/10">
+                    <FileText className="w-6 h-6 text-gold" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold mb-2">38-Page Documentation</h3>
+                    <p className="text-muted-foreground text-sm font-body leading-relaxed">
+                      Complete design documentation including narrative drafts, flowcharts, gameplay mechanics, and consequence tracking systems.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Core Narrative */}
+          <section className="mb-16">
+            <h2 className="font-display text-3xl font-semibold mb-6">Core Narrative</h2>
+            <div className="card-elevated border-gradient-gold rounded-lg p-8">
+              <p className="text-muted-foreground font-body leading-relaxed mb-4">
+                Players control <strong className="text-foreground">Kari</strong>, a fox navigating the infected forests of Northern Canada alongside <strong className="text-foreground">Whisker</strong>, her owl companion. The world is threatened by <strong className="text-foreground">The Stain</strong>—a corruption that transforms living creatures into monstrous versions of themselves.
+              </p>
+              <p className="text-muted-foreground font-body leading-relaxed mb-4">
+                The quest system explores the theme: <em className="text-gold">"The enemy of my enemy is my friend."</em> When Kari encounters Raaz, a wounded lynx who once killed her sister, she must choose between revenge and survival. This decision creates a narrative ripple effect that impacts future quests, character relationships, and even the environment itself.
+              </p>
+              <p className="text-muted-foreground font-body leading-relaxed">
+                Unlike traditional quest design, consequences here are not binary good/bad outcomes. Helping an enemy may save lives but create new conflicts. Abandoning someone may haunt the player through hallucinations and environmental changes. Every choice asks: <em>What is the cost of survival?</em>
+              </p>
+            </div>
+          </section>
+
+          {/* Featured Quests */}
+          <section className="mb-16">
+            <h2 className="font-display text-3xl font-semibold mb-6">Featured Quest Design</h2>
+            
+            <div className="space-y-12">
+              {/* Quest 1 */}
+              <div className="card-elevated border-gradient-gold rounded-lg p-8">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="font-display text-2xl font-semibold">Quest 1: "Pacts Beneath the Snow"</h3>
+                  <Badge variant="outline" className="border-gold/30 text-gold">Main Quest</Badge>
+                </div>
+                
+                <p className="text-sm text-gold uppercase tracking-wider mb-4 font-body">
+                  Theme: "The enemy of my enemy is my friend"
+                </p>
+                
+                <p className="text-muted-foreground font-body leading-relaxed mb-6">
+                  Kari discovers Raaz trapped in an old hunter's snare, surrounded by infected creatures. Nearby lies Kenji, an unconscious human who once saved Raaz as a child. The player must decide who to help—if anyone—as The Stain closes in.
+                </p>
+
+                <div className="border-l-2 border-gold/30 pl-6 mb-6">
+                  <p className="text-muted-foreground italic font-body leading-relaxed text-sm">
+                    "Those are just memories, fox. Will you let the past decide if I live or die?"
+                  </p>
+                  <p className="text-xs text-gold mt-2 font-body">— Raaz, trapped and desperate</p>
+                </div>
+
+                <div className="space-y-3">
+                  <h4 className="font-display text-lg font-semibold">Branching Outcomes:</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground font-body">
+                    <li className="flex gap-2">
+                      <span className="text-gold">→</span>
+                      <span><strong>Help both:</strong> Complex escape sequence; all survive but Whisker is injured by Raaz</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-gold">→</span>
+                      <span><strong>Help Raaz only:</strong> He becomes an unpredictable ally; Kenji haunts later quests</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-gold">→</span>
+                      <span><strong>Help Kenji only:</strong> Human ally gained; Raaz returns as corrupted threat</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-gold">→</span>
+                      <span><strong>Abandon both:</strong> Guilt-driven hallucinations; both appear as enemies in Quest 2</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Expand Button */}
+                <div className="mt-8 pt-8 border-t border-border/50">
+                  <Button
+                    onClick={() => setExpandedQuest(expandedQuest === "quest1" ? null : "quest1")}
+                    variant="outline"
+                    className="border-gold/30 text-gold hover:bg-gold/10"
+                  >
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    {expandedQuest === "quest1" ? "Hide Full Narrative" : "View Full Narrative"}
+                  </Button>
+                </div>
+
+                {/* Expanded Content */}
+                {expandedQuest === "quest1" && (
+                  <div className="mt-6 pt-6 border-t border-border/50 space-y-6">
+                    {/* Narrative */}
+                    <div className="prose prose-invert prose-sm max-w-none">
+                      <div className="bg-muted/30 border border-border rounded-lg p-6 max-h-96 overflow-y-auto">
+                        <p className="text-muted-foreground font-body leading-relaxed whitespace-pre-line">
+                          {quest1Narrative}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Characters Section */}
+                    <div className="space-y-4">
+                      <h4 className="font-display text-xl font-semibold flex items-center gap-2">
+                        <Users className="w-5 h-5 text-gold" />
+                        Key Characters
+                      </h4>
+                      <div className="grid gap-6 md:grid-cols-2">
+                        {quest1Characters.map((character) => (
+                          <div key={character.name} className="bg-muted/20 border border-border/50 rounded-lg p-6 space-y-4">
+                            {/* Character Image */}
+                            <div className="aspect-square w-full bg-muted/30 rounded-md overflow-hidden border border-border/30">
+                              <img
+                                src={character.imageUrl}
+                                alt={character.name}
+                                className="w-full h-full object-cover object-top"
+                                onError={(e) => {
+                                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzFhMWExYSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5JbWFnZSBQbGFjZWhvbGRlcjwvdGV4dD48L3N2Zz4=';
+                                }}
+                              />
+                            </div>
+                            
+                            {/* Character Info */}
+                            <div>
+                              <div className="flex items-start justify-between mb-2">
+                                <h5 className="font-display text-lg font-bold text-gold">{character.name}</h5>
+                                <Badge variant="outline" className="border-gold/30 text-gold text-xs">
+                                  {character.species.split('(')[0].trim()}
+                                </Badge>
+                              </div>
+                              <p className="text-sm text-muted-foreground italic mb-3">{character.role}</p>
+                              
+                              <div className="space-y-2 text-sm">
+                                <div>
+                                  <span className="font-semibold text-foreground">Appearance:</span>
+                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.appearance}</p>
+                                </div>
+                                <div>
+                                  <span className="font-semibold text-foreground">Personality:</span>
+                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.personality}</p>
+                                </div>
+                                <div>
+                                  <span className="font-semibold text-foreground">Narrative Role:</span>
+                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.narrativeRole}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* PDF Button */}
+                    <Button
+                      onClick={() => setPdfModalOpen("quest1")}
+                      variant="outline"
+                      className="w-full border-gold/30 text-gold hover:bg-gold/10"
+                    >
+                      <FileText className="w-4 h-4 mr-2" />
+                      Ver Narrativa Completa en PDF (incluye todas las rutas y outcomes)
+                    </Button>
+                  </div>
+                )}
+
+                {/* Flowchart */}
+                <div className="mt-8 pt-8 border-t border-border/50">
+                  <h4 className="font-display text-lg font-semibold mb-4">Decision Flowchart</h4>
+                  <Button
+                    onClick={() => setPdfModalOpen("flowchart1")}
+                    variant="outline"
+                    className="w-full border-gold/30 text-gold hover:bg-gold/10"
+                  >
+                    <FileText className="w-4 h-4 mr-2" />
+                    Ver Diagrama de Decisiones
+                  </Button>
+                </div>
+              </div>
+
+              {/* Quest 2 */}
+              <div className="card-elevated border-gradient-gold rounded-lg p-8">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="font-display text-2xl font-semibold">Quest 2: "Echoes in the Gorge"</h3>
+                  <Badge variant="outline" className="border-gold/30 text-gold">Main Quest</Badge>
+                </div>
+                
+                <p className="text-sm text-gold uppercase tracking-wider mb-4 font-body">
+                  Theme: "Everything returns eventually" (The Butterfly Effect)
+                </p>
+                
+                <p className="text-muted-foreground font-body leading-relaxed mb-6">
+                  Crossing a gorge filled with hallucinogenic spores, Kari confronts the consequences of her choices. Tala, a raven, needs help protecting her nest. Arlen, a beaver, is trapped building a dam to clear the spores. And in the mist... familiar figures appear, corrupted or protective depending on past decisions.
+                </p>
+
+                <div className="border-l-2 border-gold/30 pl-6 mb-6">
+                  <p className="text-muted-foreground italic font-body leading-relaxed text-sm">
+                    "Are you going to help that beaver finish his dam? Or will you help me protect my nest and trust that my eyes will get you out of here?"
+                  </p>
+                  <p className="text-xs text-gold mt-2 font-body">— Tala, desperate and impatient</p>
+                </div>
+
+                <div className="space-y-3">
+                  <h4 className="font-display text-lg font-semibold">Consequence-Based Encounters:</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground font-body">
+                    <li className="flex gap-2">
+                      <span className="text-gold">→</span>
+                      <span><strong>If Raaz was saved:</strong> He appears as a guide through hallucinations</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-gold">→</span>
+                      <span><strong>If Raaz was abandoned:</strong> Corrupted version hunts Kari through the gorge</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-gold">→</span>
+                      <span><strong>Help both NPCs:</strong> Safe passage; water clears spores; future allies gained</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-gold">→</span>
+                      <span><strong>Prioritize one:</strong> Partial success; the other becomes hostile or dies</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-gold">→</span>
+                      <span><strong>Help neither:</strong> Nightmare escape sequence with permanent guilt effects</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Expand Button */}
+                <div className="mt-8 pt-8 border-t border-border/50">
+                  <Button
+                    onClick={() => setExpandedQuest(expandedQuest === "quest2" ? null : "quest2")}
+                    variant="outline"
+                    className="border-gold/30 text-gold hover:bg-gold/10"
+                  >
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    {expandedQuest === "quest2" ? "Hide Full Narrative" : "View Full Narrative"}
+                  </Button>
+                </div>
+
+                {/* Expanded Content */}
+                {expandedQuest === "quest2" && (
+                  <div className="mt-6 pt-6 border-t border-border/50 space-y-6">
+                    {/* Narrative */}
+                    <div className="prose prose-invert prose-sm max-w-none">
+                      <div className="bg-muted/30 border border-border rounded-lg p-6 max-h-96 overflow-y-auto">
+                        <p className="text-muted-foreground font-body leading-relaxed whitespace-pre-line">
+                          {quest2Narrative}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Characters Section */}
+                    <div className="space-y-4">
+                      <h4 className="font-display text-xl font-semibold flex items-center gap-2">
+                        <Users className="w-5 h-5 text-gold" />
+                        Key Characters
+                      </h4>
+                      <div className="grid gap-6 md:grid-cols-2">
+                        {quest2Characters.map((character) => (
+                          <div key={character.name} className="bg-muted/20 border border-border/50 rounded-lg p-6 space-y-4">
+                            {/* Character Image */}
+                            <div className="aspect-square w-full bg-muted/30 rounded-md overflow-hidden border border-border/30">
+                              <img
+                                src={character.imageUrl}
+                                alt={character.name}
+                                className="w-full h-full object-cover object-top"
+                                onError={(e) => {
+                                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzFhMWExYSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5JbWFnZSBQbGFjZWhvbGRlcjwvdGV4dD48L3N2Zz4=';
+                                }}
+                              />
+                            </div>
+                            
+                            {/* Character Info */}
+                            <div>
+                              <div className="flex items-start justify-between mb-2">
+                                <h5 className="font-display text-lg font-bold text-gold">{character.name}</h5>
+                                <Badge variant="outline" className="border-gold/30 text-gold text-xs">
+                                  {character.species.split('(')[0].trim()}
+                                </Badge>
+                              </div>
+                              <p className="text-sm text-muted-foreground italic mb-3">{character.role}</p>
+                              
+                              <div className="space-y-2 text-sm">
+                                <div>
+                                  <span className="font-semibold text-foreground">Appearance:</span>
+                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.appearance}</p>
+                                </div>
+                                <div>
+                                  <span className="font-semibold text-foreground">Personality:</span>
+                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.personality}</p>
+                                </div>
+                                <div>
+                                  <span className="font-semibold text-foreground">Narrative Role:</span>
+                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.narrativeRole}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* PDF Button */}
+                    <Button
+                      onClick={() => setPdfModalOpen("quest2")}
+                      variant="outline"
+                      className="w-full border-gold/30 text-gold hover:bg-gold/10"
+                    >
+                      <FileText className="w-4 h-4 mr-2" />
+                      Ver Narrativa Completa en PDF (incluye todas las rutas y outcomes)
+                    </Button>
+                  </div>
+                )}
+
+                {/* Flowchart */}
+                <div className="mt-8 pt-8 border-t border-border/50">
+                  <h4 className="font-display text-lg font-semibold mb-4">Decision Flowchart</h4>
+                  <Button
+                    onClick={() => setPdfModalOpen("flowchart2")}
+                    variant="outline"
+                    className="w-full border-gold/30 text-gold hover:bg-gold/10"
+                  >
+                    <FileText className="w-4 h-4 mr-2" />
+                    Ver Diagrama de Decisiones
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Design Philosophy */}
+          <section className="mb-16">
+            <h2 className="font-display text-3xl font-semibold mb-6">Design Philosophy</h2>
+            <div className="card-elevated border-gradient-gold rounded-lg p-8">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-display text-xl font-semibold mb-3">Choices Over Combat</h3>
+                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
+                    FOQUES prioritizes stealth, puzzles, and moral decisions over direct combat. Violence has consequences—both mechanical and narrative. Players must think strategically about whom to trust and what to sacrifice.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-display text-xl font-semibold mb-3">Characters Discovered Through Play</h3>
+                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
+                    Instead of exposition-heavy dialogue, character personalities emerge through behaviors, reactions, and consequences. Raaz's pride shows through his refusal to beg. Whisker's distrust reveals itself in subtle disapproval. Players learn who these characters are by seeing how they act under pressure.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-display text-xl font-semibold mb-3">The Environment as Storyteller</h3>
+                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
+                    The Stain isn't just a threat—it's a narrative tool. Hallucinogenic spores force players to confront guilt and past choices. Infected water spreads corruption if left unchecked. The world reacts to player decisions, making the setting itself a living consequence system.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-display text-xl font-semibold mb-3">No "Right" Answers</h3>
+                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
+                    Every choice carries weight. Helping everyone may spread resources too thin. Focusing on one character may doom another. The quest system doesn't judge—it reflects. Players must live with their decisions and see them echo through future encounters.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Additional Quest Concepts */}
+          <section className="mb-16">
+            <h2 className="font-display text-3xl font-semibold mb-6">Additional Quest Concepts</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { 
+                  title: "The Beaver's Dam", 
+                  theme: "Individual survival vs. community well-being",
+                  synopsis: "A beaver has built a dam to protect itself from infected waters, but flooded the forest. Kari must choose: destroy the dam and earn resentment, negotiate for trust, or leave it and doom the land."
+                },
+                { 
+                  title: "A Father's Roar", 
+                  theme: "Sacrifice born from love",
+                  synopsis: "A massive bear searches for its corrupted cub. In a moment of tragic clarity, the father sacrifices himself so Kari and Whisker can escape. A cinematic meditation on parental love and inevitable loss."
+                },
+                { 
+                  title: "The White Hare", 
+                  theme: "Predator instinct vs. gratitude",
+                  synopsis: "Starving and weak, Kari collapses—a white hare saves her with kindness. When Kari recovers, she must choose between hunting it for survival or honoring the debt. Whisker watches in judgment."
+                },
+                { 
+                  title: "Whisker's Call", 
+                  theme: "Family bonds vs. survival priorities",
+                  synopsis: "Whisker hears calls from his family trapped in an infected zone. His desperation tests Kari's commitment. She must decide whether to support him, convince him to abandon them, or risk everything together."
+                },
+                { 
+                  title: "The Owl's Warning", 
+                  theme: "Trust and opportunism",
+                  synopsis: "A mysterious owl offers information in exchange for food or a human trap. Whisker distrusts the trade. Kari must weigh the cost of resources against knowledge that might save them later."
+                },
+                { 
+                  title: "The Caribou Crossing", 
+                  theme: "Leadership and collective survival",
+                  synopsis: "A panicked herd blocks the path, some showing infection. Kari can guide them to safety, using stealth to protect them, or slip through alone—affecting how animals perceive her throughout the game."
+                },
+                { 
+                  title: "The Broken Wing", 
+                  theme: "Prejudice vs. compassion",
+                  synthesis: "An injured magpie begs for help, but Whisker strongly opposes, calling magpies deceitful scavengers. Kari must challenge her companion's bias or leave the creature to die."
+                },
+                { 
+                  title: "The Stain's Bloom", 
+                  theme: "Ignorance vs. survival",
+                  synopsis: "A grotesque infected tree releases hallucinogenic pollen. Mice worship it as a guardian. Kari must decide: destroy it and save them from false faith, or leave them to their fatal belief."
+                },
+                { 
+                  title: "Echoes of the Lost Pack", 
+                  theme: "Past ties and grief",
+                  synopsis: "Kari finds traces of her old pack, now partially corrupted. A hallucination forces her to choose: rescue a family member and risk spreading infection, or abandon them and carry the guilt forever."
+                },
+                { 
+                  title: "Night of the Wolves", 
+                  theme: "Unexpected alliances",
+                  synopsis: "During a violent storm, wolves fight to protect their cubs from infected creatures. Kari must choose: intervene and help them, creating future allies, or escape and leave them to their fate."
+                },
+              ].map((quest) => (
+                <div key={quest.title} className="card-elevated border-gradient-gold rounded-lg p-6 hover:scale-[1.02] transition-transform">
+                  <h3 className="font-display text-lg font-semibold mb-2">{quest.title}</h3>
+                  <p className="text-xs text-gold italic font-body mb-3">"{quest.theme}"</p>
+                  <p className="text-sm text-muted-foreground font-body leading-relaxed">
+                    {quest.synopsis || quest.synthesis}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Technical Details */}
+          <section className="mb-16">
+            <h2 className="font-display text-3xl font-semibold mb-6">Technical Details</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="card-elevated border-gradient-gold rounded-lg p-6">
+                <h3 className="font-display text-lg font-semibold mb-2">Scope</h3>
+                <ul className="text-sm text-muted-foreground space-y-1 font-body">
+                  <li>• 12 side quests designed</li>
+                  <li>• 2 fully scripted narratives</li>
+                  <li>• 6 major character profiles</li>
+                  <li>• 38 pages of documentation</li>
+                </ul>
+              </div>
+
+              <div className="card-elevated border-gradient-gold rounded-lg p-6">
+                <h3 className="font-display text-lg font-semibold mb-2">Mechanics</h3>
+                <ul className="text-sm text-muted-foreground space-y-1 font-body">
+                  <li>• Branching dialogue trees</li>
+                  <li>• Consequence tracking system</li>
+                  <li>• Environmental puzzles</li>
+                  <li>• Stealth gameplay integration</li>
+                </ul>
+              </div>
+
+              <div className="card-elevated border-gradient-gold rounded-lg p-6">
+                <h3 className="font-display text-lg font-semibold mb-2">Inspirations</h3>
+                <ul className="text-sm text-muted-foreground space-y-1 font-body">
+                  <li>• Hellblade: Senua's Sacrifice</li>
+                  <li>• The Last of Us</li>
+                  <li>• INSIDE</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Reflection */}
+          <section className="mb-16">
+            <h2 className="font-display text-3xl font-semibold mb-6">Reflection</h2>
+            <div className="card-elevated border-gradient-gold rounded-lg p-8">
+              <p className="text-muted-foreground font-body leading-relaxed mb-4">
+                This project taught me that <strong className="text-foreground">narrative design is not just writing—it's integration</strong>. It's about understanding how story, environment, and mechanics can work together to create emotional impact. Players don't read character descriptions; they discover personalities through gameplay interactions and consequences.
+              </p>
+              <p className="text-muted-foreground font-body leading-relaxed mb-4">
+                The story I developed is both beautiful and tragic. On a personal level, it made me reflect on the value of time, of life itself, and of the Earth we inhabit. It reminded me of the importance of teamwork and building bonds, and of how sometimes setting aside differences can be the key to survival.
+              </p>
+              <p className="text-muted-foreground font-body leading-relaxed">
+                I'm grateful to the FOQUES team for giving me the opportunity to grow as a narrative designer and for valuing the work I contributed to this project.
+              </p>
+            </div>
+          </section>
+
+          {/* CTA */}
+          <section className="text-center py-12">
+            <Button asChild size="lg" className="bg-gold hover:bg-gold/90">
+              <a href="/projects/oscarpf_OPF_Documentation.pdf" download>
+                <Download className="w-5 h-5 mr-2" />
+                Download Complete Documentation
+              </a>
+            </Button>
+          </section>
+        </div>
+      </main>
+
+      {/* PDF Modals */}
+      <PDFModal
+        isOpen={pdfModalOpen === "quest1"}
+        onClose={() => setPdfModalOpen(null)}
+        pdfFile="/projects/oscarpf_OPF_SideQuest1.pdf"
+        title="Quest 1: Pacts Beneath the Snow - Full Narrative"
+        downloadName="FOQUES_Quest1_FullNarrative.pdf"
+      />
+      
+      <PDFModal
+        isOpen={pdfModalOpen === "quest2"}
+        onClose={() => setPdfModalOpen(null)}
+        pdfFile="/projects/oscarpf_OPF_SideQuest2.pdf"
+        title="Quest 2: Echoes in the Gorge - Full Narrative"
+        downloadName="FOQUES_Quest2_FullNarrative.pdf"
+      />
+
+      <PDFModal
+        isOpen={pdfModalOpen === "flowchart1"}
+        onClose={() => setPdfModalOpen(null)}
+        pdfFile="/projects/oscarpf_OPF_SideQuest1.pdf"
+        title="Quest 1: Decision Flowchart"
+        downloadName="FOQUES_Quest1_Flowchart.pdf"
+      />
+
+      <PDFModal
+        isOpen={pdfModalOpen === "flowchart2"}
+        onClose={() => setPdfModalOpen(null)}
+        pdfFile="/projects/oscarpf_OPF_SideQuest2.pdf"
+        title="Quest 2: Decision Flowchart"
+        downloadName="FOQUES_Quest2_Flowchart.pdf"
+      />
+
+      <Footer />
+    </div>
+  );
+};
+
+export default FoquesQuestSystem;

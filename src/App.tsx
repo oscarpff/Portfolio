@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SplitLanding from "./pages/SplitLanding";
 import NarrativePortfolio from "./pages/NarrativePortfolio";
 import CybersecurityPortfolio from "./pages/CybersecurityPortfolio";
+import FoquesQuestSystem from "./pages/FoquesQuestSystem";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<SplitLanding />} />
           <Route path="/narrative" element={<NarrativePortfolio />} />
+          <Route path="/narrative/foques-quest-system" element={<FoquesQuestSystem />} />
           <Route path="/cybersecurity" element={<CybersecurityPortfolio />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
