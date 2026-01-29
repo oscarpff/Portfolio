@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PDFModal from "@/components/PDFModal";
+import FlowchartViewer from "@/components/FlowchartViewer";
 import { quest1Narrative, quest2Narrative } from "@/data/questNarratives";
 import { quest1Characters, quest2Characters, QuestCharacter } from "@/data/questCharacters";
 
@@ -613,7 +614,7 @@ const FoquesQuestSystem = () => {
         downloadName="FOQUES_Quest2_FullNarrative.pdf"
       />
 
-      <PDFModal
+      <FlowchartViewer
         isOpen={pdfModalOpen === "flowchart1"}
         onClose={() => setPdfModalOpen(null)}
         pdfFile="/projects/oscarpf_OPF_SideQuest1.pdf"
@@ -621,7 +622,7 @@ const FoquesQuestSystem = () => {
         downloadName="FOQUES_Quest1_Flowchart.pdf"
       />
 
-      <PDFModal
+      <FlowchartViewer
         isOpen={pdfModalOpen === "flowchart2"}
         onClose={() => setPdfModalOpen(null)}
         pdfFile="/projects/oscarpf_OPF_SideQuest2.pdf"
