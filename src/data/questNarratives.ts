@@ -70,7 +70,7 @@ Raaz closes his eyes for a second, as if ignoring the owl requires physical effo
 
 Kari nods but promises nothing. She turns and walks away.
 
-*Note* Between these two narrative segments, gameplay takes place. Kari is free to explore the village, which serves as a semi-linear area. While she cannot leave the village, she can investigate the various houses within it. If the player chooses to interact with Raaz again during this phase, he will only repeat the location of the special house—visibly angry and exhausted.
+Note: Between these two narrative segments, gameplay takes place. Kari is free to explore the village, which serves as a semi-linear area. While she cannot leave the village, she can investigate the various houses within it. If the player chooses to interact with Raaz again during this phase, he will only repeat the location of the special house—visibly angry and exhausted.
 
 The air grows thicker. Every corner of the village hums with whisper-like tension. Open windows watch her pass. The snow on the rooftops creaks, groaning under the weight of something that hasn't happened yet.
 
@@ -98,7 +98,7 @@ Kari's ears flick. He's alive—but only just.
 
 She takes a cautious step forward, nose low. As she draws closer, something else catches her eye: a small photograph, folded and half-buried beneath an overturned crate. She paws it gently free.
 
-The faded image shows a child—dark-haired, smiling—kneeling in the snow beside a young lynx. The lynx looks wary, but calm, its eyes locked on the camera. Around the boy's neck hangs the same pendant Kari just found.
+The faded image shows a dark haired child smiling, kneeling in the snow beside a young lynx. The lynx looks wary, but calm, its eyes locked on the camera. Around the boy's neck hangs the same pendant Kari just found.
 
 She blinks slowly, glancing from the photo to the boy by the fire. Whisker, now perched on the fireplace mantle, leans forward.
 
@@ -106,7 +106,7 @@ She blinks slowly, glancing from the photo to the boy by the fire. Whisker, now 
 
 He trails off. Of course, Kari can't answer.
 
-Suddenly, the boy stirs. He doesn't open his eyes, but his lips move slightly. A faint whisper escapes—barely audible.
+Suddenly, the boy stirs. He doesn't open his eyes, but his lips move slightly. A faint whisper escapes, barely audible.
 
 "…Raaz…"
 
@@ -114,7 +114,7 @@ Kari stiffens.
 
 The boy goes still again.
 
-For a long moment, the only sounds are the wind pressing against the broken windows, and the slow crackle of a dying ember. Kari looks again at the photograph. The lynx in it is unmistakable—sleek, red-furred, eyes like fire.
+For a long moment, the only sounds are the wind pressing against the broken windows, and the slow crackle of a dying ember. Kari looks again at the photograph. The lynx in it is red-furred, eyes like fire.
 
 Raaz.
 
@@ -138,14 +138,37 @@ Kari takes a deep breath through her mouth, avoiding inhaling too much. The smel
 
 "Yes. And I still don't know whether that's better or worse than what's really here," Whisker replies.
 
+Scenario A: You didn’t help Raaz and Kenji in Quest 1
+
 They advance cautiously along a narrow ledge. In the distance, a river roars at the bottom of the gorge, crashing against the rock walls and creating small clouds of steam that clear the spores a little near the water. On one side, a huge trunk leans dangerously, covered in strands of the Stain.
 
 A deep moan breaks the noise of the water. It is not a roar or a shriek; it is a profound, desperate sound that reverberates among the rocks. Kari sharpens her ears and distinguishes another sound, high and repetitive, like tiny screams.
 
-"That came from up there," Whisker points with his wounded wing, indicating a ledge. "And from the river, at the same time."
+“That came from up there,” Whisker points with his wounded wing, indicating a ledge. “And from the river, at the same time.”
 
-Kari climbs up a narrow winding path until she reaches the ledge where a black raven waits. His feathers shine slightly under the filtered light. It's Tala. Next to her, a nest built in a crevice trembles under the weight of the wind and the dust. Two eggs sway dangerously close to the edge.
+Kari climbs up a narrow winding path until she reaches the ledge where a black raven waits. His feathers shine slightly under the filtered light. It’s Tala. Next to her, a nest built in a crevice trembles under the weight of the wind and the dust. Two eggs sway dangerously close to the edge.
 
-"Finally someone with brains shows up!" exclaims Tala with a sarcastic caw. Tala's words come out quickly, in a high-pitched tone. "I've been screaming for hours and only attracted monsters. Do you see that log?" She points downward. There, trapped under a jumble of fallen trees, a beaver struggles to free himself. His blackened tail thrashes desperately.
+“Finally someone with brains shows up!” exclaims Tala with a sarcastic caw. Tala’s words come out quickly, in a high-pitched tone. “I’ve been screaming for hours and only attracted monsters. Do you see that log?” She points downward. There, trapped under a jumble of fallen trees, a beaver struggles to free himself. His blackened tail thrashes desperately.
 
-"His name's Arlen. He was building something so the water could clean this dust. But those damn logs fell. If we don't get him out, we'll all be covered in spores... and my future chicks will die."`;
+“His name’s Arlen. He was building something so the water could clean this dust. But those damn logs fell. If we don’t get him out, we’ll all be covered in spores… and my future chicks will die.”
+
+Kari looks at the river. The spores swirl in spiralling eddies above the current. The sound of claws sliding on stone mixes with her own breathing. In the distance, in the shadows of a cave across the gorge, red flashes flicker. A familiar roar chills her inside: Raaz. But the shape that staggers out of the cave is no longer completely feline. Deformed arms have grown on its back and its red fur is interwoven with black veins.
+
+Behind it, a human figure covered in mud and with empty eyes — Kenji — walks like a puppet, dark strings protruding from his neck. They approach, but the water current stops them momentarily.
+
+“If you didn’t help them before…” whispers Whisker, “there are the consequences.”
+
+Kari feels a knot in her stomach. Her decision in the village — to save or abandon — now materialised in walking nightmares. The spores intensify her guilt, and for a moment, the figures of Raaz and Kenji seem to speak to her, accusing her… or begging her.
+
+Tala clicks her beak. “We don’t have time for contemplation. Will you help that beaver finish his dam? Or will you help me protect my nest and trust that my eyes will get you out of here?” Her words resonate among the echoes of the gorge, mixing with the river’s roar.
+
+Scenario B: You helped (or saved) Raaz and Kenji in Quest 1
+
+The setting is identical: dense air, blue dust, trunks covered in filaments. However, when they reach the bend in the path and hear the moans, the cave across the river doesn’t expel the figures of Raaz and Kenji. An eerie silence hangs for a second and then another threat emerges: a massive moose or a bear, completely transformed by the Stain, with multiplied antlers or jaws in impossible places. There is no trace of Raaz or Kenji because, having been saved, they took a different route.
+
+The spores can’t project their faces as hallucinations; instead, the dust summons another specter: Kari’s deceased sister appears in the mist, recreating the trauma that links her to Raaz. This vision doesn’t reproach Kari for saving Raaz, but rather guides her, reminding her that she still has unresolved matters and that the threat of the Stain takes on new forms. Whisker notes that although they forgave their former adversaries, the Stain always finds other ways to attack.
+
+Tala remains on her ledge, more impatient than ever: “Are you going to help that beaver or my chicks?” The dilemma remains, but the absence of Raaz and Kenji in sight alters the priorities and the distribution of dangers: there aren’t two familiar monsters, but a single brutal enemy and the shadow of a sister reminding Kari that the right decisions don’t erase her past.
+
+Note: Between these narrative segments there are playable phases where Kari must move stealthily, avoiding the Stain creatures that patrol the gorge and the clouds of spores. The player can interact with Tala or with Arlen to start their respective help routes. The water slows the infection and disperses the spores, so redirecting the current or staying near the river is essential to survive `;
+

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const navItems = [
   { label: "Work", href: "#work" },
@@ -12,6 +12,8 @@ const navItems = [
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +22,26 @@ const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    
+    // If we're not on the narrative portfolio page, navigate there first
+    if (location.pathname !== "/narrative") {
+      navigate("/narrative");
+      // Wait for navigation to complete, then scroll
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      // If we're already on the narrative page, just scroll
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+    
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header 
@@ -38,7 +60,8 @@ const Navigation = () => {
             <li key={item.label}>
               <a 
                 href={item.href}
-                className="font-body text-sm text-muted-foreground hover:text-gold transition-colors duration-300"
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="font-body text-sm text-muted-foreground hover:text-gold transition-colors duration-300 cursor-pointer inline-block"
               >
                 {item.label}
               </a>
@@ -64,8 +87,8 @@ const Navigation = () => {
             <li key={item.label}>
               <a 
                 href={item.href}
-                className="block font-body text-lg text-muted-foreground hover:text-gold transition-colors duration-300"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="block font-body text-lg text-muted-foreground hover:text-gold transition-colors duration-300 cursor-pointer py-2"
               >
                 {item.label}
               </a>

@@ -16,6 +16,52 @@ import { quest1Characters, quest2Characters } from "@/data/questCharacters";
 const FoquesQuestSystem = () => {
   const [expandedQuest, setExpandedQuest] = useState<string | null>(null);
   const [pdfModalOpen, setPdfModalOpen] = useState<string | null>(null);
+
+  const renderNarrative = (text: string) => {
+    const blocks = text.split(/\n\s*\n/);
+
+    return blocks
+      .map((block, index) => {
+        const normalized = block.replace(/\n+/g, " ").trim();
+
+        if (!normalized) {
+          return null;
+        }
+
+        if (/^Scenario\s+[AB]:/i.test(normalized)) {
+          return (
+            <h2
+              key={`scenario-${index}`}
+              className="font-display text-xl md:text-2xl font-semibold text-gold mt-4"
+            >
+              {normalized}
+            </h2>
+          );
+        }
+
+        if (/^Note:/i.test(normalized)) {
+          return (
+            <div
+              key={`note-${index}`}
+              className="mt-4 rounded-md border border-gold/30 bg-muted/30 px-4 py-3 text-sm text-muted-foreground italic"
+            >
+              <span className="text-gold font-semibold not-italic mr-2">Note</span>
+              {normalized.replace(/^Note:\s*/i, "")}
+            </div>
+          );
+        }
+
+        return (
+          <p
+            key={`paragraph-${index}`}
+            className="text-muted-foreground font-body leading-relaxed"
+          >
+            {normalized}
+          </p>
+        );
+      })
+      .filter(Boolean);
+  };
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -192,8 +238,8 @@ const FoquesQuestSystem = () => {
                   </ul>
                 </div>
 
-                {/* Expand Button */}
-                <div className="mt-8 pt-8 border-t border-border/50">
+                {/* Action Buttons */}
+                <div className="mt-8 pt-8 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Button
                     onClick={() => setExpandedQuest(expandedQuest === "quest1" ? null : "quest1")}
                     variant="outline"
@@ -202,17 +248,23 @@ const FoquesQuestSystem = () => {
                     <BookOpen className="w-4 h-4 mr-2" />
                     {expandedQuest === "quest1" ? "Hide Full Narrative & Characters" : "View Full Narrative & Characters"}
                   </Button>
+                  <Button
+                    onClick={() => setPdfModalOpen("flowchart1")}
+                    variant="outline"
+                    className="border-gold/30 text-gold hover:bg-gold/10"
+                  >
+                    <FileText className="w-4 h-4 mr-2" />
+                    View Decision Flowchart
+                  </Button>
                 </div>
-
+              </div>
                 {/* Expanded Content */}
                 {expandedQuest === "quest1" && (
                   <div className="mt-6 pt-6 border-t border-border/50 space-y-6">
                     {/* Narrative */}
                     <div className="prose prose-invert prose-sm max-w-none">
-                      <div className="bg-muted/30 border border-border rounded-lg p-6 max-h-96 overflow-y-auto">
-                        <p className="text-muted-foreground font-body leading-relaxed whitespace-pre-line">
-                          {quest1Narrative}
-                        </p>
+                      <div className="bg-muted/30 border border-border rounded-lg p-6 max-h-96 overflow-y-auto space-y-4">
+                        {renderNarrative(quest1Narrative)}
                       </div>
                     </div>
 
@@ -230,20 +282,6 @@ const FoquesQuestSystem = () => {
                     </div>
                   </div>
                 )}
-
-                {/* Flowchart */}
-                <div className="mt-8 pt-8 border-t border-border/50">
-                  <h4 className="font-display text-lg font-semibold mb-4">Decision Flowchart</h4>
-                  <Button
-                    onClick={() => setPdfModalOpen("flowchart1")}
-                    variant="outline"
-                    className="w-full border-gold/30 text-gold hover:bg-gold/10"
-                  >
-                    <FileText className="w-4 h-4 mr-2" />
-                    View Decision Flowchart
-                  </Button>
-                </div>
-              </div>
 
               {/* Quest 2 */}
               <div className="card-elevated border-gradient-gold rounded-lg p-8">
@@ -285,8 +323,8 @@ const FoquesQuestSystem = () => {
                   </ul>
                 </div>
 
-                {/* Expand Button */}
-                <div className="mt-8 pt-8 border-t border-border/50">
+                {/* Action Buttons */}
+                <div className="mt-8 pt-8 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Button
                     onClick={() => setExpandedQuest(expandedQuest === "quest2" ? null : "quest2")}
                     variant="outline"
@@ -295,6 +333,14 @@ const FoquesQuestSystem = () => {
                     <BookOpen className="w-4 h-4 mr-2" />
                     {expandedQuest === "quest2" ? "Hide Full Narrative & Characters" : "View Full Narrative & Characters"}
                   </Button>
+                  <Button
+                    onClick={() => setPdfModalOpen("flowchart2")}
+                    variant="outline"
+                    className="border-gold/30 text-gold hover:bg-gold/10"
+                  >
+                    <FileText className="w-4 h-4 mr-2" />
+                    View Decision Flowchart
+                  </Button>
                 </div>
 
                 {/* Expanded Content */}
@@ -302,10 +348,8 @@ const FoquesQuestSystem = () => {
                   <div className="mt-6 pt-6 border-t border-border/50 space-y-6">
                     {/* Narrative */}
                     <div className="prose prose-invert prose-sm max-w-none">
-                      <div className="bg-muted/30 border border-border rounded-lg p-6 max-h-96 overflow-y-auto">
-                        <p className="text-muted-foreground font-body leading-relaxed whitespace-pre-line">
-                          {quest2Narrative}
-                        </p>
+                      <div className="bg-muted/30 border border-border rounded-lg p-6 max-h-96 overflow-y-auto space-y-4">
+                        {renderNarrative(quest2Narrative)}
                       </div>
                     </div>
 
@@ -323,55 +367,6 @@ const FoquesQuestSystem = () => {
                     </div>
                   </div>
                 )}
-
-                {/* Flowchart */}
-                <div className="mt-8 pt-8 border-t border-border/50">
-                  <h4 className="font-display text-lg font-semibold mb-4">Decision Flowchart</h4>
-                  <Button
-                    onClick={() => setPdfModalOpen("flowchart2")}
-                    variant="outline"
-                    className="w-full border-gold/30 text-gold hover:bg-gold/10"
-                  >
-                    <FileText className="w-4 h-4 mr-2" />
-                    View Decision Flowchart
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Design Philosophy */}
-          <section id="philosophy" className="mb-16 scroll-mt-24">
-            <h2 className="font-display text-3xl font-semibold mb-6">Design Philosophy</h2>
-            <div className="card-elevated border-gradient-gold rounded-lg p-8">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-display text-xl font-semibold mb-3">Choices Over Combat</h3>
-                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
-                    FOQUES prioritizes stealth, puzzles, and moral decisions over direct combat. Violence has consequences, both mechanical and narrative. Players must think strategically about whom to trust and what to sacrifice.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-display text-xl font-semibold mb-3">Characters Discovery</h3>
-                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
-                    Instead of exposition and heavy dialogue, character personalities emerge through behaviors, reactions, and consequences. Raaz's pride shows through his refusal to beg. Whisker's distrust reveals itself in subtle disapproval. Players learn who these characters are by seeing how they act under pressure.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-display text-xl font-semibold mb-3">The Environment as Storyteller</h3>
-                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
-                    The Stain isn't just a threat but a narrative tool. Hallucinogenic spores force players to confront guilt and past choices. Infected water spreads corruption if left unchecked. The world reacts to player decisions, making the setting itself a living consequence system.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-display text-xl font-semibold mb-3">No "Right" Answers</h3>
-                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
-                    Every choice carries weight. Helping everyone may spread resources too thin. Focusing on one character may doom another. The quest system doesn't judge, it reflects. Players must live with their decisions and see them echo through future encounters.
-                  </p>
-                </div>
               </div>
             </div>
           </section>
@@ -381,11 +376,6 @@ const FoquesQuestSystem = () => {
             <h2 className="font-display text-3xl font-semibold mb-6">Additional Quest Concepts</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                { 
-                  title: "The Beaver's Dam", 
-                  theme: "Individual survival vs. community well-being",
-                  synopsis: "A beaver has built a dam to protect itself from infected waters, but flooded the forest. Kari must choose: destroy the dam and earn resentment, negotiate for trust, or leave it and doom the land."
-                },
                 { 
                   title: "A Father's Roar", 
                   theme: "Sacrifice born from love",
@@ -422,6 +412,11 @@ const FoquesQuestSystem = () => {
                   synopsis: "A grotesque infected tree releases hallucinogenic pollen. Mice worship it as a guardian. Kari must decide: destroy it and save them from false faith, or leave them to their fatal belief."
                 },
                 { 
+                  title: "The Beaver's Dam", 
+                  theme: "Individual survival vs. community well-being",
+                  synopsis: "A beaver has built a dam to protect itself from infected waters, but flooded the forest. Kari must choose: destroy the dam and earn resentment, negotiate for trust, or leave it and doom the land."
+                },
+                { 
                   title: "Echoes of the Lost Pack", 
                   theme: "Past ties and grief",
                   synopsis: "Kari finds traces of her old pack, now partially corrupted. A hallucination forces her to choose: rescue a family member and risk spreading infection, or abandon them and carry the guilt forever."
@@ -439,6 +434,42 @@ const FoquesQuestSystem = () => {
                   synopsis={quest.synopsis} 
                 />
               ))}
+            </div>
+          </section>
+
+          {/* Design Philosophy */}
+          <section id="philosophy" className="mb-16 scroll-mt-24">
+            <h2 className="font-display text-3xl font-semibold mb-6">Design Philosophy</h2>
+            <div className="card-elevated border-gradient-gold rounded-lg p-8">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-display text-xl font-semibold mb-3">Choices Over Combat</h3>
+                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
+                    FOQUES prioritizes stealth, puzzles, and moral decisions over direct combat. Violence has consequences, both mechanical and narrative. Players must think strategically about whom to trust and what to sacrifice.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-display text-xl font-semibold mb-3">Characters Discovery</h3>
+                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
+                    Instead of exposition and heavy dialogue, character personalities emerge through behaviors, reactions, and consequences. Raaz's pride shows through his refusal to beg. Whisker's distrust reveals itself in subtle disapproval. Players learn who these characters are by seeing how they act under pressure.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-display text-xl font-semibold mb-3">The Environment as Storyteller</h3>
+                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
+                    The Stain isn't just a threat but a narrative tool. Hallucinogenic spores force players to confront guilt and past choices. Infected water spreads corruption if left unchecked. The world reacts to player decisions, making the setting itself a living consequence system.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-display text-xl font-semibold mb-3">No "Right" Answers</h3>
+                  <p className="text-muted-foreground font-body leading-relaxed text-sm">
+                    Every choice carries weight. Helping everyone may spread resources too thin. Focusing on one character may doom another. The quest system doesn't judge, it reflects. Players must live with their decisions and see them echo through future encounters.
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
 

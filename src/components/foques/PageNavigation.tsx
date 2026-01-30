@@ -11,8 +11,8 @@ const sections: NavSection[] = [
   { id: "overview", label: "Overview" },
   { id: "narrative", label: "Core Narrative" },
   { id: "quests", label: "Featured Quests" },
-  { id: "philosophy", label: "Philosophy" },
   { id: "concepts", label: "Quest Concepts" },
+  { id: "philosophy", label: "Philosophy" },
   { id: "technical", label: "Technical" },
   { id: "reflection", label: "Reflection" },
 ];
@@ -70,7 +70,6 @@ const PageNavigation = () => {
         }`}
       >
         <div className="p-2">
-          <p className="text-xs text-muted-foreground px-3 py-2 font-body">Jump to section</p>
           <nav className="space-y-1">
             {sections.map((section) => (
               <button
