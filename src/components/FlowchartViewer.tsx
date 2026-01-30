@@ -247,14 +247,14 @@ const FlowchartViewer = ({ isOpen, onClose, pdfFile, title, downloadName }: Flow
 
           <TransformWrapper
             ref={transformRef}
-            initialScale={1}
-            minScale={0.1}
+            initialScale={0.4}
+            minScale={0.2}
             maxScale={5}
             centerOnInit={true}
-            limitToBounds={false}
+            limitToBounds={true}
             wheel={{ step: 0.1 }}
             panning={{ velocityDisabled: false }}
-            doubleClick={{ mode: "reset" }}
+            doubleClick={{ mode: "zoomIn" }}
           >
             {({ zoomIn, zoomOut, resetTransform }) => (
               <TransformComponent
