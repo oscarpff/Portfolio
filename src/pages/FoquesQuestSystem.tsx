@@ -98,7 +98,7 @@ const FoquesQuestSystem = () => {
             </div>
             
             <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl">
-              A comprehensive quest design system for the game "FOQUES", featuring interconnected narratives, moral choices with lasting consequences, and psychological horror elements set in the forests of Northern Canada.
+              A comprehensive quest design system for the game "FOQUES" during <span className="text-gradient-gold">The Vampire´s Manor Work Experience Programme</span>, featuring interconnected narratives, moral choices with lasting consequences, and psychological horror elements set in the forests of Northern Canada.
             </p>
 
             <div className="flex flex-wrap gap-4 mt-6">

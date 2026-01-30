@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"7d91e09a3a77ea4f","type":"group","x":-350,"y":-380,"width":1550,"height":660,"color":"5","label":"INCURSIONES"},
+		{"id":"e559c6d7890c8337","type":"file","file":"TRAVNIK/Imágenes/ENEMIGOS/Hooman Bailarina.jpg","x":500,"y":-360,"width":268,"height":474,"color":"5"},
+		{"id":"47f07f592362bad8","type":"text","text":"Para ampliar el universo de Travnik, se podría usar un modo PvE alejado del PvP escogido para el modo de juego battle royale 3v3. \n\nEste modo seguiría las mismas dinámicas del juego base (movimiento, combate, saqueo, exploración, etc.) pero se llevaría a cabo en diferentes mapas localizados en las madrigueras de los Hoomans, donde residen los [[GLOSARIO TERMINOLOGÍA#Cónclaves]]. Tras derrotar a los Hoomans inferiores y destruir los capullos para detener la maduración de humanos a Hoomans, el grupo de super animales se enfrentaría al Boss Final de la incursión, un Hooman superior perteneciente a \" [[GLOSARIO TERMINOLOGÍA#Los Alzados]]\".\n\nEn función de las características de cada Alzado, cada Boss cuenta con un set de ataques y movimientos único, demostrando un potencial superior a un grupo de Hoomans inferiores.\n\nTras derrotar al Alzado, el grupo vencedor recibiría una recompensa especial (camuflajes, skins, gunbuddies, banners, etc.) y una gran cantidad de Compuesto-T, (acorde al lore, las madrigueras almacenan grandes cantidades por algún motivo) además de todo el Elemento 444 recolectado de todos los Hoomans aniquilados durante la incursión.","x":-320,"y":-360,"width":691,"height":474,"color":"5"},
+		{"id":"b9a4bcd7b8c84c9f","type":"text","text":"Estos eventos también sirven para potenciar la creación de clanes dentro del juego, jugar con amigos, etc. → Más entretenimiento para los jugadores","x":-200,"y":147,"width":451,"height":106,"color":"1"},
+		{"id":"18c6090b00070b11","type":"file","file":"TRAVNIK/Imágenes/ENEMIGOS/Hooman sectario.jpg","x":880,"y":-360,"width":276,"height":474},
+		{"id":"684aaac3cae1d06f","type":"text","text":"Alzado \"[Bailarina](https://es.pinterest.com/pin/1266706139504490/)\"","x":531,"y":140,"width":206,"height":56,"color":"5"},
+		{"id":"f203d218c6bfda0e","type":"text","text":"Alzado \"[Sectario](https://es.pinterest.com/pin/140806232896673/)\"","x":910,"y":147,"width":216,"height":51,"color":"5"}
+	],
+	"edges":[]
+}

@@ -7,6 +7,7 @@ import SplitLanding from "./pages/SplitLanding";
 import NarrativePortfolio from "./pages/NarrativePortfolio";
 import CybersecurityPortfolio from "./pages/CybersecurityPortfolio";
 import FoquesQuestSystem from "./pages/FoquesQuestSystem";
+import TravnikWorldBuilding from "./pages/TravnikWorldBuilding";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/narrative" element={<NarrativePortfolio />} />
           <Route path="/narrative/foques-quest-system" element={<FoquesQuestSystem />} />
           <Route path="/cybersecurity" element={<CybersecurityPortfolio />} />
+          <Route path="/narrative/travnik-worldbuilding" element={<TravnikWorldBuilding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

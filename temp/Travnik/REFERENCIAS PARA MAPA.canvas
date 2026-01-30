@@ -1,0 +1,22 @@
+{
+	"nodes":[
+		{"id":"2093b1885f62283e","type":"group","x":1240,"y":-560,"width":1740,"height":1160,"label":"FUERA DE LA CIUDAD"},
+		{"id":"5a9e1ec800c8da17","type":"group","x":-320,"y":-560,"width":1480,"height":1160,"label":"DENTRO DE LA CIUDAD"},
+		{"id":"519d2d3c15fde0b3","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/FORTALEZA TRAVNIK.jpg","x":-300,"y":-500,"width":400,"height":267},
+		{"id":"4f459d157d5b8498","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/VISTA AEREA FORTALEZA.jpg","x":140,"y":-500,"width":475,"height":267},
+		{"id":"7092a1a7d82f67af","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/LOCOMOTORA MUSEO.png","x":-300,"y":-200,"width":400,"height":400},
+		{"id":"61c10e38e96c5113","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/CASA IVO ANDRIC.jpg","x":145,"y":-156,"width":470,"height":313},
+		{"id":"5e24dace6d48ccbd","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/TORRE DEL RELOJ.jpg","x":640,"y":-500,"width":400,"height":300},
+		{"id":"7deaf1b9811fbea4","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/Igleisa Ort, Virgen María.jpg","x":640,"y":-156,"width":411,"height":313},
+		{"id":"dfdcae760823b305","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/Estadio Cercano a un silo.jpg","x":-300,"y":240,"width":400,"height":300},
+		{"id":"eb13d2ab9cdbf535","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/Mehmed Pasa Mosque.jpg","x":133,"y":240,"width":490,"height":300},
+		{"id":"7f627b3702e61d4a","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/Poturmahalska dzamija cerca rio.png","x":640,"y":240,"width":442,"height":300},
+		{"id":"9b82ed7e081e1dda","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/Cascadas de Jajce.png","x":1281,"y":-156,"width":392,"height":635},
+		{"id":"b3d13757a26157d5","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/PERUCICA FOREST.png","x":1360,"y":-528,"width":784,"height":316},
+		{"id":"e5480c6e876dbc2b","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/Eye of Earth.jpg","x":1700,"y":-111,"width":500,"height":537},
+		{"id":"3b984ca1852b35d7","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/IDEA COMPLEJO INDUSTRIAL.jpg","x":2240,"y":193,"width":679,"height":286},
+		{"id":"761a7016eb37d804","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/CUEVAS DE BIJAMBARE (2).jpg","x":2297,"y":-156,"width":566,"height":309},
+		{"id":"05b4227c6b1f760a","type":"file","file":"TRAVNIK/Imágenes/MAPAS/REFERENCIAS CIUDAD/CUEVAS DE BIJAMBARE.jpg","x":2297,"y":-521,"width":566,"height":309}
+	],
+	"edges":[]
+}

@@ -4,7 +4,7 @@ export const quest1Narrative = `The snow crunches under Kari's paws, each step s
 
 "I can't stand this smell," says the owl, shaking his feathers before gaining height again. "The corruption seeps even into places where nothing living remains."
 
-Kari sniffs the air. Something feels wrong—there's a metallic tang, almost like rusted iron, mixed with the sour scent of decay.
+Kari sniffs the air. Something feels wrong; there's a metallic tang, almost like rusted iron, mixed with the sour scent of decay.
 
 "Do you think the Stain has reached this place too?" she asks, her voice barely above a whisper, as if afraid of waking something dormant.
 
@@ -12,7 +12,7 @@ Kari sniffs the air. Something feels wrong—there's a metallic tang, almost lik
 
 They move forward until they reach the outskirts of an old, abandoned village. The wooden cabins, blackened by time and fire, stand like skeletal remains. Empty windows, broken glass, a rusted iron bell hangs askew from a tower that no longer rings. The silence is so dense that each step feels like it shatters it.
 
-As they explore the ruins, a sound tears through the stillness. It isn't the howl of a wolf or the caw of a crow. It's a lament—a low, broken sound, filled with both pain and fury. Kari tenses, her ears swiveling in all directions.
+As they explore the ruins, a sound tears through the stillness. It isn't the howl of a wolf or the caw of a crow. It's a lament, a low, broken sound filled with both pain and fury. Kari tenses, her ears swiveling in all directions.
 
 "Did you hear that?" she whispers.
 
@@ -26,7 +26,7 @@ There is an instant of silence, as though the world itself stops. Kari instincti
 
 "And it's trapped. Don't be afraid, Kari," Whisker says in a firm tone, though his feathers are ruffled. "It can't hurt you."
 
-Despite its pain, the lynx lifts its head with an aura of superiority, studying Kari as if she were prey. It tries to lunge forward—a reflex of dominance—but a guttural cry of pain halts it.
+Despite its pain, the lynx lifts its head with an aura of superiority, studying Kari as if she were prey. It tries to lunge forward, a reflex of dominance, but a guttural cry of pain halts it.
 
 Kari recognizes him immediately.
 
@@ -48,7 +48,7 @@ Raaz's eyes soften for the first time.
 
 "Help me... or we'll all be devoured."
 
-Kari hesitates. Her instincts scream to run, but compassion—or fear of leaving him to a worse fate—fights to surface. Whisker, however, remains resolute.
+Kari hesitates. Her instincts scream to run, but compassion, or fear of leaving him to a worse fate, fights to surface. Whisker, however, remains resolute.
 
 "Don't do it, Kari. He's a killer. He doesn't deserve your help."
 
@@ -58,33 +58,33 @@ Raaz growls, his voice low but sharp.
 
 Time is running out. The Stain is reaching the village, and the air starts to feel heavy. Kari stares at the trap. The blood no longer flows as before, but the lynx still pants, his face contorted in pain. The Stain's stench draws closer with every breath.
 
-"The lever you need…" Raaz mutters, his voice hoarse, "is in one of the stone houses across the village. Old place, near the well. They used to hide things there… or people they wanted to forget."
+"The lever you need," Raaz mutters, his voice hoarse, "is in one of the stone houses across the village. Old place, near the well. They used to hide things there, or people they wanted to forget."
 
-Kari watches him in silence. He doesn't seem to be begging—just stating facts. There's urgency, yes, but no desperation. From a half-collapsed beam above, Whisker scoffs:
+Kari watches him in silence. He doesn't seem to be begging, just stating facts. There's urgency, yes, but no desperation. From a half-collapsed beam above, Whisker scoffs:
 
 "Oh, now you're giving us directions. How thoughtful."
 
 Raaz closes his eyes for a second, as if ignoring the owl requires physical effort.
 
-"Whatever you decide… don't take too long."
+"Whatever you decide, don't take too long."
 
 Kari nods but promises nothing. She turns and walks away.
 
-Note: Between these two narrative segments, gameplay takes place. Kari is free to explore the village, which serves as a semi-linear area. While she cannot leave the village, she can investigate the various houses within it. If the player chooses to interact with Raaz again during this phase, he will only repeat the location of the special house—visibly angry and exhausted.
+Note: Between these two narrative segments, gameplay takes place. Kari is free to explore the village, which serves as a semi-linear area. While she cannot leave the village, she can investigate the various houses within it. If the player chooses to interact with Raaz again during this phase, he will only repeat the location of the special house, visibly angry and exhausted.
 
 The air grows thicker. Every corner of the village hums with whisper-like tension. Open windows watch her pass. The snow on the rooftops creaks, groaning under the weight of something that hasn't happened yet.
 
-The house Raaz described is sturdier than the others. Its stone walls are blackened by time, the chimney coated with soot. The door is blocked by a fallen beam, but Kari slips in through a narrow side gap. Inside, the air smells of smoke, iron… and something else. Something human.
+The house Raaz described is sturdier than the others. Its stone walls are blackened by time, the chimney coated with soot. The door is blocked by a fallen beam, but Kari slips in through a narrow side gap. Inside, the air smells of smoke, iron, and something else. Something human.
 
-The stone house looms like a broken tooth among the ruins—more intact than the others but still bearing the scars of time. Snow dusts the shattered windows, and the door hangs off its hinges, creaking gently with the wind.
+The stone house looms like a broken tooth among the ruins, more intact than the others but still bearing the scars of time. Snow dusts the shattered windows, and the door hangs off its hinges, creaking gently with the wind.
 
-Kari steps inside cautiously. The air hangs heavy with dust, ash, and something else… something human. Whisker follows close, gliding silently onto a wooden beam above her.
+Kari steps inside cautiously. The air hangs heavy with dust, ash, and something else, something human. Whisker follows close, gliding silently onto a wooden beam above her.
 
-Inside, the walls stand scorched. The remains of furniture lie scattered across the floor, and a fireplace—still faintly warm—casts a dull red glow into the room.
+Inside, the walls stand scorched. The remains of furniture lie scattered across the floor, and a fireplace, still faintly warm, casts a dull red glow into the room.
 
 Her eyes catch a glint. On a broken table, resting among fallen papers and soot, lies a small metal pendant, shaped like a curved fang. The chain is frayed; the edges dulled with age. Kari tilts her head, curious.
 
-She sniffs it—metal, worn leather, a faint scent she doesn't recognize.
+She sniffs it, metal, worn leather, a faint scent she doesn't recognize.
 
 "Interesting shape," Whisker murmurs above her. "Why would a human wear something like that?"
 
@@ -94,7 +94,7 @@ A human.
 
 Young. Male. His skin pale, dark hair matted against his forehead, one arm scraped and bleeding. He lies curled near the fireplace, partially covered by a collapsed beam. His breath is shallow, his face dusted in sweat and soot.
 
-Kari's ears flick. He's alive—but only just.
+Kari's ears flick. He's alive, but only just.
 
 She takes a cautious step forward, nose low. As she draws closer, something else catches her eye: a small photograph, folded and half-buried beneath an overturned crate. She paws it gently free.
 
@@ -102,13 +102,13 @@ The faded image shows a dark haired child smiling, kneeling in the snow beside a
 
 She blinks slowly, glancing from the photo to the boy by the fire. Whisker, now perched on the fireplace mantle, leans forward.
 
-"You don't think that's…"
+"You don't think that's..."
 
 He trails off. Of course, Kari can't answer.
 
 Suddenly, the boy stirs. He doesn't open his eyes, but his lips move slightly. A faint whisper escapes, barely audible.
 
-"…Raaz…"
+"Raaz..."
 
 Kari stiffens.
 
@@ -122,11 +122,13 @@ She steps closer to the boy and nudges his coat with her nose. He doesn't wake, 
 
 Whisker lets out a muffled sound, somewhere between a breath and a growl.
 
-"This is… complicated."
+"This is... complicated."
 
-Kari looks back toward the village. The path to the lynx still lies ahead, and now… so does something else.
+Kari looks back toward the village. The path to the lynx still lies ahead, and now, so does something else.
 
 A choice.`;
+
+// Quest 2: Echoes in the Gorge - Full Narrative
 
 export const quest2Narrative = `The air in the gorge is heavy and humid. A cold wind blows through the chasm, carrying with it dark blue dust. Each particle settles on Kari's fur like an intangible cloak. Whisker flies overhead, injured from the village, but even he sneezes and shakes his feathers.
 
@@ -154,21 +156,21 @@ Kari climbs up a narrow winding path until she reaches the ledge where a black r
 
 Kari looks at the river. The spores swirl in spiralling eddies above the current. The sound of claws sliding on stone mixes with her own breathing. In the distance, in the shadows of a cave across the gorge, red flashes flicker. A familiar roar chills her inside: Raaz. But the shape that staggers out of the cave is no longer completely feline. Deformed arms have grown on its back and its red fur is interwoven with black veins.
 
-Behind it, a human figure covered in mud and with empty eyes — Kenji — walks like a puppet, dark strings protruding from his neck. They approach, but the water current stops them momentarily.
+Behind it, a human figure covered in mud and with empty eyes, Kenji, walks like a puppet, dark strings protruding from his neck. They approach, but the water current stops them momentarily.
 
-“If you didn’t help them before…” whispers Whisker, “there are the consequences.”
+"If you didn’t help them before," whispers Whisker, "there are the consequences."
 
-Kari feels a knot in her stomach. Her decision in the village — to save or abandon — now materialised in walking nightmares. The spores intensify her guilt, and for a moment, the figures of Raaz and Kenji seem to speak to her, accusing her… or begging her.
+Kari feels a knot in her stomach. Her decision in the village, to save or abandon, now materialised in walking nightmares. The spores intensify her guilt, and for a moment, the figures of Raaz and Kenji seem to speak to her, accusing her or begging her.
 
 Tala clicks her beak. “We don’t have time for contemplation. Will you help that beaver finish his dam? Or will you help me protect my nest and trust that my eyes will get you out of here?” Her words resonate among the echoes of the gorge, mixing with the river’s roar.
 
 Scenario B: You helped (or saved) Raaz and Kenji in Quest 1
 
-The setting is identical: dense air, blue dust, trunks covered in filaments. However, when they reach the bend in the path and hear the moans, the cave across the river doesn’t expel the figures of Raaz and Kenji. An eerie silence hangs for a second and then another threat emerges: a massive moose or a bear, completely transformed by the Stain, with multiplied antlers or jaws in impossible places. There is no trace of Raaz or Kenji because, having been saved, they took a different route.
+The setting is identical: dense air, blue dust, trunks covered in filaments. However, when they reach the bend in the path and hear the moans, the cave across the river doesn’t expel the figures of Raaz and Kenji. An eerie silence hangs for a second, and then another threat emerges: a massive moose or a bear, completely transformed by the Stain, with multiplied antlers or jaws in impossible places. There is no trace of Raaz or Kenji because, having been saved, they took a different route.
 
-The spores can’t project their faces as hallucinations; instead, the dust summons another specter: Kari’s deceased sister appears in the mist, recreating the trauma that links her to Raaz. This vision doesn’t reproach Kari for saving Raaz, but rather guides her, reminding her that she still has unresolved matters and that the threat of the Stain takes on new forms. Whisker notes that although they forgave their former adversaries, the Stain always finds other ways to attack.
+The spores can’t project their faces as hallucinations; instead, the dust summons another specter. Kari’s deceased sister appears in the mist, recreating the trauma that links her to Raaz. This vision doesn’t reproach Kari for saving Raaz, but rather guides her, reminding her that she still has unresolved matters and that the threat of the Stain takes on new forms. Whisker notes that although they forgave their former adversaries, the Stain always finds other ways to attack.
 
-Tala remains on her ledge, more impatient than ever: “Are you going to help that beaver or my chicks?” The dilemma remains, but the absence of Raaz and Kenji in sight alters the priorities and the distribution of dangers: there aren’t two familiar monsters, but a single brutal enemy and the shadow of a sister reminding Kari that the right decisions don’t erase her past.
+Tala remains on her ledge, more impatient than ever. “Are you going to help that beaver or my chicks?” The dilemma remains, but the absence of Raaz and Kenji in sight alters the priorities and the distribution of dangers: there aren’t two familiar monsters, but a single brutal enemy and the shadow of a sister reminding Kari that the right decisions don’t erase her past.
 
 Note: Between these narrative segments there are playable phases where Kari must move stealthily, avoiding the Stain creatures that patrol the gorge and the clouds of spores. The player can interact with Tala or with Arlen to start their respective help routes. The water slows the infection and disperses the spores, so redirecting the current or staying near the river is essential to survive `;
 
