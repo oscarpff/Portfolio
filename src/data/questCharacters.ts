@@ -19,8 +19,8 @@ export const raaz: QuestCharacter = {
   role: "Antagonist-turned-reluctant-ally",
   species: "Red Lynx (Lynx rufus)",
   gender: "Male",
-  appearance: "Sleek build with red-orange fur marked by darker spots. His golden eyes carry intensity and pride. A deep scar crosses his left cheek—a reminder of past battles. His movements are calculated, his claws sharp. Blood stains his leg from the trap.",
-  personality: "Proud and sarcastic, Raaz rarely shows weakness. He is a natural predator who values strength and survival above sentimentality. Despite his ruthlessness, he harbors an unexpected capacity for pragmatism and loyalty—if earned. His pride often clashes with his instinct for self-preservation.",
+  appearance: "Sleek build with red-orange fur marked by darker spots. His golden eyes carry intensity and pride. A deep scar crosses his left cheek as a reminder of past battles. His movements are calculated, his claws sharp. Blood stains his leg from the trap.",
+  personality: "Proud and sarcastic, Raaz rarely shows weakness. He is a natural predator who values strength and survival above sentimentality. Despite his ruthlessness, he harbors an unexpected capacity for pragmatism and loyalty. His pride often clashes with his instinct for self-preservation.",
   currentState: "Trapped in an old iron trap in an abandoned village. His leg is badly injured, and the Stain's creatures are closing in. He is desperate but refuses to beg—his tone remains commanding even in vulnerability.",
   narrativeRole: "Raaz represents the theme of 'the enemy of my enemy is my friend.' If Kari saves him, he becomes a guide and occasional protector, though his methods remain morally gray. If abandoned, he returns in Quest 2 as a corrupted hallucination, embodying Kari's guilt and the consequences of inaction.",
   imageUrl: "/projects/characters/raaz.jpg" // Placeholder path
@@ -31,8 +31,8 @@ export const kenji: QuestCharacter = {
   role: "Vulnerable human survivor",
   species: "Human",
   gender: "Male",
-  appearance: "Young man (20-25 years old) with pale skin and dark hair matted against his forehead. One arm is scraped and bleeding. He wears worn winter clothing and carries a metal pendant shaped like a curved fang—the same symbol associated with Raaz. His face shows exhaustion and soot from the fire.",
-  personality: "Kenji is empathetic, determined, and deeply connected to the natural world despite being human. He has a bond with Raaz that transcends the typical predator-prey dynamic. Though physically weak, his emotional strength and loyalty shine through in moments of crisis.",
+  appearance: "Young man (20-25 years old) with pale skin and dark hair matted against his forehead. One arm is scraped and bleeding. He wears worn winter clothing and carries a metal pendant shaped like a curved fang, the same symbol associated with Raaz. His face shows exhaustion and soot from the fire.",
+  personality: "Kenji is empathetic, determined, and deeply connected to the natural world despite being human. He has a bond with Raaz that transcends the typical predator - prey dynamic. Though physically weak, his emotional strength and loyalty shine through in moments of crisis.",
   currentState: "Collapsed and unconscious in a stone house near a dying fireplace. He is injured from falling debris and weakened by exposure. A photograph nearby shows him as a child with a young Raaz, revealing their shared history.",
   narrativeRole: "Kenji acts as a mirror of Raaz's humanity, breaking Kari's binary view of predator = threat. His presence softens Raaz's image and creates a layered moral dilemma. If saved, he reunites with Raaz and can provide shortcuts in Quest 2. If abandoned, he appears as a hallucination, representing Kari's guilt.",
   imageUrl: "/projects/characters/kenji.jpg" // Placeholder path

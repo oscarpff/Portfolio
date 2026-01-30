@@ -86,7 +86,7 @@ const FoquesQuestSystem = () => {
                     <Users className="w-6 h-6 text-gold" />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-semibold mb-2">Complex Character System</h3>
+                    <h3 className="font-display text-xl font-semibold mb-2">Character Relationship System</h3>
                     <p className="text-muted-foreground text-sm font-body leading-relaxed">
                       Multiple NPCs with detailed profiles, emotional arcs, and dynamic relationships that shift based on player choices.
                     </p>
@@ -114,7 +114,7 @@ const FoquesQuestSystem = () => {
                     <FileText className="w-6 h-6 text-gold" />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl font-semibold mb-2">38-Page Documentation</h3>
+                    <h3 className="font-display text-xl font-semibold mb-2">Documentation and Work Diary</h3>
                     <p className="text-muted-foreground text-sm font-body leading-relaxed">
                       Complete design documentation including narrative drafts, flowcharts, gameplay mechanics, and consequence tracking systems.
                     </p>
@@ -129,13 +129,13 @@ const FoquesQuestSystem = () => {
             <h2 className="font-display text-3xl font-semibold mb-6">Core Narrative</h2>
             <div className="card-elevated border-gradient-gold rounded-lg p-8">
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                Players control <strong className="text-foreground">Kari</strong>, a fox navigating the infected forests of Northern Canada alongside <strong className="text-foreground">Whisker</strong>, her owl companion. The world is threatened by <strong className="text-foreground">The Stain</strong>, a corruption that transforms living creatures into monstrous versions of themselves.
+                In FOQUES, players control <strong className="text-foreground">Kari</strong>, a fox navigating the infected forests of Northern Canada alongside <strong className="text-foreground">Whisker</strong>, her owl companion. The world is threatened by <strong className="text-foreground">The Stain</strong>, a corruption that transforms living creatures into monstrous versions of themselves.
               </p>
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
-                The quest system explores themes like: <em className="text-gold">"The enemy of my enemy is my friend"</em> and the <em className="text-gold">"Butterfly Effect"</em> ; small choices that compound into major consequences. When Kari encounters Raaz, a wounded lynx who once killed her sister, she must choose between revenge and survival. That decision sends a ripple through future quests, character relationships, and even the environment itself.
+                The quest system explores themes like <em className="text-gold">"The enemy of my enemy is my friend"</em> and the <em className="text-gold">"Butterfly Effect"</em> ; small choices that compound into major consequences. When Kari encounters Raaz, a wounded lynx who once killed her sister, she must choose between revenge and survival. That decision sends a ripple through future quests, character relationships, and even the environment itself.
               </p>
               <p className="text-muted-foreground font-body leading-relaxed">
-                Unlike traditional quest design, consequences here are not binary good/bad outcomes. Helping an enemy may save lives but create new conflicts. Abandoning someone may haunt the player through hallucinations and environmental changes. Every choice asks: <em className="text-gold">What is the cost of survival?</em>
+                Unlike traditional quest design, consequences here are not binary good/bad outcomes. Helping an enemy may save lives but create new conflicts. Abandoning someone may haunt the player through hallucinations and environmental changes. Every choice asks: <em className="text-gold">"What is the cost of survival?"</em>
               </p>
             </div>
           </section>
@@ -157,7 +157,7 @@ const FoquesQuestSystem = () => {
                 </p>
                 
                 <p className="text-muted-foreground font-body leading-relaxed mb-6">
-                  Kari discovers Raaz trapped in an old hunter's snare, surrounded by infected creatures. Nearby lies Kenji, an unconscious human who once saved Raaz as a child. The player must decide who to help—if anyone—as The Stain closes in.
+                  Kari discovers Raaz trapped in an old hunter's snare, surrounded by infected creatures. Nearby lies Kenji, an unconscious human who once saved Raaz as a child. The player must decide who to help, if anyone, as The Stain closes in.
                 </p>
 
                 <div className="border-l-2 border-gold/30 pl-6 mb-6">
@@ -263,16 +263,6 @@ const FoquesQuestSystem = () => {
                         ))}
                       </div>
                     </div>
-
-                    {/* PDF Button */}
-                    <Button
-                      onClick={() => setPdfModalOpen("quest1")}
-                      variant="outline"
-                      className="w-full border-gold/30 text-gold hover:bg-gold/10"
-                    >
-                      <FileText className="w-4 h-4 mr-2" />
-                      Ver Narrativa Completa en PDF (incluye todas las rutas y outcomes)
-                    </Button>
                   </div>
                 )}
 
@@ -302,7 +292,7 @@ const FoquesQuestSystem = () => {
                 </p>
                 
                 <p className="text-muted-foreground font-body leading-relaxed mb-6">
-                  Crossing a gorge filled with hallucinogenic spores, Kari confronts the consequences of her choices. Tala, a raven, needs help protecting her nest. Arlen, a beaver, is trapped building a dam to clear the spores. And in the mist... familiar figures appear, corrupted or protective depending on past decisions.
+                  Crossing a gorge filled with hallucinogenic spores, Kari confronts the consequences of her choices. Tala, a raven, needs help protecting her nest. Arlen, a beaver, is trapped building a dam to clear the spores. And in the mist... familiar figures appear.
                 </p>
 
                 <div className="border-l-2 border-gold/30 pl-6 mb-6">
@@ -313,16 +303,8 @@ const FoquesQuestSystem = () => {
                 </div>
 
                 <div className="space-y-3">
-                  <h4 className="font-display text-lg font-semibold">Consequence-Based Encounters:</h4>
+                  <h4 className="font-display text-lg font-semibold">Branching Outcomes:</h4>
                   <ul className="space-y-2 text-sm text-muted-foreground font-body">
-                    <li className="flex gap-2">
-                      <span className="text-gold">→</span>
-                      <span><strong>If Raaz was saved:</strong> He appears as a guide through hallucinations</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <span className="text-gold">→</span>
-                      <span><strong>If Raaz was abandoned:</strong> Corrupted version hunts Kari through the gorge</span>
-                    </li>
                     <li className="flex gap-2">
                       <span className="text-gold">→</span>
                       <span><strong>Help both NPCs:</strong> Safe passage; water clears spores; future allies gained</span>
@@ -412,16 +394,6 @@ const FoquesQuestSystem = () => {
                         ))}
                       </div>
                     </div>
-
-                    {/* PDF Button */}
-                    <Button
-                      onClick={() => setPdfModalOpen("quest2")}
-                      variant="outline"
-                      className="w-full border-gold/30 text-gold hover:bg-gold/10"
-                    >
-                      <FileText className="w-4 h-4 mr-2" />
-                      Ver Narrativa Completa en PDF (incluye todas las rutas y outcomes)
-                    </Button>
                   </div>
                 )}
 
@@ -449,28 +421,28 @@ const FoquesQuestSystem = () => {
                 <div>
                   <h3 className="font-display text-xl font-semibold mb-3">Choices Over Combat</h3>
                   <p className="text-muted-foreground font-body leading-relaxed text-sm">
-                    FOQUES prioritizes stealth, puzzles, and moral decisions over direct combat. Violence has consequences—both mechanical and narrative. Players must think strategically about whom to trust and what to sacrifice.
+                    FOQUES prioritizes stealth, puzzles, and moral decisions over direct combat. Violence has consequences, both mechanical and narrative. Players must think strategically about whom to trust and what to sacrifice.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-display text-xl font-semibold mb-3">Characters Discovered Through Play</h3>
+                  <h3 className="font-display text-xl font-semibold mb-3">Characters Discovery</h3>
                   <p className="text-muted-foreground font-body leading-relaxed text-sm">
-                    Instead of exposition-heavy dialogue, character personalities emerge through behaviors, reactions, and consequences. Raaz's pride shows through his refusal to beg. Whisker's distrust reveals itself in subtle disapproval. Players learn who these characters are by seeing how they act under pressure.
+                    Instead of exposition and heavy dialogue, character personalities emerge through behaviors, reactions, and consequences. Raaz's pride shows through his refusal to beg. Whisker's distrust reveals itself in subtle disapproval. Players learn who these characters are by seeing how they act under pressure.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="font-display text-xl font-semibold mb-3">The Environment as Storyteller</h3>
                   <p className="text-muted-foreground font-body leading-relaxed text-sm">
-                    The Stain isn't just a threat—it's a narrative tool. Hallucinogenic spores force players to confront guilt and past choices. Infected water spreads corruption if left unchecked. The world reacts to player decisions, making the setting itself a living consequence system.
+                    The Stain isn't just a threat but a narrative tool. Hallucinogenic spores force players to confront guilt and past choices. Infected water spreads corruption if left unchecked. The world reacts to player decisions, making the setting itself a living consequence system.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="font-display text-xl font-semibold mb-3">No "Right" Answers</h3>
                   <p className="text-muted-foreground font-body leading-relaxed text-sm">
-                    Every choice carries weight. Helping everyone may spread resources too thin. Focusing on one character may doom another. The quest system doesn't judge—it reflects. Players must live with their decisions and see them echo through future encounters.
+                    Every choice carries weight. Helping everyone may spread resources too thin. Focusing on one character may doom another. The quest system doesn't judge, it reflects. Players must live with their decisions and see them echo through future encounters.
                   </p>
                 </div>
               </div>
@@ -553,7 +525,7 @@ const FoquesQuestSystem = () => {
                 <ul className="text-sm text-muted-foreground space-y-1 font-body">
                   <li>• 12 side quests designed</li>
                   <li>• 2 fully scripted narratives</li>
-                  <li>• 6 major character profiles</li>
+                  <li>• Major character profiles</li>
                   <li>• 38 pages of documentation</li>
                 </ul>
               </div>
