@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { 
   X, 
   ZoomIn, 
@@ -32,11 +32,30 @@ const FlowchartViewer = ({ isOpen, onClose, pdfFile, title, downloadName }: Flow
   const [numPages, setNumPages] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState(1);
   const transformRef = useRef<ReactZoomPanPinchRef>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Listen for fullscreen changes (e.g., user presses Escape)
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
 
   const onDocumentLoadSuccess = useCallback(({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
     setLoading(false);
     setError(null);
+    
+    // Center to top-middle after a brief delay to ensure content is rendered
+    setTimeout(() => {
+      if (transformRef.current) {
+        // Reset and then pan to show top of document
+        transformRef.current.resetTransform();
+      }
+    }, 100);
   }, []);
 
   const onDocumentLoadError = useCallback((err: Error) => {
@@ -56,23 +75,32 @@ const FlowchartViewer = ({ isOpen, onClose, pdfFile, title, downloadName }: Flow
     document.body.removeChild(link);
   };
 
-  const toggleFullscreen = () => {
-    setIsFullscreen(!isFullscreen);
+  const toggleFullscreen = async () => {
+    if (!containerRef.current) return;
+    
+    try {
+      if (!document.fullscreenElement) {
+        await containerRef.current.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    } catch (err) {
+      console.error("Fullscreen error:", err);
+    }
   };
 
-  const containerClasses = isFullscreen
-    ? "fixed inset-0 z-50 bg-background"
-    : "fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4";
-
-  const viewerClasses = isFullscreen
-    ? "w-full h-full flex flex-col"
-    : "relative w-full h-full max-w-6xl max-h-[90vh] flex flex-col bg-background rounded-lg overflow-hidden";
+  const viewerClasses = "w-full h-full flex flex-col bg-background";
 
   return (
-    <div className={containerClasses} onClick={!isFullscreen ? onClose : undefined}>
+    <div 
+      ref={containerRef}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+      onClick={onClose}
+    >
       <div 
-        className={viewerClasses}
+        className={viewerClasses + " relative max-w-6xl max-h-[90vh] rounded-lg overflow-hidden " + (isFullscreen ? "max-w-none max-h-none rounded-none" : "")}
         onClick={(e) => e.stopPropagation()}
+        style={isFullscreen ? { width: '100vw', height: '100vh' } : { width: '95vw', height: '90vh' }}
       >
         {/* Header */}
         <div className="flex items-center justify-between p-3 bg-muted/50 border-b border-border shrink-0">
