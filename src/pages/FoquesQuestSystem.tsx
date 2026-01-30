@@ -7,8 +7,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PDFModal from "@/components/PDFModal";
 import FlowchartViewer from "@/components/FlowchartViewer";
+import CharacterCard from "@/components/foques/CharacterCard";
+import QuestConceptCard from "@/components/foques/QuestConceptCard";
+import PageNavigation from "@/components/foques/PageNavigation";
 import { quest1Narrative, quest2Narrative } from "@/data/questNarratives";
-import { quest1Characters, quest2Characters, QuestCharacter } from "@/data/questCharacters";
+import { quest1Characters, quest2Characters } from "@/data/questCharacters";
 
 const FoquesQuestSystem = () => {
   const [expandedQuest, setExpandedQuest] = useState<string | null>(null);
@@ -63,7 +66,7 @@ const FoquesQuestSystem = () => {
           </header>
 
           {/* Project Overview */}
-          <section className="mb-16">
+          <section id="overview" className="mb-16 scroll-mt-24">
             <h2 className="font-display text-3xl font-semibold mb-6">Project Overview</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="card-elevated border-gradient-gold rounded-lg p-6">
@@ -125,7 +128,7 @@ const FoquesQuestSystem = () => {
           </section>
 
           {/* Core Narrative */}
-          <section className="mb-16">
+          <section id="narrative" className="mb-16 scroll-mt-24">
             <h2 className="font-display text-3xl font-semibold mb-6">Core Narrative</h2>
             <div className="card-elevated border-gradient-gold rounded-lg p-8">
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
@@ -141,7 +144,7 @@ const FoquesQuestSystem = () => {
           </section>
 
           {/* Featured Quests */}
-          <section className="mb-16">
+          <section id="quests" className="mb-16 scroll-mt-24">
             <h2 className="font-display text-3xl font-semibold mb-6">Featured Quest Design</h2>
             
             <div className="space-y-12">
@@ -221,45 +224,7 @@ const FoquesQuestSystem = () => {
                       </h4>
                       <div className="grid gap-6 md:grid-cols-2">
                         {quest1Characters.map((character) => (
-                          <div key={character.name} className="bg-muted/20 border border-border/50 rounded-lg p-6 space-y-4">
-                            {/* Character Image */}
-                            <div className="aspect-square w-full bg-muted/30 rounded-md overflow-hidden border border-border/30">
-                              <img
-                                src={character.imageUrl}
-                                alt={character.name}
-                                className="w-full h-full object-cover object-top"
-                                onError={(e) => {
-                                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzFhMWExYSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5JbWFnZSBQbGFjZWhvbGRlcjwvdGV4dD48L3N2Zz4=';
-                                }}
-                              />
-                            </div>
-                            
-                            {/* Character Info */}
-                            <div>
-                              <div className="flex items-start justify-between mb-2">
-                                <h5 className="font-display text-lg font-bold text-gold">{character.name}</h5>
-                                <Badge variant="outline" className="border-gold/30 text-gold text-xs">
-                                  {character.species.split('(')[0].trim()}
-                                </Badge>
-                              </div>
-                              <p className="text-sm text-muted-foreground italic mb-3">{character.role}</p>
-                              
-                              <div className="space-y-2 text-sm">
-                                <div>
-                                  <span className="font-semibold text-foreground">Appearance:</span>
-                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.appearance}</p>
-                                </div>
-                                <div>
-                                  <span className="font-semibold text-foreground">Personality:</span>
-                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.personality}</p>
-                                </div>
-                                <div>
-                                  <span className="font-semibold text-foreground">Narrative Role:</span>
-                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.narrativeRole}</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          <CharacterCard key={character.name} character={character} />
                         ))}
                       </div>
                     </div>
@@ -352,45 +317,7 @@ const FoquesQuestSystem = () => {
                       </h4>
                       <div className="grid gap-6 md:grid-cols-2">
                         {quest2Characters.map((character) => (
-                          <div key={character.name} className="bg-muted/20 border border-border/50 rounded-lg p-6 space-y-4">
-                            {/* Character Image */}
-                            <div className="aspect-square w-full bg-muted/30 rounded-md overflow-hidden border border-border/30">
-                              <img
-                                src={character.imageUrl}
-                                alt={character.name}
-                                className="w-full h-full object-cover object-top"
-                                onError={(e) => {
-                                  e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzFhMWExYSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5JbWFnZSBQbGFjZWhvbGRlcjwvdGV4dD48L3N2Zz4=';
-                                }}
-                              />
-                            </div>
-                            
-                            {/* Character Info */}
-                            <div>
-                              <div className="flex items-start justify-between mb-2">
-                                <h5 className="font-display text-lg font-bold text-gold">{character.name}</h5>
-                                <Badge variant="outline" className="border-gold/30 text-gold text-xs">
-                                  {character.species.split('(')[0].trim()}
-                                </Badge>
-                              </div>
-                              <p className="text-sm text-muted-foreground italic mb-3">{character.role}</p>
-                              
-                              <div className="space-y-2 text-sm">
-                                <div>
-                                  <span className="font-semibold text-foreground">Appearance:</span>
-                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.appearance}</p>
-                                </div>
-                                <div>
-                                  <span className="font-semibold text-foreground">Personality:</span>
-                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.personality}</p>
-                                </div>
-                                <div>
-                                  <span className="font-semibold text-foreground">Narrative Role:</span>
-                                  <p className="text-muted-foreground mt-1 leading-relaxed">{character.narrativeRole}</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          <CharacterCard key={character.name} character={character} />
                         ))}
                       </div>
                     </div>
@@ -414,7 +341,7 @@ const FoquesQuestSystem = () => {
           </section>
 
           {/* Design Philosophy */}
-          <section className="mb-16">
+          <section id="philosophy" className="mb-16 scroll-mt-24">
             <h2 className="font-display text-3xl font-semibold mb-6">Design Philosophy</h2>
             <div className="card-elevated border-gradient-gold rounded-lg p-8">
               <div className="space-y-6">
@@ -450,7 +377,7 @@ const FoquesQuestSystem = () => {
           </section>
 
           {/* Additional Quest Concepts */}
-          <section className="mb-16">
+          <section id="concepts" className="mb-16 scroll-mt-24">
             <h2 className="font-display text-3xl font-semibold mb-6">Additional Quest Concepts</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
@@ -487,7 +414,7 @@ const FoquesQuestSystem = () => {
                 { 
                   title: "The Broken Wing", 
                   theme: "Prejudice vs. compassion",
-                  synthesis: "An injured magpie begs for help, but Whisker strongly opposes, calling magpies deceitful scavengers. Kari must challenge her companion's bias or leave the creature to die."
+                  synopsis: "An injured magpie begs for help, but Whisker strongly opposes, calling magpies deceitful scavengers. Kari must challenge her companion's bias or leave the creature to die."
                 },
                 { 
                   title: "The Stain's Bloom", 
@@ -505,19 +432,18 @@ const FoquesQuestSystem = () => {
                   synopsis: "During a violent storm, wolves fight to protect their cubs from infected creatures. Kari must choose: intervene and help them, creating future allies, or escape and leave them to their fate."
                 },
               ].map((quest) => (
-                <div key={quest.title} className="card-elevated border-gradient-gold rounded-lg p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="font-display text-lg font-semibold mb-2">{quest.title}</h3>
-                  <p className="text-xs text-gold italic font-body mb-3">"{quest.theme}"</p>
-                  <p className="text-sm text-muted-foreground font-body leading-relaxed">
-                    {quest.synopsis || quest.synthesis}
-                  </p>
-                </div>
+                <QuestConceptCard 
+                  key={quest.title} 
+                  title={quest.title} 
+                  theme={quest.theme} 
+                  synopsis={quest.synopsis} 
+                />
               ))}
             </div>
           </section>
 
           {/* Technical Details */}
-          <section className="mb-16">
+          <section id="technical" className="mb-16 scroll-mt-24">
             <h2 className="font-display text-3xl font-semibold mb-6">Technical Details</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="card-elevated border-gradient-gold rounded-lg p-6">
@@ -552,7 +478,7 @@ const FoquesQuestSystem = () => {
           </section>
 
           {/* Reflection */}
-          <section className="mb-16">
+          <section id="reflection" className="mb-16 scroll-mt-24">
             <h2 className="font-display text-3xl font-semibold mb-6">Reflection</h2>
             <div className="card-elevated border-gradient-gold rounded-lg p-8">
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
@@ -569,7 +495,7 @@ const FoquesQuestSystem = () => {
         </div>
       </main>
 
-      {/* PDF Modals */}
+      <PageNavigation />
       <PDFModal
         isOpen={pdfModalOpen === "quest1"}
         onClose={() => setPdfModalOpen(null)}
