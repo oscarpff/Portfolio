@@ -87,6 +87,27 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--gold) / 0.9) hsl(var(--ink-light) / 0.9);
+  }
+
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: hsl(var(--ink-light) / 0.9);
+    border-radius: 999px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(var(--gold-glow) / 0.95), hsl(var(--gold) / 0.9));
+    border-radius: 999px;
+    border: 2px solid hsl(var(--ink-light) / 0.9);
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, hsl(var(--gold-glow) / 0.9), hsl(var(--gold) / 0.8));
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -153,6 +174,30 @@
 
   .animate-bounce-slow {
     animation: bounceSlow 10s ease-in-out infinite;
+  }
+
+  .scrollbar-gold {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--gold) / 0.6) hsl(var(--card) / 0.6);
+  }
+
+  .scrollbar-gold::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .scrollbar-gold::-webkit-scrollbar-track {
+    background: hsl(var(--card) / 0.6);
+    border-radius: 999px;
+  }
+
+  .scrollbar-gold::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(var(--gold) / 0.8), hsl(var(--gold-dim) / 0.7));
+    border-radius: 999px;
+    border: 2px solid hsl(var(--card) / 0.6);
+  }
+
+  .scrollbar-gold::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, hsl(var(--gold-glow) / 0.9), hsl(var(--gold) / 0.8));
   }
 }
 

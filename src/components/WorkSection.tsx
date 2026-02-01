@@ -1,7 +1,7 @@
 import { useState } from "react";
 import WorkCard from "./WorkCard";
 
-const categories = ["All", "Quest Design", "Lore", "Worldbuilding", "Characters"];
+const categories = ["All", "Quest Design", "Worldbuilding", "Characters"];
 
 const works = [
   {
@@ -14,7 +14,7 @@ const works = [
     logoAlt: "TTV Media Studio",
   },
   {
-    title: "Travnik - Post-Nuclear Worldbuilding",
+    title: "Travnik - Worldbuilding",
     category: "Worldbuilding",
     description: "Complete worldbuilding documentation for a post-apocalyptic PvP/PvE shooter. Features three conflicting factions, radioactive mutation systems, and a rich lore spanning from nuclear war to space colonization.",
     excerpt: "The snow crunches under Kari's paws. Before her lies a wounded lynx—her natural predator—trapped and desperate. The enemy of my enemy is my friend. But can she trust him? Every choice ripples through time, shaping allies, enemies, and the very landscape itself...",

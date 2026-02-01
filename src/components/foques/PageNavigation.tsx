@@ -65,17 +65,17 @@ const PageNavigation = () => {
 
       {/* Navigation Panel */}
       <div
-        className={`fixed bottom-20 right-6 z-40 bg-card border border-border rounded-lg shadow-xl transition-all duration-300 ${
+        className={`fixed bottom-20 right-6 z-40 bg-card border border-border rounded-lg shadow-xl transition-all duration-300 w-fit ${
           isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
         }`}
       >
-        <div className="p-2">
-          <nav className="space-y-1">
+        <div className="p-1">
+          <nav className="flex flex-col gap-0.5">
             {sections.map((section) => (
               <button
                 key={section.id}
                 onClick={() => scrollToSection(section.id)}
-                className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors font-body ${
+                className={`text-left px-2.5 py-1 text-xs rounded-md transition-colors font-body whitespace-nowrap ${
                   activeSection === section.id
                     ? "bg-gold/10 text-gold font-medium"
                     : "text-muted-foreground hover:bg-muted hover:text-foreground"

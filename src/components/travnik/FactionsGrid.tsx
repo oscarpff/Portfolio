@@ -20,7 +20,7 @@ function ExpandableText({ text, maxChars = 200 }: { text: string; maxChars?: num
           onClick={() => setExpanded(!expanded)}
           className="text-xs text-gold/70 hover:text-gold transition-colors"
         >
-          {expanded ? "Read less" : "Read more"}
+          {expanded ? "Show less" : "Show more"}
         </button>
       )}
     </div>

@@ -1,6 +1,6 @@
 import { ArrowLeft, Download, FileText, Users, GitBranch, MapPin, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
@@ -9,13 +9,27 @@ import PDFModal from "@/components/PDFModal";
 import FlowchartViewer from "@/components/FlowchartViewer";
 import CharacterCard from "@/components/foques/CharacterCard";
 import QuestConceptCard from "@/components/foques/QuestConceptCard";
-import PageNavigation from "@/components/foques/PageNavigation";
+import ProjectNavigation from "@/components/ProjectNavigation";
 import { quest1Narrative, quest2Narrative } from "@/data/questNarratives";
 import { quest1Characters, quest2Characters } from "@/data/questCharacters";
+
+const foquesNavSections = [
+  { id: "overview", label: "Overview" },
+  { id: "narrative", label: "Core Narrative" },
+  { id: "quests", label: "Featured Quests" },
+  { id: "concepts", label: "Quest Concepts" },
+  { id: "philosophy", label: "Philosophy" },
+  { id: "technical", label: "Technical" },
+  { id: "reflection", label: "Reflection" },
+];
 
 const FoquesQuestSystem = () => {
   const [expandedQuest, setExpandedQuest] = useState<string | null>(null);
   const [pdfModalOpen, setPdfModalOpen] = useState<string | null>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const renderNarrative = (text: string) => {
     const blocks = text.split(/\n\s*\n/);
@@ -526,7 +540,7 @@ const FoquesQuestSystem = () => {
         </div>
       </main>
 
-      <PageNavigation />
+      <ProjectNavigation sections={foquesNavSections} />
       <PDFModal
         isOpen={pdfModalOpen === "quest1"}
         onClose={() => setPdfModalOpen(null)}

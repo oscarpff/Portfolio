@@ -1,14 +1,15 @@
-import { ArrowLeft, BookOpen } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
-import Timeline from "@/components/travnik/Timeline";
-import FactionsGrid from "@/components/travnik/FactionsGrid";
-import CharacterCarousel from "@/components/travnik/CharacterCarousel";
+import { TimelineExpanded } from "@/components/travnik/TimelineExpanded";
+import FactionFeed from "@/components/travnik/FactionFeed";
 import EnemiesGrid from "@/components/travnik/EnemiesGrid";
 import MaterialsGrid from "@/components/travnik/MaterialsGrid";
 import EventsGrid from "@/components/travnik/EventsGrid";
+import LoreTabs from "@/components/travnik/LoreTabs";
+import ProjectNavigation from "@/components/ProjectNavigation";
 import {
   timelineEvents,
   factions,
@@ -17,17 +18,46 @@ import {
   materials,
   glossary,
   events,
+  loreSections,
 } from "@/data/travnikLore";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
+
+const travnikNavSections = [
+  { id: "overview", label: "Overview" },
+  { id: "timeline", label: "Timeline" },
+  { id: "lore", label: "World History" },
+  { id: "factions", label: "Factions" },
+  { id: "systems", label: "Resources" },
+  { id: "enemies", label: "Enemies" },
+  { id: "events", label: "Events" },
+  { id: "glossary", label: "Glossary" },
+];
 
 const TravnikWorldBuilding = () => {
   const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const filteredGlossary = glossary.filter(
     (term) =>
       term.term.toLowerCase().includes(searchTerm.toLowerCase()) ||
       term.definition.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  // Filter lore sections to exclude factions and resources (they have their own dedicated sections)
+  const coreLoreSections = loreSections.filter(
+    (lore) => lore.category === "war" || lore.category === "world"
+  );
+
+  const factionLoreSections = loreSections.filter(
+    (lore) => lore.category === "factions"
+  );
+
+  const resourceLoreSections = loreSections.filter(
+    (lore) => lore.category === "resources"
   );
 
   return (
@@ -36,6 +66,7 @@ const TravnikWorldBuilding = () => {
 
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6 max-w-5xl">
+          {/* Back Button */}
           {/* Back Button */}
           <Link to="/narrative" className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors mb-8">
             <ArrowLeft className="w-4 h-4" />
@@ -47,9 +78,6 @@ const TravnikWorldBuilding = () => {
             <div className="flex flex-wrap gap-2 mb-4">
               <Badge variant="outline" className="border-gold/30 text-gold">
                 Worldbuilding
-              </Badge>
-              <Badge variant="outline" className="border-gold/30 text-gold">
-                Post-Apocalyptic
               </Badge>
               <Badge variant="outline" className="border-gold/30 text-gold">
                 Game Design
@@ -71,37 +99,44 @@ const TravnikWorldBuilding = () => {
             </p>
           </header>
 
-          {/* Timeline Section */}
-          <section id="timeline" className="mb-16 scroll-mt-24">
+        </div>
+
+        {/* Timeline Section - Full Width */}
+        <section id="timeline" className="mb-16 scroll-mt-24 w-full">
+          <div className="container mx-auto px-6 max-w-5xl mb-8">
             <h2 className="font-display text-3xl font-semibold mb-6">
               Timeline: Pre-Game History
             </h2>
+          </div>
+          <TimelineExpanded events={timelineEvents} />
+        </section>
+
+        <div className="container mx-auto px-6 max-w-5xl">
+
+          {/* Detailed Lore Section */}
+          <section id="lore" className="mb-16 scroll-mt-24">
+            <h2 className="font-display text-3xl font-semibold mb-6">
+              World History & Context
+            </h2>
             <p className="text-muted-foreground mb-8">
-              From Nuclear War to Wild Awakening
+              Explore the events that shaped Travnik's world. From the devastating Inter-World War to the emergence of super-intelligent animals.
             </p>
-            <Timeline events={timelineEvents} />
+            <LoreTabs loreSections={coreLoreSections} />
           </section>
 
           {/* Factions Section */}
           <section id="factions" className="mb-16 scroll-mt-24">
             <h2 className="font-display text-3xl font-semibold mb-6">
-              Three Factions
+              Factions & Characters
             </h2>
             <p className="text-muted-foreground mb-8">
-              Factions fighting for survival and resources in Travnik. Expand each faction to see its characters.
+              The three factions represent distinct philosophies and approaches. Click the book icon for detailed faction lore, or "Details" to explore members and organization.
             </p>
-            <FactionsGrid factions={factions} characters={characters} />
-          </section>
-
-          {/* Characters Section */}
-          <section id="characters" className="mb-16 scroll-mt-24">
-            <h2 className="font-display text-3xl font-semibold mb-6">
-              Character Gallery
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Explore the protagonists in detail. Slide or click to view complete information.
-            </p>
-            <CharacterCarousel characters={characters} />
+            <FactionFeed 
+              factions={factions} 
+              characters={characters}
+              loreSections={factionLoreSections}
+            />
           </section>
 
           {/* Systems & Materials Section */}
@@ -110,9 +145,12 @@ const TravnikWorldBuilding = () => {
               Systems & Resources
             </h2>
             <p className="text-muted-foreground mb-8">
-              The pillars that sustain the world's economy and technology
+              The pillars that sustain the world's economy and technology. Click "Read Detailed Lore" for comprehensive information about each resource.
             </p>
-            <MaterialsGrid materials={materials} />
+            <MaterialsGrid 
+              materials={materials}
+              loreSections={resourceLoreSections}
+            />
           </section>
 
           {/* Enemies Section */}
@@ -192,6 +230,7 @@ const TravnikWorldBuilding = () => {
         </div>
       </main>
 
+      <ProjectNavigation sections={travnikNavSections} />
       <Footer />
     </div>
   );

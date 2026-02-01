@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const navItems = [
@@ -43,6 +43,21 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleLogoClick = () => {
+    // If we're in a project page (FOQUES, TRAVNIK, or Cybersecurity writeups), go to that section's home
+    if (location.pathname.includes("foques") || location.pathname.includes("travnik")) {
+      navigate("/narrative");
+    } else if (location.pathname.includes("cybersecurity")) {
+      navigate("/cybersecurity");
+    } else if (location.pathname === "/narrative") {
+      // If we're in narrative portfolio, go to split landing
+      navigate("/");
+    } else {
+      // Otherwise go to split landing
+      navigate("/");
+    }
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -50,9 +65,22 @@ const Navigation = () => {
       }`}
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="font-display text-2xl font-semibold text-gradient-gold">
-          Oscarpf
-        </Link>
+        <div className="flex items-center gap-4">
+          {/* Home Button - Shown on main portfolio pages */}
+          {(location.pathname === "/narrative" || location.pathname === "/cybersecurity") && (
+            <Link to="/" className={`transition-colors ${
+              location.pathname === "/cybersecurity" 
+                ? "text-cyan-400 hover:text-cyan-300" 
+                : "text-gold hover:text-gold/80"
+            }`}>
+              <Home className="w-5 h-5" />
+            </Link>
+          )}
+          
+          <button onClick={handleLogoClick} className="font-display text-2xl font-semibold text-gradient-gold hover:opacity-80 transition-opacity">
+            Oscarpf
+          </button>
+        </div>
 
         {/* Desktop navigation */}
         <ul className="hidden md:flex items-center gap-8">
@@ -61,7 +89,13 @@ const Navigation = () => {
               <a 
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="font-body text-sm text-muted-foreground hover:text-gold transition-colors duration-300 cursor-pointer inline-block"
+                className={`font-body text-sm transition-colors duration-300 cursor-pointer inline-block ${
+                  location.pathname === "/narrative"
+                    ? "text-gold hover:text-gold/80"
+                    : location.pathname === "/cybersecurity"
+                    ? "text-cyan-400 hover:text-cyan-300"
+                    : "text-muted-foreground hover:text-gold"
+                }`}
               >
                 {item.label}
               </a>
@@ -88,7 +122,13 @@ const Navigation = () => {
               <a 
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="block font-body text-lg text-muted-foreground hover:text-gold transition-colors duration-300 cursor-pointer py-2"
+                className={`block font-body text-lg transition-colors duration-300 cursor-pointer py-2 ${
+                  location.pathname === "/narrative"
+                    ? "text-gold hover:text-gold/80"
+                    : location.pathname === "/cybersecurity"
+                    ? "text-cyan-400 hover:text-cyan-300"
+                    : "text-muted-foreground hover:text-gold"
+                }`}
               >
                 {item.label}
               </a>
