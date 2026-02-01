@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PDFModal from "@/components/PDFModal";
 import FlowchartViewer from "@/components/FlowchartViewer";
@@ -78,7 +77,6 @@ const FoquesQuestSystem = () => {
   };
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6 max-w-5xl">
@@ -107,11 +105,11 @@ const FoquesQuestSystem = () => {
               <img 
                 src="/TVM_Logo_Text.PNG" 
                 alt="TTV Media Studio" 
-                className="h-20 opacity-80"
+                className="h-24 opacity-80"
               />
             </div>
             
-            <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl">
+            <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-5xl">
               A comprehensive quest design system for the game "FOQUES" during <span className="text-gradient-gold">The Vampire´s Manor Work Experience Programme</span>, featuring interconnected narratives, moral choices with lasting consequences, and psychological horror elements set in the forests of Northern Canada.
             </p>
 

@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X, Home } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useScrolled } from "@/hooks/use-scrolled";
 
 const navItems = [
   { label: "Writeups", href: "#writeups" },
@@ -11,18 +12,10 @@ const navItems = [
 ];
 
 const CyberNavigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const isScrolled = useScrolled();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const handleLogoClick = () => {
     if (location.pathname === "/cybersecurity") {
@@ -40,12 +33,12 @@ const CyberNavigation = () => {
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <Link to="/" className="text-cyan-400 hover:text-cyan-300 transition-colors hidden sm:block">
+          <Link to="/" className="text-cyber hover:text-cyber-glow transition-colors hidden sm:block">
             <Home className="w-5 h-5" />
           </Link>
           <button 
             onClick={handleLogoClick}
-            className="font-display text-2xl font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+            className="font-display text-2xl font-semibold text-cyber hover:text-cyber-glow transition-colors"
           >
             Oscarpf
           </button>
@@ -57,7 +50,7 @@ const CyberNavigation = () => {
             <li key={item.label}>
               <a 
                 href={item.href}
-                className="font-body text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                className="font-body text-sm text-cyber hover:text-cyber-glow transition-colors duration-300"
               >
                 {item.label}
               </a>
@@ -83,7 +76,7 @@ const CyberNavigation = () => {
             <li key={item.label}>
               <a 
                 href={item.href}
-                className="block font-body text-lg text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                className="block font-body text-lg text-cyber hover:text-cyber-glow transition-colors duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}

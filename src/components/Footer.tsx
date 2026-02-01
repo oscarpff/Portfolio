@@ -1,7 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Feather } from "lucide-react";
 
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleBackClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Si estamos en un proyecto de narrative, ir a /narrative
+    if (location.pathname.startsWith("/travnik") || location.pathname.startsWith("/foques")) {
+      navigate("/narrative");
+    }
+    // Si estamos en /narrative, ir a split
+    else if (location.pathname === "/narrative") {
+      navigate("/");
+    }
+    // En cualquier otro caso, ir a split
+    else {
+      navigate("/");
+    }
+  };
+
   return (
     <footer className="py-12 border-t border-border">
       <div className="container mx-auto px-6">
@@ -17,12 +37,12 @@ const Footer = () => {
             © {new Date().getFullYear()} Óscar Pérez Fernández. All rights reserved.
           </p>
           
-          <Link 
-            to="/" 
+          <button
+            onClick={handleBackClick}
             className="text-sm text-muted-foreground hover:text-gold transition-colors font-body"
           >
             ← Back to Home
-          </Link>
+          </button>
         </div>
       </div>
     </footer>

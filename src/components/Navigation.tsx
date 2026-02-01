@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X, Home } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useScrolled } from "@/hooks/use-scrolled";
 
 const navItems = [
   { label: "Work", href: "#work" },
@@ -10,18 +11,10 @@ const navItems = [
 ];
 
 const Navigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const isScrolled = useScrolled();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();

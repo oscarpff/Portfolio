@@ -1,6 +1,5 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { TimelineExpanded } from "@/components/travnik/TimelineExpanded";
@@ -62,7 +61,6 @@ const TravnikWorldBuilding = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
 
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6 max-w-5xl">

@@ -1,7 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Shield } from "lucide-react";
 
 const CyberFooter = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleBackClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Si estamos en /cybersecurity, ir a split
+    if (location.pathname === "/cybersecurity") {
+      navigate("/");
+    }
+    // Si estamos en un proyecto de cybersecurity, ir a /cybersecurity
+    else {
+      navigate("/cybersecurity");
+    }
+  };
+
   return (
     <footer className="py-12 border-t border-cyber/20">
       <div className="container mx-auto px-6">
@@ -17,12 +33,12 @@ const CyberFooter = () => {
             © {new Date().getFullYear()} Óscar Pérez Fernández. All rights reserved.
           </p>
           
-          <Link 
-            to="/" 
+          <button
+            onClick={handleBackClick}
             className="text-sm text-muted-foreground hover:text-cyber transition-colors font-mono"
           >
             ← Back to Home
-          </Link>
+          </button>
         </div>
       </div>
     </footer>
