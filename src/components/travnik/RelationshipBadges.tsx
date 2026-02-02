@@ -1,5 +1,12 @@
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { useExplorer, ExplorerItem } from "./TravnikExplorer";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const relationshipTypes = {
   usesMaterial: { label: "Uses", color: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30" },
@@ -13,6 +20,7 @@ const relationshipTypes = {
 interface Relationship {
   type: keyof typeof relationshipTypes;
   target: ExplorerItem;
+  description?: string;
 }
 
 interface RelationshipBadgesProps {
@@ -22,7 +30,8 @@ interface RelationshipBadgesProps {
 }
 
 export default function RelationshipBadges({ itemId, itemType, compact = false }: RelationshipBadgesProps) {
-  const { findCharacter, findFaction, openDetail } = useExplorer();
+  const { findCharacter, findFaction, findMaterial } = useExplorer();
+  const [hoveredBadge, setHoveredBadge] = useState<string | null>(null);
 
   // Determine relationships based on item type
   const getRelationships = (): Relationship[] => {
@@ -40,19 +49,25 @@ export default function RelationshipBadges({ itemId, itemType, compact = false }
           if (faction) {
             relationships.push({
               type: "memberOf",
-              target: { id: factionId, type: "faction", name: faction.shortName, icon: faction.icon }
+              target: { id: factionId, type: "faction", name: faction.shortName, icon: faction.icon },
+              description: faction.tagline
             });
           }
         }
 
         // Add material usage (all characters use materials in this world)
+        const material444 = findMaterial("elemento-444");
+        const materialCompound = findMaterial("compuesto-t");
+        
         relationships.push({
           type: "usesMaterial",
-          target: { id: "elemento-444", type: "material", name: "Element 444", icon: "🧬" }
+          target: { id: "elemento-444", type: "material", name: "Element 444", icon: "🧬" },
+          description: "Biomolecule for genetic enhancement"
         });
         relationships.push({
           type: "usesMaterial",
-          target: { id: "compuesto-t", type: "material", name: "Compound-T", icon: "⚗️" }
+          target: { id: "compuesto-t", type: "material", name: "Compound-T", icon: "⚗️" },
+          description: "Enhanced radioactive mineral"
         });
       }
     }
@@ -64,13 +79,15 @@ export default function RelationshipBadges({ itemId, itemType, compact = false }
         if (itemId === "esas") {
           relationships.push({
             type: "enemyOf",
-            target: { id: "proslitos", type: "faction", name: "Proselytes", icon: "⛪" }
+            target: { id: "proslitos", type: "faction", name: "Proselytes", icon: "⛪" },
+            description: "Religious faction with underground base"
           });
         }
         if (itemId === "ingenieros") {
           relationships.push({
             type: "allyOf",
-            target: { id: "esas", type: "faction", name: "ESAS", icon: "🚀" }
+            target: { id: "esas", type: "faction", name: "ESAS", icon: "🚀" },
+            description: "Military space faction"
           });
         }
       }
@@ -84,24 +101,30 @@ export default function RelationshipBadges({ itemId, itemType, compact = false }
   if (relationships.length === 0) return null;
 
   return (
-    <div className={`flex flex-wrap gap-1.5 ${compact ? '' : 'mt-2'}`}>
-      {relationships.map((rel, index) => (
-        <Badge
-          key={`${rel.type}-${rel.target.id}-${index}`}
-          variant="outline"
-          className={`
-            ${relationshipTypes[rel.type].color}
-            cursor-pointer text-[10px] px-2 py-0.5 transition-all hover:scale-105
-          `}
-          onClick={(e) => {
-            e.stopPropagation();
-            openDetail(rel.target);
-          }}
-        >
-          {rel.target.icon && <span className="mr-1">{rel.target.icon}</span>}
-          {relationshipTypes[rel.type].label}: {rel.target.name}
-        </Badge>
-      ))}
-    </div>
+    <TooltipProvider>
+      <div className={`flex flex-wrap gap-2 ${compact ? '' : 'mt-4 pt-4 border-t border-gold/10'}`}>
+        {relationships.map((rel, index) => (
+          <Tooltip key={`${rel.type}-${rel.target.id}-${index}`}>
+            <TooltipTrigger asChild>
+              <Badge
+                variant="outline"
+                className={`
+                  ${relationshipTypes[rel.type].color}
+                  cursor-help text-xs px-3 py-1.5 transition-all 
+                  hover:scale-110 hover:shadow-lg
+                `}
+              >
+                {rel.target.icon && <span className="mr-1.5">{rel.target.icon}</span>}
+                <span className="font-semibold">{relationshipTypes[rel.type].label}:</span>
+                <span className="ml-1">{rel.target.name}</span>
+              </Badge>
+            </TooltipTrigger>
+            <TooltipContent className="max-w-xs">
+              <p className="text-sm">{rel.description || rel.target.name}</p>
+            </TooltipContent>
+          </Tooltip>
+        ))}
+      </div>
+    </TooltipProvider>
   );
 }

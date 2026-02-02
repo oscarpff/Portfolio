@@ -32,11 +32,11 @@ export default function ExplorerBreadcrumbs({ onNavigate }: ExplorerBreadcrumbsP
   };
 
   return (
-    <div className="fixed bottom-20 left-1/2 -translate-x-1/2 z-40 max-w-[90vw]">
-      <div className="flex items-center gap-1 px-3 py-2 rounded-full bg-black/90 backdrop-blur-sm border border-gold/20 shadow-xl">
+    <div className="fixed bottom-28 left-1/2 -translate-x-1/2 z-40 max-w-[90vw] pointer-events-auto">
+      <div className="flex items-center gap-1 px-4 py-3 rounded-full bg-gradient-to-r from-black/95 via-gold/10 to-black/95 backdrop-blur-xl border border-gold/30 shadow-2xl hover:border-gold/50 transition-colors">
         {/* Home icon */}
-        <div className="flex items-center gap-1 text-muted-foreground text-xs">
-          <Home className="w-3 h-3" />
+        <div className="flex items-center gap-2 text-gold text-xs font-semibold">
+          <Home className="w-4 h-4" />
           <span className="hidden sm:inline">Explored:</span>
         </div>
         

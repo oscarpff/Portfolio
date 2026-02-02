@@ -351,6 +351,32 @@ export const characters: Character[] = [
     background:
       "From an early age, Oct-Vi-O always stood out for his ability to hide around the house, camouflaging himself with the surroundings and scaring his siblings to laugh at them. When his parents worked in the field, he roamed the perimeter of the base, asking guards posted at the entrances what the outside world was like. The guards usually ignored him, but that made Oct-Vi-O's curiosity grow increasingly. During a period of resource scarcity, the Supreme Priest decided to sacrifice a family to save resources, convincing the faithful by saying they were chosen for premature Ascension. Oct-Vi-O's family was selected. His parents and siblings went to the Temple, eager to receive the Ascension, but Oct-Vi-O wanted to know the outside world, so when the guards were about to light the pyre, he shot the Supreme Priest in cold blood with a sniper rifle he had stolen from the armory. As everyone present stood in shock, Oct-Vi-O walked slowly toward the Supreme Priest's corpse, took his scepter, and sat on the throne, while his family and temple members knelt in respect.",
   },
+  {
+    id: "lysander",
+    name: "Lysander",
+    faction: "PROSÉLITOS",
+    role: "Priest / Botanist",
+    species: "Mantis",
+    scientificName: "Mantis religiosa",
+    gender: "Female",
+    description:
+      "High priestess of agriculture. Devoted to sacred cultivation of resources. Mystical connection to Compound-T. Keeper of temple gardens.",
+    personality:
+      "Serene, devoted, philosophical. Speaks in measured tones about ascension and sacrifice. Deeply spiritual but pragmatic about survival.",
+    objectives:
+      "Cultivate sacred gardens. Harvest Element 444. Achieve ascension. Lead faithful to paradise.",
+    abilities: {
+      active:
+        "Garden's Blessing (Active) → Regenerates health in marked area, also heals allies",
+      passive:
+        "Faith (Passive) → Gains X% resistance to control effects and mutations",
+    },
+    imageUrl: "/projects/characters/LYSANDER PRIESTESS.png",
+    skinImages: ["/projects/characters/LYSANDER PRIESTESS.png"],
+    color: "#228B22",
+    background:
+      "Lysander has served the Proselytes since the base's founding, tending to the underground gardens where Element 444 is cultivated in sacred ritual. She was not born into the faith but converted after discovering that the gardens' growth seemed to accelerate under her touch, which the elders interpreted as divine blessing. As the primary cultivator of resources, Lysander maintains the delicate balance between harvesting materials for survival and preserving the sacred groves. She is Oct-Vi-O's most trusted advisor, offering spiritual guidance while managing the base's agricultural operations. Despite her devotion to ascension theology, Lysander harbors secret doubts about the sacrificial practices, believing that the faithful should ascend through spiritual evolution rather than ceremonial fire. Her relationship with the new Supreme Priest is one of respectful obedience mixed with subtle resistance, as she quietly steers temple policy toward sustainable resource management.",
+  },
 ];
 
 // ==================== MATERIALS ====================

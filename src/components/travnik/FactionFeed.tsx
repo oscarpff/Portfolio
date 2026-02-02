@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, BookOpen } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import RelationshipBadges from "./RelationshipBadges";
 
 interface FactionFeedProps {
   factions: Faction[];
@@ -169,6 +170,11 @@ export default function FactionFeed({ factions, characters, loreSections = [] }:
                   <p className="text-muted-foreground leading-relaxed">
                     {selectedFaction.description}
                   </p>
+                  {/* Relationship Badges */}
+                  <RelationshipBadges 
+                    itemId={selectedFaction.id} 
+                    itemType="faction"
+                  />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
@@ -219,10 +225,10 @@ export default function FactionFeed({ factions, characters, loreSections = [] }:
                     {getFactionCharacters(selectedFaction).map((character) => (
                       <div
                         key={character.id}
-                        className="border border-gold/20 rounded-lg overflow-hidden bg-gradient-to-br from-gold/5 to-muted/20 hover:border-gold/50 transition-all"
+                        className="border border-gold/20 rounded-lg overflow-hidden bg-gradient-to-br from-gold/5 to-muted/20 hover:border-gold/50 transition-all flex flex-col h-full"
                       >
                         {/* Character Image */}
-                        <div className="relative h-48 overflow-hidden bg-muted/40">
+                        <div className="relative h-48 overflow-hidden bg-muted/40 flex-shrink-0">
                           <img
                             src={getImageUrl(character.imageUrl)}
                             alt={character.name}
@@ -235,7 +241,7 @@ export default function FactionFeed({ factions, characters, loreSections = [] }:
                         </div>
 
                         {/* Character Info */}
-                        <div className="p-6 space-y-4">
+                        <div className="p-6 space-y-4 flex flex-col flex-1 justify-between">
                           <div>
                             <h4 className="font-display text-2xl font-bold text-gold mb-1">
                               {character.name}
@@ -246,21 +252,21 @@ export default function FactionFeed({ factions, characters, loreSections = [] }:
                             </p>
                           </div>
 
-                          <div>
+                          <div className="min-h-[80px]">
                             <h5 className="font-semibold text-gold text-sm mb-2">Personality</h5>
                             <p className="text-sm text-muted-foreground leading-relaxed">
                               {character.personality}
                             </p>
                           </div>
 
-                          <div>
+                          <div className="min-h-[80px]">
                             <h5 className="font-semibold text-gold text-sm mb-2">Description</h5>
                             <p className="text-sm text-muted-foreground leading-relaxed">
                               {character.description}
                             </p>
                           </div>
 
-                          <div>
+                          <div className="min-h-[80px]">
                             <h5 className="font-semibold text-gold text-sm mb-2">Objectives</h5>
                             <p className="text-sm text-muted-foreground leading-relaxed">
                               {character.objectives}
@@ -268,7 +274,7 @@ export default function FactionFeed({ factions, characters, loreSections = [] }:
                           </div>
 
                           {/* Abilities */}
-                          <div className="space-y-2 pt-4 border-t border-gold/10">
+                          <div className="space-y-2 pt-4 border-t border-gold/10 min-h-[140px]">
                             <div className="rounded-lg bg-emerald-500/10 border border-emerald-500/30 p-3">
                               <p className="text-xs font-semibold text-emerald-400 mb-1 uppercase">
                                 ↑ Active Ability
@@ -290,13 +296,22 @@ export default function FactionFeed({ factions, characters, loreSections = [] }:
 
                           {/* Full Background */}
                           {character.background && (
-                            <div className="pt-4 border-t border-gold/10">
+                            <div className="pt-4 border-t border-gold/10 min-h-[100px]">
                               <h5 className="font-semibold text-gold text-sm mb-2">Full Story</h5>
                               <p className="text-sm text-muted-foreground leading-relaxed">
                                 {character.background}
                               </p>
                             </div>
                           )}
+
+                          {/* Character Relationships */}
+                          <div className="min-h-[50px] flex items-end">
+                            <RelationshipBadges 
+                              itemId={character.id}
+                              itemType="character"
+                              compact
+                            />
+                          </div>
                         </div>
                       </div>
                     ))}

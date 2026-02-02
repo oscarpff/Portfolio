@@ -11,7 +11,6 @@ import LoreTabs from "@/components/travnik/LoreTabs";
 import ProjectNavigation from "@/components/ProjectNavigation";
 import WorldMap from "@/components/travnik/WorldMap";
 import { ExplorerProvider } from "@/components/travnik/TravnikExplorer";
-import ExplorerBreadcrumbs from "@/components/travnik/ExplorerBreadcrumbs";
 import {
   timelineEvents,
   factions,
@@ -247,9 +246,6 @@ const TravnikWorldBuilding = () => {
             </section>
           </div>
         </main>
-
-        {/* Explorer Breadcrumbs */}
-        <ExplorerBreadcrumbs />
         
         <ProjectNavigation sections={travnikNavSections} />
         <Footer />
