@@ -13,10 +13,11 @@ const featuredWorks = [
     logoAlt: "TTV Media Studio",
   },
   {
-    title: "The Hollow Crown",
-    category: "Quest Design",
-    description: "A branching questline exploring themes of power and sacrifice, featuring 12 unique endings based on player moral choices.",
-    excerpt: "The throne room fell silent as the last echo of steel faded. Before you lies the crown—but at what cost? The kingdom awaits your decision, yet every path forward is paved with the memories of those who fell...",
+    title: "Travnik - Worldbuilding",
+    category: "Worldbuilding",
+    description: "Complete worldbuilding documentation for a post-apocalyptic PvP/PvE shooter. Features three conflicting factions, radioactive mutation systems, and a rich lore spanning from nuclear war to space colonization.",
+    excerpt: "The snow crunches under Kari's paws. Before her lies a wounded lynx—her natural predator—trapped and desperate. The enemy of my enemy is my friend. But can she trust him? Every choice ripples through time, shaping allies, enemies, and the very landscape itself...",
+    link: "/narrative/travnik-worldbuilding",
   },
   {
     title: "Chronicles of the Shattered Realm",

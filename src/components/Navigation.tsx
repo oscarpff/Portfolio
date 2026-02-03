@@ -60,7 +60,7 @@ const Navigation = () => {
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           {/* Home Button - Shown on main portfolio pages */}
-          {(location.pathname === "/narrative" || location.pathname === "/cybersecurity") && (
+          {(location.pathname.startsWith("/narrative") || location.pathname === "/cybersecurity") && (
             <Link to="/" className={`transition-colors ${
               location.pathname === "/cybersecurity" 
                 ? "text-cyan-400 hover:text-cyan-300" 
@@ -83,7 +83,7 @@ const Navigation = () => {
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
                 className={`font-body text-sm transition-colors duration-300 cursor-pointer inline-block ${
-                  location.pathname === "/narrative"
+                  location.pathname.startsWith("/narrative")
                     ? "text-gold hover:text-gold/80"
                     : location.pathname === "/cybersecurity"
                     ? "text-cyan-400 hover:text-cyan-300"
@@ -116,7 +116,7 @@ const Navigation = () => {
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
                 className={`block font-body text-lg transition-colors duration-300 cursor-pointer py-2 ${
-                  location.pathname === "/narrative"
+                  location.pathname.startsWith("/narrative")
                     ? "text-gold hover:text-gold/80"
                     : location.pathname === "/cybersecurity"
                     ? "text-cyan-400 hover:text-cyan-300"
