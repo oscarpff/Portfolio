@@ -81,27 +81,15 @@ const CyberContactSection = () => {
                 
                 <div className="space-y-3">
                   <Button variant="cyberOutline" size="lg" asChild className="w-full justify-start">
-                    <a href="mailto:pefer.oscar@gmail.com">
-                      <Mail className="mr-2" size={20} />
-                      pefer.oscar@gmail.com
-                    </a>
-                  </Button>
-                  <Button variant="cyberOutline" size="lg" asChild className="w-full justify-start">
                     <a href="https://www.linkedin.com/in/oscarperez-cybersecurity/" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="mr-2" size={20} />
                       LinkedIn Profile
                     </a>
                   </Button>
                   <Button variant="cyberOutline" size="lg" asChild className="w-full justify-start">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/oscarpff" target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2" size={20} />
                       GitHub
-                    </a>
-                  </Button>
-                  <Button variant="cyberOutline" size="lg" asChild className="w-full justify-start">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <FileText className="mr-2" size={20} />
-                      Download Resume
                     </a>
                   </Button>
                 </div>

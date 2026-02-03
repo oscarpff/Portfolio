@@ -101,12 +101,6 @@ const ContactSection = () => {
                 
                 <div className="space-y-3">
                   <Button variant="goldOutline" size="lg" asChild className="w-full justify-start">
-                    <a href="mailto:hello@example.com">
-                      <Mail className="mr-2" size={20} />
-                      pefer.oscar@gmail.com
-                    </a>
-                  </Button>
-                  <Button variant="goldOutline" size="lg" asChild className="w-full justify-start">
                     <a href="https://www.linkedin.com/in/oscarperez-cybersecurity/" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="mr-2" size={20} />
                       LinkedIn Profile

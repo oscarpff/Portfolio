@@ -1,30 +1,9 @@
 import { Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WriteupCard from "./WriteupCard";
+import { writeups, featuredWriteupIds } from "@/data/writeups";
 
-const featuredWriteups = [
-  {
-    title: "Active Directory Lab",
-    platform: "HackTheBox",
-    difficulty: "Hard" as const,
-    description: "Complete AD domain compromise including Kerberoasting, AS-REP roasting, and DCSync attacks for full domain admin access.",
-    tags: ["Active Directory", "Kerberos", "Windows", "Lateral Movement"],
-  },
-  {
-    title: "Mr Robot",
-    platform: "TryHackMe",
-    difficulty: "Medium" as const,
-    description: "Based on the TV show. WordPress enumeration, brute-forcing login, reverse shell exploitation, and SUID privilege escalation.",
-    tags: ["WordPress", "Linux", "SUID", "Web Exploitation"],
-  },
-  {
-    title: "Buffer Overflow Prep",
-    platform: "TryHackMe",
-    difficulty: "Hard" as const,
-    description: "Comprehensive buffer overflow practice covering stack-based overflows, bad character detection, and shellcode generation.",
-    tags: ["Buffer Overflow", "Assembly", "Python", "Exploitation"],
-  },
-];
+const featuredWriteups = featuredWriteupIds.map(id => writeups[id]);
 
 const FeaturedWriteups = () => {
   const scrollToWriteups = () => {
