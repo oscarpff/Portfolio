@@ -8,8 +8,8 @@ import NarrativePortfolio from "./pages/NarrativePortfolio";
 import CybersecurityPortfolio from "./pages/CybersecurityPortfolio";
 import FoquesQuestSystem from "./pages/FoquesQuestSystem";
 import TravnikWorldBuilding from "./pages/TravnikWorldBuilding";
+import SlaughterhouseProject from "./pages/SlaughterhouseProject";
 import NotFound from "./pages/NotFound";
-
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -22,6 +22,7 @@ const App = () => (
           <Route path="/" element={<SplitLanding />} />
           <Route path="/narrative" element={<NarrativePortfolio />} />
           <Route path="/narrative/foques-quest-system" element={<FoquesQuestSystem />} />
+          <Route path="/narrative/slaughterhouse" element={<SlaughterhouseProject />} />
           <Route path="/cybersecurity" element={<CybersecurityPortfolio />} />
           <Route path="/narrative/travnik-worldbuilding" element={<TravnikWorldBuilding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
