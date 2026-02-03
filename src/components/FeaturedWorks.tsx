@@ -8,8 +8,7 @@ const featuredWorks = [
     category: "Published Game",
     description: "A survival horror game built in Unreal Engine 5. Lead narrative design, AI systems, combat mechanics, and movement programming.",
     excerpt: "The slaughterhouse has become a breeding ground for unspeakable mutations. Twisted creatures, born of the facility's dark past, now roam the halls. What starts as a twisted quest soon turns into a desperate fight for survival...",
-    link: "https://las-divinas.itch.io/slaughter-house",
-    isExternal: true,
+    link: "/narrative/slaughterhouse",
     tags: ["Unreal Engine 5", "Published", "Team Project"],
   },
   {
