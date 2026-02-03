@@ -126,7 +126,7 @@ const FoquesQuestSystem = () => {
 
           {/* Project Overview */}
           <section id="overview" className="mb-16 scroll-mt-24">
-            <h2 className="font-display text-3xl font-semibold mb-6">Project Overview</h2>
+            <h2 className="font-display text-3xl font-semibold mb-6">Project <span className="text-gradient-gold">Overview</span></h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="card-elevated border-gradient-gold rounded-lg p-6">
                 <div className="flex items-start gap-4">
@@ -188,7 +188,7 @@ const FoquesQuestSystem = () => {
 
           {/* Core Narrative */}
           <section id="narrative" className="mb-16 scroll-mt-24">
-            <h2 className="font-display text-3xl font-semibold mb-6">Core Narrative</h2>
+            <h2 className="font-display text-3xl font-semibold mb-6">Core <span className="text-gradient-gold">Narrative</span></h2>
             <div className="card-elevated border-gradient-gold rounded-lg p-8">
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
                 In FOQUES, players control <strong className="text-foreground">Kari</strong>, a fox navigating the infected forests of Northern Canada alongside <strong className="text-foreground">Whisker</strong>, her owl companion. The world is threatened by <strong className="text-foreground">The Stain</strong>, a corruption that transforms living creatures into monstrous versions of themselves.
@@ -204,7 +204,7 @@ const FoquesQuestSystem = () => {
 
           {/* Featured Quests */}
           <section id="quests" className="mb-16 scroll-mt-24">
-            <h2 className="font-display text-3xl font-semibold mb-6">Featured Quest Design</h2>
+            <h2 className="font-display text-3xl font-semibold mb-6">Featured <span className="text-gradient-gold">Quest Design</span></h2>
             
             <div className="space-y-12">
               {/* Quest 1 */}
@@ -386,7 +386,7 @@ const FoquesQuestSystem = () => {
 
           {/* Additional Quest Concepts */}
           <section id="concepts" className="mb-16 scroll-mt-24">
-            <h2 className="font-display text-3xl font-semibold mb-6">Additional Quest Concepts</h2>
+            <h2 className="font-display text-3xl font-semibold mb-6">Additional <span className="text-gradient-gold">Quest Concepts</span></h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 { 
@@ -452,7 +452,7 @@ const FoquesQuestSystem = () => {
 
           {/* Design Philosophy */}
           <section id="philosophy" className="mb-16 scroll-mt-24">
-            <h2 className="font-display text-3xl font-semibold mb-6">Design Philosophy</h2>
+            <h2 className="font-display text-3xl font-semibold mb-6">Design <span className="text-gradient-gold">Philosophy</span></h2>
             <div className="card-elevated border-gradient-gold rounded-lg p-8">
               <div className="space-y-6">
                 <div>
@@ -488,7 +488,7 @@ const FoquesQuestSystem = () => {
 
           {/* Technical Details */}
           <section id="technical" className="mb-16 scroll-mt-24">
-            <h2 className="font-display text-3xl font-semibold mb-6">Technical Details</h2>
+            <h2 className="font-display text-3xl font-semibold mb-6">Technical <span className="text-gradient-gold">Details</span></h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="card-elevated border-gradient-gold rounded-lg p-6">
                 <h3 className="font-display text-lg font-semibold mb-2">Scope</h3>
@@ -523,7 +523,7 @@ const FoquesQuestSystem = () => {
 
           {/* Reflection */}
           <section id="reflection" className="mb-16 scroll-mt-24">
-            <h2 className="font-display text-3xl font-semibold mb-6">Reflection</h2>
+            <h2 className="font-display text-3xl font-semibold mb-6"><span className="text-gradient-gold">Reflection</span></h2>
             <div className="card-elevated border-gradient-gold rounded-lg p-8">
               <p className="text-muted-foreground font-body leading-relaxed mb-4">
                 This project taught me that <strong className="text-foreground">narrative design is not just writing, but integration</strong>. It's about understanding how story, environment, and mechanics can work together to create emotional impact. Players don't read character descriptions; they discover personalities through gameplay interactions and consequences.

@@ -22,9 +22,9 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground font-body leading-relaxed">
               <p>
-                I'm a narrative designer passionate about creating interactive stories 
+                I'm a game & narrative designer passionate about creating interactive stories 
                 that resonate with players long after they've put down the controller. 
-                My work focuses on the intersection of player agency and meaningful storytelling.
+                My work focuses on creating immersive narratives and making the players part of them.
               </p>
               <p>
                 With experience in quest design, world-building, and character development, 
@@ -32,7 +32,7 @@ const AboutSection = () => {
                 Every choice should feel impactful; every revelation, earned.
               </p>
               <p>
-                I believe the best game narratives don't just tell stories—they invite 
+                I believe the best game narratives don't just tell stories; they invite 
                 players to become co-authors of experiences they'll remember forever.
               </p>
             </div>

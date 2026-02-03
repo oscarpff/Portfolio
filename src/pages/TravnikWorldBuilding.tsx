@@ -100,19 +100,19 @@ const TravnikWorldBuilding = () => {
               </div>
 
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-4">
-                Travnik - <span className="text-gradient-gold">Post-Nuclear Worldbuilding</span>
+                Travnik - <span className="text-gradient-gold">Worldbuilding</span>
               </h1>
 
               <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl">
-                Three rival factions battle across a nuclear-scarred Earth in a PvP/PvE isometric shooter where 
-                mutated humans roam as mindless beasts and uplifted animals rise as the new superpowers.
+                On a nuclear-scarred Earth, three rival factions fight for survival in a PvP/PvE isometric shooter. 
+                Humans have devolved into mindless mutants, while uplifted animals emerge as the new ruling powers.
               </p>
             </header>
 
             {/* World Map Section */}
             <section id="map" className="mb-16 scroll-mt-24">
               <h2 className="font-display text-3xl font-semibold mb-4">
-                Explore the World
+                Explore the <span className="text-gradient-gold">World</span>
               </h2>
               <p className="text-muted-foreground mb-6">
                 Click on locations to discover lore. Some regions remain shrouded in mystery—what secrets do they hold?
@@ -125,7 +125,7 @@ const TravnikWorldBuilding = () => {
           <section id="timeline" className="mb-16 scroll-mt-24 w-full">
             <div className="container mx-auto px-6 max-w-5xl mb-8">
               <h2 className="font-display text-3xl font-semibold mb-6">
-                Timeline: Pre-Game History
+                Timeline: Pre-Game <span className="text-gradient-gold">History</span>
               </h2>
             </div>
             <TimelineExpanded events={timelineEvents} />
@@ -136,7 +136,7 @@ const TravnikWorldBuilding = () => {
             {/* Detailed Lore Section */}
             <section id="lore" className="mb-16 scroll-mt-24">
               <h2 className="font-display text-3xl font-semibold mb-6">
-                World History & Context
+                World History & <span className="text-gradient-gold">Context</span>
               </h2>
               <p className="text-muted-foreground mb-8">
                 Explore the events that shaped Travnik's world. From the devastating Inter-World War to the emergence of super-intelligent animals.
@@ -147,7 +147,7 @@ const TravnikWorldBuilding = () => {
             {/* Factions Section */}
             <section id="factions" className="mb-16 scroll-mt-24">
               <h2 className="font-display text-3xl font-semibold mb-6">
-                Factions & Characters
+                Factions & <span className="text-gradient-gold">Characters</span>
               </h2>
               <p className="text-muted-foreground mb-8">
                 The three factions represent distinct philosophies and approaches. Click the book icon for detailed faction lore, or "Details" to explore members and organization.
@@ -162,7 +162,7 @@ const TravnikWorldBuilding = () => {
             {/* Locations Section */}
             <section id="locations" className="mb-16 scroll-mt-24">
               <h2 className="font-display text-3xl font-semibold mb-6">
-                Locations & Environments
+                Locations & <span className="text-gradient-gold">Environments</span>
               </h2>
               <p className="text-muted-foreground mb-8">
                 The diverse regions of Travnik, each shaped by the catastrophe's aftermath. From scorched wastelands to frozen tundras, every environment presents unique threats and opportunities.
@@ -173,7 +173,7 @@ const TravnikWorldBuilding = () => {
             {/* Systems & Materials Section */}
             <section id="systems" className="mb-16 scroll-mt-24">
               <h2 className="font-display text-3xl font-semibold mb-6">
-                Systems & Resources
+                Systems & <span className="text-gradient-gold">Resources</span>
               </h2>
               <p className="text-muted-foreground mb-8">
                 The pillars that sustain the world's economy and technology. Click "Read Detailed Lore" for comprehensive information about each resource.
@@ -187,7 +187,7 @@ const TravnikWorldBuilding = () => {
             {/* Enemies Section */}
             <section id="enemies" className="mb-16 scroll-mt-24">
               <h2 className="font-display text-3xl font-semibold mb-6">
-                Threats & Bosses
+                Threats & <span className="text-gradient-gold">Bosses</span>
               </h2>
               <p className="text-muted-foreground mb-8">
                 Dangerous creatures inhabiting Travnik
@@ -198,7 +198,7 @@ const TravnikWorldBuilding = () => {
             {/* Events Section */}
             <section id="events" className="mb-16 scroll-mt-24">
               <h2 className="font-display text-3xl font-semibold mb-6">
-                PvE Events
+                PvE <span className="text-gradient-gold">Events</span>
               </h2>
               <p className="text-muted-foreground mb-8">
                 Special operations and seasonal events
@@ -209,7 +209,7 @@ const TravnikWorldBuilding = () => {
             {/* Glossary Section */}
             <section id="glossary" className="mb-16 scroll-mt-24">
               <h2 className="font-display text-3xl font-semibold mb-6">
-                Lore Glossary
+                Lore <span className="text-gradient-gold">Glossary</span>
               </h2>
               <p className="text-muted-foreground mb-4">
                 Key terms and concepts of the Travnik worldbuilding
