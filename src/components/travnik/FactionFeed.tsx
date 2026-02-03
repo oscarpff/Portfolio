@@ -82,22 +82,21 @@ export default function FactionFeed({ factions, characters, loreSections = [] }:
                 </p>
 
                 {/* Character Icons */}
-                <div className="flex gap-2 mb-3">
+                <div className="flex gap-3 mb-3">
                   {getFactionCharacters(faction).map((character) => (
                     <div
                       key={character.id}
-                      className="relative w-10 h-10 rounded-full overflow-hidden border border-gold/30 flex-shrink-0"
+                      className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-gold/40 flex-shrink-0 bg-muted/20 p-1.5"
                       title={character.name}
                     >
                       <img
                         src={getImageUrl(character.imageUrl)}
                         alt={character.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                         onError={(e) => {
-                          e.currentTarget.src = `https://via.placeholder.com/40x40?text=${character.name[0]}`;
+                          e.currentTarget.src = `https://via.placeholder.com/64x64?text=${character.name[0]}`;
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                     </div>
                   ))}
                 </div>
@@ -148,17 +147,20 @@ export default function FactionFeed({ factions, characters, loreSections = [] }:
             <div className="space-y-8">
               {/* Header */}
               <div className="border-b border-gold/10 pb-6">
-                <div className="mb-4">
-                  <h2 className="font-display text-5xl font-bold text-gold mb-2">
-                    {selectedFaction.shortName}
-                  </h2>
-                  <p className="text-xl text-muted-foreground italic mb-4">
-                    {selectedFaction.tagline}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-gold/20 text-gold border-gold/30">
-                      Members: {getFactionCharacters(selectedFaction).length}
-                    </Badge>
+                <div className="mb-4 flex items-start gap-4">
+                  <div className="text-6xl flex-shrink-0">{selectedFaction.icon}</div>
+                  <div className="flex-1">
+                    <h2 className="font-display text-5xl font-bold text-gold mb-2">
+                      {selectedFaction.shortName}
+                    </h2>
+                    <p className="text-xl text-muted-foreground italic mb-4">
+                      {selectedFaction.tagline}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge className="bg-gold/20 text-gold border-gold/30">
+                        Members: {getFactionCharacters(selectedFaction).length}
+                      </Badge>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -228,16 +230,15 @@ export default function FactionFeed({ factions, characters, loreSections = [] }:
                         className="border border-gold/20 rounded-lg overflow-hidden bg-gradient-to-br from-gold/5 to-muted/20 hover:border-gold/50 transition-all flex flex-col h-full"
                       >
                         {/* Character Image */}
-                        <div className="relative h-48 overflow-hidden bg-muted/40 flex-shrink-0">
+                        <div className="relative bg-muted/40 flex items-end justify-center p-4 h-96">
                           <img
                             src={getImageUrl(character.imageUrl)}
                             alt={character.name}
-                            className="h-full w-full object-cover"
+                            className="w-auto h-auto max-h-full object-contain"
                             onError={(e) => {
                               e.currentTarget.src = `https://via.placeholder.com/300x300?text=${character.name}`;
                             }}
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                         </div>
 
                         {/* Character Info */}

@@ -77,6 +77,20 @@ export interface GlossaryTerm {
   definition: string;
   relatedTerms?: string[];
 }
+
+export interface Location {
+  id: string;
+  name: string;
+  type: "wasteland" | "urban" | "swamp" | "cave" | "oasis" | "frozen";
+  icon: string;
+  description: string;
+  environment: string;
+  threats: string;
+  resources: string;
+  loreElements: string;
+  strategicValue: string;
+}
+
 export interface Event {
   id: string;
   name: string;
@@ -244,8 +258,8 @@ export const characters: Character[] = [
         "Yesterday's Memories (Active) → +X% attack speed and extra damage",
       passive: "Resilience (Passive) → +X% life steal in melee combat",
     },
-    imageUrl: "/projects/characters/QUASAR ESPACIAL.png",
-    skinImages: ["/projects/characters/QUASAR ESPACIAL.png"],
+    imageUrl: "/projects/characters/Mandril.png",
+    skinImages: ["/projects/characters/Mandril.png"],
     color: "#000000",
     background:
       "Blood, tears, and screams. Reminiscences of a tormented past marked in Quasar's memory haunt his sleep every night, gripping his knives tightly in a vain attempt to rest. Marked as the best of his promotion, Quasar leads ESAS operations on Earth, directing his members and sending information to the ISS. Though he worries about his comrades' well-being, he would not hesitate for a second to eliminate them if they endangered the mission's success. The only thing that matters now is returning to space—they need him there. Though excellent with almost any weapon, Quasar enjoys working with his knives, light and silent weapons for eliminating Hoomans without alerting the rest, an ideal option for conserving ammunition, scarce on the blue planet. Quasar possesses great agility, allowing him to infiltrate enemy ranks unseen and quickly eliminate his targets, opening a path for his squad to advance into Hooman burrows and collect Element 444, as well as into enemy bases to plunder other valuable resources like Compound-T.",
@@ -270,8 +284,8 @@ export const characters: Character[] = [
       passive:
         "Hardness (Passive) → Gains X armor points, resists control when outnumbered",
     },
-    imageUrl: "/projects/characters/BOMBER RHYNO.png",
-    skinImages: ["/projects/characters/BOMBER RHYNO.png"],
+    imageUrl: "/projects/characters/Escarabajo.png",
+    skinImages: ["/projects/characters/Escarabajo.png"],
     color: "#000000",
     background:
       "Not the biggest, nor the smartest, nor the strongest. But perhaps the most persevering. When life hung by a thread, Bugve was the first to push himself and repeat trial simulations, determined to climb the rankings and be selected to join ESAS. Capable of withstanding blows and extreme situations, Bugve managed to surpass difficult trials like skirmishes among aspirants or radiation simulations, taking shelter under his shell until the test ended while his comrades collapsed unconscious. Once selected, Bugve decided to specialize in explosives, capable of surviving accidents that would kill any other squad member. His passion for discovering new explosives and improving them using Compound-T makes him seem like a mad scientist, with irrational expressions and attitudes. However, beneath that eccentric and hyperactive mask hides a shy and insecure creature, fearful of failing his team and being expelled from ESAS.",
@@ -296,8 +310,8 @@ export const characters: Character[] = [
       passive:
         "Advanced Knowledge → Requires fewer materials to craft objects",
     },
-    imageUrl: "/projects/characters/PALAPTICA PILOTO.jpg",
-    skinImages: ["/projects/characters/PALAPTICA PILOTO.jpg"],
+    imageUrl: "/projects/characters/Ave.png",
+    skinImages: ["/projects/characters/Ave.png"],
     color: "#4B8BBE",
     background:
       "Descendant of a family of falcons sheltered by the engineers at the underground base, Palaptica is the pilot of the ship that carries the Engineers from the base to Travnik. During the evolution of animals, Palaptica lost her ability to fly but sharpened her senses to an extreme level, capable of visualizing distant targets with ease or hearing the slightest sound that alerts Hoomans or other creatures. During her training with the engineers, she specialized in designing and maintaining aeronautical structures, becoming responsible for investigating ship improvements and repairing it when it crashes on Travnik. As she usually works in the base, she has no great weapons training, so she uses a simple pistol and various custom gadgets that ensure her survival against Hoomans and possibility of escape against other enemies. She is a pioneer in working with Compound-T, investigating its properties and conducting tests to create new materials resistant to radiation.",
@@ -321,8 +335,8 @@ export const characters: Character[] = [
         "Diligent Student (Active) → Harnesses air to charge at speed, lifting enemies",
       passive: "+X% damage dealt / +X% damage received",
     },
-    imageUrl: "/projects/characters/ARMY BLITZ.jpg",
-    skinImages: ["/projects/characters/ARMY BLITZ.jpg"],
+    imageUrl: "/projects/characters/Antilope.png",
+    skinImages: ["/projects/characters/Antilope.png"],
     color: "#4B8BBE",
     background:
       "Blitz is a young antelope from the radioactive wastelands surrounding the city of Travnik. It is unknown how his family survived the radiation and mutated to resist it. During the Wild Awakening, Blitz and his herd discover Travnik's command center while the Engineers are in the midst of reform and construction work to build a safe base to work and operate from. Seeking food and resources, Blitz's group infiltrates the base to steal valuable supplies, but after triggering an alarm they are forced to flee, pursued by the Engineers. Swift but inexperienced, Blitz becomes trapped in the facility, surrounded by Engineers who, instead of finishing him, propose that he join them. Blitz accepts and becomes a brilliant apprentice, standing out among the rest of the students, and earning a place in the Engineers' exploration squad, where he hopes to find his herd and convince them to join the Engineers to settle and live a better life. Blitz specializes in aerodynamics, studying better ways to leverage his innate high speed.",
@@ -345,8 +359,8 @@ export const characters: Character[] = [
       active: "Playtime (Active) → Camouflages with surroundings",
       passive: "+X% damage using sniper rifle",
     },
-    imageUrl: "/projects/characters/OCT-VI-O SACERDOTE.png",
-    skinImages: ["/projects/characters/OCT-VI-O SACERDOTE.png"],
+    imageUrl: "/projects/characters/Pulpo.png",
+    skinImages: ["/projects/characters/Pulpo.png"],
     color: "#228B22",
     background:
       "From an early age, Oct-Vi-O always stood out for his ability to hide around the house, camouflaging himself with the surroundings and scaring his siblings to laugh at them. When his parents worked in the field, he roamed the perimeter of the base, asking guards posted at the entrances what the outside world was like. The guards usually ignored him, but that made Oct-Vi-O's curiosity grow increasingly. During a period of resource scarcity, the Supreme Priest decided to sacrifice a family to save resources, convincing the faithful by saying they were chosen for premature Ascension. Oct-Vi-O's family was selected. His parents and siblings went to the Temple, eager to receive the Ascension, but Oct-Vi-O wanted to know the outside world, so when the guards were about to light the pyre, he shot the Supreme Priest in cold blood with a sniper rifle he had stolen from the armory. As everyone present stood in shock, Oct-Vi-O walked slowly toward the Supreme Priest's corpse, took his scepter, and sat on the throne, while his family and temple members knelt in respect.",
@@ -371,8 +385,8 @@ export const characters: Character[] = [
       passive:
         "Faith (Passive) → Gains X% resistance to control effects and mutations",
     },
-    imageUrl: "/projects/characters/LYSANDER PRIESTESS.png",
-    skinImages: ["/projects/characters/LYSANDER PRIESTESS.png"],
+    imageUrl: "/projects/characters/mantis.png",
+    skinImages: ["/projects/characters/mantis.png"],
     color: "#228B22",
     background:
       "Lysander has served the Proselytes since the base's founding, tending to the underground gardens where Element 444 is cultivated in sacred ritual. She was not born into the faith but converted after discovering that the gardens' growth seemed to accelerate under her touch, which the elders interpreted as divine blessing. As the primary cultivator of resources, Lysander maintains the delicate balance between harvesting materials for survival and preserving the sacred groves. She is Oct-Vi-O's most trusted advisor, offering spiritual guidance while managing the base's agricultural operations. Despite her devotion to ascension theology, Lysander harbors secret doubts about the sacrificial practices, believing that the faithful should ascend through spiritual evolution rather than ceremonial fire. Her relationship with the new Supreme Priest is one of respectful obedience mixed with subtle resistance, as she quietly steers temple policy toward sustainable resource management.",
@@ -537,6 +551,196 @@ export const glossary: GlossaryTerm[] = [
     definition:
       "Belief in two deities: good god (spiritual world) and evil god (material world). On Travnik, good god is Michael (the savior Finger).",
     relatedTerms: ["Proselytes"],
+  },
+  {
+    id: "filtro-viabilidad",
+    term: "Viability Filter",
+    definition:
+      "Brutal ESAS training process. Candidates undergo extreme physical and psychological tests, including combat simulations and radiation exposure. High mortality rate.",
+    relatedTerms: ["ESAS", "ISS"],
+  },
+  {
+    id: "despertar-salvaje",
+    term: "Wild Awakening",
+    definition:
+      "Historical period (2400-2415) when radiation-affected pathogen granted animals advanced intelligence and cognitive abilities. Animals discovered human shelters and technology.",
+    relatedTerms: ["Element 444", "Rebirth Syndrome"],
+  },
+  {
+    id: "iss",
+    term: "ISS (International Space Station)",
+    definition:
+      "Orbital base where animals established refuge after the Exodus. Houses most advanced technology and serves as ESAS command center. Resource scarcity forced return to Earth.",
+    relatedTerms: ["ESAS", "Operation Return"],
+  },
+  {
+    id: "compuesto-t",
+    term: "Compound-T",
+    definition:
+      "Radioactive mineral formed by Element 444 mixed with atmospheric gases. Ten times harder and denser than conventional materials. Used for advanced weapons and radiation-resistant structures.",
+    relatedTerms: ["Element 444", "Conclaves"],
+  },
+  {
+    id: "elemento-444",
+    term: "Element 444",
+    definition:
+      "Biomolecule extracted from neural tissue of hibernating humans. Catalyst for beneficial mutations and resistance to environmental toxins. Essential for genetic engineering.",
+    relatedTerms: ["Hoomans", "Hibernation State", "Compound-T"],
+  },
+  {
+    id: "operacion-retorno",
+    term: "Operation Return",
+    definition:
+      "Year 2444 mission when ESAS descended from ISS to Travnik due to resource scarcity in orbit. Marked beginning of faction conflicts on Earth.",
+    relatedTerms: ["ESAS", "ISS", "Travnik"],
+  },
+  {
+    id: "travnik",
+    term: "Travnik",
+    definition:
+      "City in Europe Sector that serves as command center after the Fall. Strategic location where three factions (ESAS, Engineers, Proselytes) clash for resources.",
+    relatedTerms: ["Operation Return", "Engineers", "ESAS", "Proselytes"],
+  },
+  {
+    id: "cinco-dedos",
+    term: "Five Fingers of Death",
+    definition:
+      "Elite group of soldiers from Oceania Sector, also called Deadly Hand of Indian Ocean. Each carried a hydrogen bomb in suicide mission. The Europe Finger rebelled, saving thousands.",
+    relatedTerms: ["The Fall", "General Davis"],
+  },
+  {
+    id: "guerra-inter-mundial",
+    term: "Inter-World War",
+    definition:
+      "Global conflict (2035) between Earth sectors fighting for last resources. Used Rebirth Syndrome as main weapon. Ended with nuclear bombs from General Davis.",
+    relatedTerms: ["Rebirth Syndrome", "The Fall", "Five Fingers of Death"],
+  },
+  {
+    id: "invierno-nuclear",
+    term: "Nuclear Winter",
+    definition:
+      "Years following the Fall (2040-2400) when nuclear devastation made surface uninhabitable. Survivors forced underground. Pathogen infiltrated water reserves.",
+    relatedTerms: ["The Fall", "Rebirth Syndrome", "Wild Awakening"],
+  },
+  {
+    id: "criogenizacion",
+    term: "Cryogenization",
+    definition:
+      "Emergency process used on humans during New Dawn. Survivors placed in cryogenic sleep hoping for future salvation. Pathogen infiltrated these systems.",
+    relatedTerms: ["New Dawn", "Engineers", "Hibernation State"],
+  },
+];
+
+// ==================== LOCATIONS ====================
+
+export const locations: Location[] = [
+  {
+    id: "wasteland-moors",
+    name: "The Moors",
+    type: "wasteland",
+    icon: "🏜️",
+    description:
+      "Vast desolate wastelands stretching across former fertile lands. Harsh winds carry radioactive dust across barren terrain.",
+    environment:
+      "Extreme temperature variations. Limited vegetation. Scarce water sources. High radiation in certain zones.",
+    threats:
+      "Hooman patrols. Radiation storms. Resource scarcity. Extreme exposure.",
+    resources:
+      "Scattered military equipment. Abandoned supply caches. Compound-T veins in exposed rock formations.",
+    loreElements:
+      "Pre-Fall warning signs. Abandoned military outposts. Communication towers with emergency broadcasts still looping.",
+    strategicValue:
+      "Open terrain ideal for long-range reconnaissance. Few hiding spots force tactical movement. ESAS patrol routes.",
+  },
+  {
+    id: "oasis-sanctuaries",
+    name: "Oasis Sanctuaries",
+    type: "oasis",
+    icon: "🌴",
+    description:
+      "Rare pockets of life around underground water springs. These areas attract both survivors and predators.",
+    environment:
+      "Vegetation clusters. Clean water sources. Moderate temperatures. Natural shelter from elements.",
+    threats:
+      "Contested territory. Faction conflicts. Hooman ambushes near water. Wildlife competition.",
+    resources:
+      "Fresh water. Medicinal plants. Food sources. Safe camping locations.",
+    loreElements:
+      "Engineer research camps. Proselyte shrines. Pre-Fall rest stops and tourist locations.",
+    strategicValue:
+      "Critical resource points. Natural meeting grounds. Faction negotiation zones. High-value control points.",
+  },
+  {
+    id: "frozen-zones",
+    name: "Frozen Wastes",
+    type: "frozen",
+    icon: "❄️",
+    description:
+      "Ice-covered regions where nuclear winter's effects never fully receded. Temperatures remain below freezing year-round.",
+    environment:
+      "Permanent ice and snow. Blizzards. Limited visibility. Treacherous terrain.",
+    threats:
+      "Hypothermia. Ice collapses. Limited mobility. Frozen Hooman hibernation sites.",
+    resources:
+      "Preserved pre-Fall supplies. Cryogenic facility remnants. Isolated research stations.",
+    loreElements:
+      "Intact frozen structures. Preserved vehicles. Emergency shelters with supplies. Scientists' final recordings.",
+    strategicValue:
+      "Natural storage for sensitive materials. Slow Hooman activity. Hidden ESAS supply caches.",
+  },
+  {
+    id: "cave-networks",
+    name: "Underground Networks",
+    type: "cave",
+    icon: "⛰️",
+    description:
+      "Extensive cave systems formed by natural erosion and wartime excavations. Many lead to pre-Fall bunkers.",
+    environment:
+      "Total darkness in deep sections. Natural labyrinths. Underground rivers. Stable temperatures.",
+    threats:
+      "Hooman conclaves. Cave-ins. Navigation difficulties. Ambush-prone corridors.",
+    resources:
+      "Element 444 from hibernation cocoons. Compound-T veins. Shelter from surface dangers.",
+    loreElements:
+      "Proselyte temples. Pre-Fall survival bunkers. Military storage facilities. Ancient human murals and messages.",
+    strategicValue:
+      "Proselyte strongholds. Direct access to Element 444. Safe from aerial threats. Strategic underground passages.",
+  },
+  {
+    id: "urban-ruins",
+    name: "City Ruins",
+    type: "urban",
+    icon: "🏚️",
+    description:
+      "Collapsed cities with crumbling skyscrapers and overturned vehicles. Once-thriving urban centers now serve as deadly mazes.",
+    environment:
+      "Multi-level structures. Urban debris. Unstable buildings. Enclosed spaces mixed with open plazas.",
+    threats:
+      "Building collapses. Hooman nests in structures. Trapped corridors. Vertical dangers.",
+    resources:
+      "Abundant loot in buildings. Military equipment. Civilian supplies. Technology components.",
+    loreElements:
+      "Store fronts frozen in time. Personal belongings. Propaganda posters. Emergency evacuation signs. Final messages spray-painted on walls.",
+    strategicValue:
+      "Rich scavenging grounds. Excellent for traps and ambushes. Vertical combat advantages. Engineers establish workshops here.",
+  },
+  {
+    id: "swamp-junkyards",
+    name: "Toxic Marshes",
+    type: "swamp",
+    icon: "☢️",
+    description:
+      "Contaminated wetlands where industrial waste merged with floodwaters. Hooman breeding grounds proliferate in the murky depths.",
+    environment:
+      "Toxic water. Dense fog. Decomposing vegetation. Unstable ground. Limited visibility.",
+    threats:
+      "Hooman nests everywhere. Disease. Poisoned water. Quicksand-like mud. Frequent ambushes.",
+    resources:
+      "Salvageable scrap. Compound-T deposits in debris. Element 444 from abundant cocoons.",
+    loreElements:
+      "Submerged vehicles with personal effects. Industrial waste sites with company logos. Warning signs about contamination. Makeshift refugee camps.",
+    strategicValue:
+      "High-risk, high-reward for Element 444 harvesting. Natural defensive terrain for Proselytes. Engineers avoid due to equipment corrosion.",
   },
 ];
 

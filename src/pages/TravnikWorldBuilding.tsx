@@ -8,6 +8,7 @@ import EnemiesGrid from "@/components/travnik/EnemiesGrid";
 import MaterialsGrid from "@/components/travnik/MaterialsGrid";
 import EventsGrid from "@/components/travnik/EventsGrid";
 import LoreTabs from "@/components/travnik/LoreTabs";
+import LocationsGrid from "@/components/travnik/LocationsGrid";
 import ProjectNavigation from "@/components/ProjectNavigation";
 import WorldMap from "@/components/travnik/WorldMap";
 import { ExplorerProvider } from "@/components/travnik/TravnikExplorer";
@@ -20,6 +21,7 @@ import {
   glossary,
   events,
   loreSections,
+  locations,
 } from "@/data/travnikLore";
 import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
@@ -30,6 +32,7 @@ const travnikNavSections = [
   { id: "timeline", label: "Timeline" },
   { id: "lore", label: "World History" },
   { id: "factions", label: "Factions" },
+  { id: "locations", label: "Locations" },
   { id: "systems", label: "Resources" },
   { id: "enemies", label: "Enemies" },
   { id: "events", label: "Events" },
@@ -99,10 +102,8 @@ const TravnikWorldBuilding = () => {
               </h1>
 
               <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl">
-                Complete worldbuilding documentation for a post-apocalyptic PvP/PvE isometric
-                shooter. Three conflicting factions fight for survival on a radiation-ravaged
-                Earth where nuclear war mutated humans into mindless beasts and animals into
-                intelligent superbeings.
+                Three rival factions battle across a nuclear-scarred Earth in a PvP/PvE isometric shooter where 
+                mutated humans roam as mindless beasts and uplifted animals rise as the new superpowers.
               </p>
             </header>
 
@@ -154,6 +155,17 @@ const TravnikWorldBuilding = () => {
                 characters={characters}
                 loreSections={factionLoreSections}
               />
+            </section>
+
+            {/* Locations Section */}
+            <section id="locations" className="mb-16 scroll-mt-24">
+              <h2 className="font-display text-3xl font-semibold mb-6">
+                Locations & Environments
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                The diverse regions of Travnik, each shaped by the catastrophe's aftermath. From scorched wastelands to frozen tundras, every environment presents unique threats and opportunities.
+              </p>
+              <LocationsGrid locations={locations} />
             </section>
 
             {/* Systems & Materials Section */}

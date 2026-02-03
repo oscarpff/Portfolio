@@ -93,13 +93,13 @@ export function LoreCard({ lore }: LoreCardProps) {
               components={{
                 h2: ({ ...props }) => (
                   <h2
-                    className="text-2xl font-bold text-white mt-6 mb-3"
+                    className="text-2xl font-bold text-gold mt-6 mb-3"
                     {...props}
                   />
                 ),
                 h3: ({ ...props }) => (
                   <h3
-                    className="text-xl font-bold text-white/90 mt-4 mb-2"
+                    className="text-xl font-bold text-gold mt-4 mb-2"
                     {...props}
                   />
                 ),
