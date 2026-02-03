@@ -4,6 +4,15 @@ import WorkCard from "./WorkCard";
 
 const featuredWorks = [
   {
+    title: "Slaughterhouse",
+    category: "Published Game",
+    description: "A survival horror game built in Unreal Engine 5. Lead narrative design, AI systems, combat mechanics, and movement programming.",
+    excerpt: "The slaughterhouse has become a breeding ground for unspeakable mutations. Twisted creatures, born of the facility's dark past, now roam the halls. What starts as a twisted quest soon turns into a desperate fight for survival...",
+    link: "https://las-divinas.itch.io/slaughter-house",
+    isExternal: true,
+    tags: ["Unreal Engine 5", "Published", "Team Project"],
+  },
+  {
     title: "Quest Design - FOQUES (TVM)",
     category: "Quest Design & System Design",
     description: "A complete side quest system for FOQUES featuring 12 interconnected quests with branching narratives, moral choices, and consequence-based storytelling.",
@@ -16,14 +25,8 @@ const featuredWorks = [
     title: "Travnik - Worldbuilding",
     category: "Worldbuilding",
     description: "Complete worldbuilding documentation for a post-apocalyptic PvP/PvE shooter. Features three conflicting factions, radioactive mutation systems, and a rich lore spanning from nuclear war to space colonization.",
-    excerpt: "The snow crunches under Kari's paws. Before her lies a wounded lynx—her natural predator—trapped and desperate. The enemy of my enemy is my friend. But can she trust him? Every choice ripples through time, shaping allies, enemies, and the very landscape itself...",
+    excerpt: "In the aftermath of nuclear devastation, super-intelligent animals rise from the ashes while humanity devolves into monstrous Hoomans. Three factions clash for control...",
     link: "/narrative/travnik-worldbuilding",
-  },
-  {
-    title: "Chronicles of the Shattered Realm",
-    category: "Lore",
-    description: "Deep world-building documentation for a post-apocalyptic fantasy setting, including 200+ years of fictional history.",
-    excerpt: "In the Third Age of Silence, when the gods turned their backs and the stars grew cold, humanity learned to forge hope from the ashes of celestial betrayal...",
   },
 ];
 

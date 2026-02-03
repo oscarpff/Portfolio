@@ -32,7 +32,7 @@ const SplitLanding = () => {
           </div>
           
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
-            <span className="text-gradient-gold">Narrative</span>
+            <span className="text-gradient-gold">Game & Narrative</span>
             <br />
             <span className="text-foreground/90">Design</span>
           </h2>
@@ -40,7 +40,7 @@ const SplitLanding = () => {
           <p className={`font-body text-muted-foreground max-w-xs mx-auto transition-all duration-300 ${
             hoveredSide === "narrative" ? "opacity-100" : "opacity-70"
           }`}>
-            Quest design, world-building, and stories that bring games to life.
+            Games, quest design, world-building, and stories that bring ideas to life.
           </p>
           
           <div className={`mt-8 font-body text-sm text-gold tracking-widest uppercase transition-all duration-300 ${

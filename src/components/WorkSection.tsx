@@ -1,9 +1,18 @@
 import { useState } from "react";
 import WorkCard from "./WorkCard";
 
-const categories = ["All", "Quest Design", "Worldbuilding", "Characters"];
+const categories = ["All", "Games", "Quest Design", "Worldbuilding", "Characters"];
 
 const works = [
+  {
+    title: "Slaughterhouse",
+    category: "Games",
+    description: "A survival horror game built in Unreal Engine 5. Lead narrative design, AI systems, combat mechanics, and movement programming. Published on Itch.io.",
+    excerpt: "The slaughterhouse has become a breeding ground for unspeakable mutations. Twisted creatures, born of the facility's dark past, now roam the halls. What starts as a twisted quest for approval soon turns into a desperate fight for survival...",
+    link: "https://las-divinas.itch.io/slaughter-house",
+    isExternal: true,
+    tags: ["Unreal Engine 5", "Published", "Team Project"],
+  },
   {
     title: "Side Quest System - FOQUES",
     category: "Quest Design",
@@ -17,7 +26,7 @@ const works = [
     title: "Travnik - Worldbuilding",
     category: "Worldbuilding",
     description: "Complete worldbuilding documentation for a post-apocalyptic PvP/PvE shooter. Features three conflicting factions, radioactive mutation systems, and a rich lore spanning from nuclear war to space colonization.",
-    excerpt: "The snow crunches under Kari's paws. Before her lies a wounded lynx—her natural predator—trapped and desperate. The enemy of my enemy is my friend. But can she trust him? Every choice ripples through time, shaping allies, enemies, and the very landscape itself...",
+    excerpt: "In the aftermath of nuclear devastation, super-intelligent animals rise from the ashes while humanity devolves into monstrous Hoomans. Three factions clash for control of the last habitable city on Earth...",
     link: "/narrative/travnik-worldbuilding",
   },
   {
