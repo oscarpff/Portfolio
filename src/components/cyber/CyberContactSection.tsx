@@ -22,6 +22,7 @@ const CyberContactSection = () => {
             {/* Contact Form */}
             <div className="card-cyber border-gradient-cyber rounded-lg p-8">
               <form action="https://formspree.io/f/mvzkonzz" method="POST" className="space-y-6">
+                <input type="hidden" name="_next" value="https://oscarpff.netlify.app/cyber" />
                 <div>
                   <label htmlFor="name" className="block font-body text-sm font-medium text-foreground mb-2">
                     Name

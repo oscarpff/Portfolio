@@ -42,6 +42,7 @@ const ContactSection = () => {
             {/* Contact Form */}
             <div className="card-elevated border-gradient-gold rounded-lg p-8">
               <form action="https://formspree.io/f/mvzkonzz" method="POST" className="space-y-6">
+                <input type="hidden" name="_next" value="https://oscarpff.netlify.app/narrative" />
                 <div>
                   <label htmlFor="name" className="block font-body text-sm font-medium text-foreground mb-2">
                     Name
