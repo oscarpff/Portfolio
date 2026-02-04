@@ -37,17 +37,9 @@ const Navigation = () => {
   };
 
   const handleLogoClick = () => {
-    // If we're in a project page (FOQUES, TRAVNIK, or Cybersecurity writeups), go to that section's home
-    if (location.pathname.includes("foques") || location.pathname.includes("travnik")) {
+    // OscarPF always goes to /narrative (or stays there)
+    if (location.pathname !== "/narrative") {
       navigate("/narrative");
-    } else if (location.pathname.includes("cybersecurity")) {
-      navigate("/cybersecurity");
-    } else if (location.pathname === "/narrative") {
-      // If we're in narrative portfolio, go to split landing
-      navigate("/");
-    } else {
-      // Otherwise go to split landing
-      navigate("/");
     }
   };
 

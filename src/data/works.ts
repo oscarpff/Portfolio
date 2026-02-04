@@ -1,6 +1,6 @@
 export interface Work {
   title: string;
-  category: string;
+  category: string | string[];
   description: string;
   excerpt?: string;
   link?: string;
@@ -8,6 +8,7 @@ export interface Work {
   logo?: string;
   logoAlt?: string;
   tags?: string[];
+  thumbnail?: string;
 }
 
 export const works: Work[] = [
@@ -17,7 +18,7 @@ export const works: Work[] = [
     description: "A survival horror game built in Unreal Engine 5. Lead narrative design, AI systems, combat mechanics, and movement programming. Published on Itch.io.",
     link: "/narrative/slaughterhouse",
     logo: "/projects/slaughterhouse/SH_Logo.png",
-    logoAlt: "Slaughterhouse Game Logo",
+    logoAlt: "Slaughterhouse Logo",
     tags: ["Published", "Unreal Engine 5", "Team Project"],
   },
   {
@@ -36,7 +37,16 @@ export const works: Work[] = [
     link: "/narrative/travnik-worldbuilding",
     tags: ["Obsidian", "Worldbuilding"],
   },
+  {
+    title: "The Day After",
+    category: ["Games", "Game Jams"],
+    description: "A narrative-driven exploration game developed for ZamJam 2025. Clean up a messy house and uncover dark secrets guided by a mysterious magical bubble.",
+    link: "/narrative/the-day-after",
+    logo: "/projects/thedayafter/Logo.png",
+    logoAlt: "The Day After Logo",
+    tags: ["Published", "Game Jam", "Team Project"],
+  },
 ];
 
 // IDs of works to feature (0-indexed)
-export const featuredWorkIds = [0, 1,];
+export const featuredWorkIds = [0, 1, 2];

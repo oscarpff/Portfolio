@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 interface WorkCardProps {
   title: string;
-  category: string;
+  category: string | string[];
   description: string;
   excerpt?: string;
   index: number;
@@ -14,12 +14,15 @@ interface WorkCardProps {
   logo?: string;
   logoAlt?: string;
   tags?: string[];
+  thumbnail?: string;
 }
 
-const WorkCard = ({ title, category, description, excerpt, index, link, isExternal, logo, logoAlt, tags }: WorkCardProps) => {
+const WorkCard = ({ title, category, description, excerpt, index, link, isExternal, logo, logoAlt, tags, thumbnail }: WorkCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
-  const isGame = category === "Games" || category === "Published Game";
+  const categories = Array.isArray(category) ? category : [category];
+  const isGame = categories.includes("Games") || categories.includes("Published Game");
+  const categoryDisplay = Array.isArray(category) ? category.join(" / ") : category;
 
   const handleClick = (e: React.MouseEvent) => {
     if (link) {
@@ -34,7 +37,7 @@ const WorkCard = ({ title, category, description, excerpt, index, link, isExtern
         <div className="flex items-center gap-2">
           {isGame && <Gamepad2 className="w-4 h-4 text-gold" />}
           <span className="text-gold text-xs tracking-[0.2em] uppercase font-body">
-            {category}
+            {categoryDisplay}
           </span>
         </div>
         {isExternal ? (
@@ -94,12 +97,12 @@ const WorkCard = ({ title, category, description, excerpt, index, link, isExtern
         </div>
       )}
       
-      {/* Organization logo badge */}
+      {/* Logo badge */}
       {logo && (
         <div className="absolute bottom-4 right-4 opacity-60 group-hover:opacity-80 transition-opacity duration-300">
           <img 
-            src={logo} 
-            alt={logoAlt || "Organization logo"}
+            src={logo}
+            alt={logoAlt || title}
             className="h-7 w-auto"
           />
         </div>

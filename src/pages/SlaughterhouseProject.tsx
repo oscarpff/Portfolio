@@ -96,10 +96,6 @@ const SlaughterhouseProject = () => {
             <Badge variant="outline" className="border-gold/30 text-gold">Unreal Engine 5</Badge>
             <Badge variant="outline" className="border-gold/30 text-gold">2024</Badge>
           </div>
-
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-4">
-            Slaughterhouse - <span className="text-gradient-gold">Game</span>
-          </h1>
           
           <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-4xl mb-7 text-center mx-auto">
             Explore an abandoned facility, uncover its

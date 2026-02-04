@@ -2,14 +2,17 @@ import { useState } from "react";
 import WorkCard from "./WorkCard";
 import { works } from "@/data/works";
 
-const categories = ["All", "Games", "Quest Design", "Worldbuilding", "Characters"];
+const categories = ["All", "Games", "Quest Design", "Worldbuilding", "Game Jams"];
 
 const WorkSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredWorks = activeCategory === "All" 
     ? works 
-    : works.filter(work => work.category === activeCategory);
+    : works.filter(work => {
+        const categories = Array.isArray(work.category) ? work.category : [work.category];
+        return categories.includes(activeCategory);
+      });
 
   return (
     <section id="work" className="py-16 md:py-20">

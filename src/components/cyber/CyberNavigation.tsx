@@ -18,9 +18,8 @@ const CyberNavigation = () => {
   const location = useLocation();
 
   const handleLogoClick = () => {
-    if (location.pathname === "/cybersecurity") {
-      navigate("/");
-    } else {
+    // OscarPF always goes to /cybersecurity (or stays there)
+    if (!location.pathname.startsWith("/cybersecurity")) {
       navigate("/cybersecurity");
     }
   };
