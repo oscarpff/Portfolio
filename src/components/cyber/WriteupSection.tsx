@@ -24,27 +24,40 @@ const WriteupSection = () => {
             </p>
           </div>
           {/* Platform filters */}
-          <div className="flex flex-wrap gap-2">
-            {platforms.map((platform) => (
-              <button
-                key={platform}
-                onClick={() => setActivePlatform(platform)}
-                className={`px-4 py-1.5 rounded-full font-mono text-xs transition-all duration-300 ${
-                  activePlatform === platform
-                    ? "bg-cyber text-background"
-                    : "bg-secondary text-secondary-foreground hover:bg-cyber/20 hover:text-cyber"
-                }`}
-              >
-                {platform}
-              </button>
+          {writeups.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {platforms.map((platform) => (
+                <button
+                  key={platform}
+                  onClick={() => setActivePlatform(platform)}
+                  className={`px-4 py-1.5 rounded-full font-mono text-xs transition-all duration-300 ${
+                    activePlatform === platform
+                      ? "bg-cyber text-background"
+                      : "bg-secondary text-secondary-foreground hover:bg-cyber/20 hover:text-cyber"
+                  }`}
+                >
+                  {platform}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+        {filteredWriteups.length > 0 ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredWriteups.map((writeup, index) => (
+              <WriteupCard key={writeup.title} {...writeup} index={index} />
             ))}
           </div>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredWriteups.map((writeup, index) => (
-            <WriteupCard key={writeup.title} {...writeup} index={index} />
-          ))}
-        </div>
+        ) : (
+          <div className="rounded-lg border border-cyber/20 bg-ink/40 p-6 text-center">
+            <p className="text-cyber font-mono text-sm tracking-[0.3em] uppercase">
+              Hacking right now
+            </p>
+            <p className="text-muted-foreground mt-2">
+              No writeups published yet. More to come soon.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );

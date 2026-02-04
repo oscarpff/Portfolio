@@ -2,32 +2,33 @@ import { Award, ExternalLink, Calendar } from "lucide-react";
 
 const certifications = [
   {
-    name: "CompTIA Security+",
-    issuer: "CompTIA",
-    date: "In Progress",
-    status: "upcoming" as const,
-    description: "Industry-standard certification covering security fundamentals, threats, and risk management.",
-  },
-  {
-    name: "Google Cybersecurity Certificate",
-    issuer: "Google / Coursera",
-    date: "2024",
+    name: "ISO/IEC 27001 Information Security Associate™",
+    issuer: "SkillFront",
+    date: "2025",
     status: "completed" as const,
-    description: "Professional certificate covering security operations, incident response, and security tools.",
+    description: "Professional certification for information security management systems covering ISO/IEC 27001 standards and best practices.",
+    link: "https://www.skillfront.com/Badges/15234947469275",
   },
   {
-    name: "TryHackMe Learning Paths",
+    name: "TryHackMe SOC Level 1",
     issuer: "TryHackMe",
     date: "Ongoing",
     status: "ongoing" as const,
-    description: "Completed SOC Level 1, Cyber Defense, and Pre-Security paths with hands-on labs.",
+    description: "Learning the fundamentals, tools, and techniques used in Security Operations Centers (SOC).",
   },
   {
     name: "HackTheBox Academy",
     issuer: "Hack The Box",
     date: "Ongoing",
     status: "ongoing" as const,
-    description: "Advanced penetration testing modules and skill development through practical challenges.",
+    description: "Trying to beat machines, scaling from beginner to intermediate levels in penetration testing.",
+  },
+    {
+    name: "CompTIA Security+",
+    issuer: "CompTIA",
+    date: "upcoming",
+    status: "upcoming" as const,
+    description: "Preparing for the CompTIA Security+ certification to validate foundational skills in cybersecurity.",
   },
 ];
 
@@ -51,40 +52,54 @@ const CertificationsSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto space-y-6">
-          {certifications.map((cert, index) => (
-            <div
-              key={cert.name}
-              className="group card-cyber border-gradient-cyber rounded-lg p-6 transition-all duration-300 hover:glow-cyber flex flex-col md:flex-row md:items-center gap-4"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="p-3 rounded-lg bg-cyber/10 border border-cyber/20 self-start">
-                <Award className="w-6 h-6 text-cyber" />
-              </div>
-              
-              <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <h3 className="font-display text-xl font-semibold text-foreground group-hover:text-cyber transition-colors">
-                    {cert.name}
-                  </h3>
-                  <span className={`px-2 py-0.5 rounded text-xs font-mono border ${statusColors[cert.status]}`}>
-                    {cert.status === "completed" ? "Completed" : cert.status === "ongoing" ? "In Progress" : "Upcoming"}
-                  </span>
+          {certifications.map((cert, index) => {
+            const CardWrapper = cert.link ? 'a' : 'div';
+            const cardProps = cert.link 
+              ? { 
+                  href: cert.link, 
+                  target: "_blank", 
+                  rel: "noopener noreferrer" 
+                } 
+              : {};
+
+            return (
+              <CardWrapper
+                key={cert.name}
+                {...cardProps}
+                className="group card-cyber border-gradient-cyber rounded-lg p-6 transition-all duration-300 hover:glow-cyber flex flex-col md:flex-row md:items-center gap-4 cursor-pointer"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="p-3 rounded-lg bg-cyber/10 border border-cyber/20 self-start">
+                  <Award className="w-6 h-6 text-cyber" />
                 </div>
-                <p className="text-muted-foreground text-sm mb-2">{cert.description}</p>
-                <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                  <span className="font-mono">{cert.issuer}</span>
-                  <span className="flex items-center gap-1">
-                    <Calendar size={12} />
-                    {cert.date}
-                  </span>
+                
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <h3 className="font-display text-xl font-semibold text-foreground group-hover:text-cyber transition-colors">
+                      {cert.name}
+                    </h3>
+                    <span className={`px-2 py-0.5 rounded text-xs font-mono border ${statusColors[cert.status]}`}>
+                      {cert.status === "completed" ? "Completed" : cert.status === "ongoing" ? "In Progress" : "Upcoming"}
+                    </span>
+                  </div>
+                  <p className="text-muted-foreground text-sm mb-2">{cert.description}</p>
+                  <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                    <span className="font-mono">{cert.issuer}</span>
+                    <span className="flex items-center gap-1">
+                      <Calendar size={12} />
+                      {cert.date}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              
-              <button className="text-cyber opacity-0 group-hover:opacity-100 transition-opacity self-start md:self-center">
-                <ExternalLink size={18} />
-              </button>
-            </div>
-          ))}
+                
+                {cert.link && (
+                  <div className="text-cyber opacity-0 group-hover:opacity-100 transition-opacity self-start md:self-center">
+                    <ExternalLink size={18} />
+                  </div>
+                )}
+              </CardWrapper>
+            );
+          })}
         </div>
       </div>
     </section>

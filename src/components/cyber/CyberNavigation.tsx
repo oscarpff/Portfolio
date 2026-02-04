@@ -18,10 +18,21 @@ const CyberNavigation = () => {
   const location = useLocation();
 
   const handleLogoClick = () => {
-    // OscarPF always goes to /cybersecurity (or stays there)
-    if (!location.pathname.startsWith("/cybersecurity")) {
-      navigate("/cybersecurity");
+    navigate("/cybersecurity");
+  };
+
+  const handleNavClick = (href: string) => {
+    // Si estamos en la página principal de cybersecurity, scroll al ancla
+    if (location.pathname === "/cybersecurity") {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Si estamos en una subpágina, navegar a /cybersecurity con el hash
+      navigate(`/cybersecurity${href}`);
     }
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -47,12 +58,12 @@ const CyberNavigation = () => {
         <ul className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <li key={item.label}>
-              <a 
-                href={item.href}
+              <button 
+                onClick={() => handleNavClick(item.href)}
                 className="font-body text-sm text-cyber hover:text-cyber-glow transition-colors duration-300"
               >
                 {item.label}
-              </a>
+              </button>
             </li>
           ))}
         </ul>
@@ -73,13 +84,12 @@ const CyberNavigation = () => {
         <ul className="container mx-auto px-6 py-6 space-y-4">
           {navItems.map((item) => (
             <li key={item.label}>
-              <a 
-                href={item.href}
-                className="block font-body text-lg text-cyber hover:text-cyber-glow transition-colors duration-300"
-                onClick={() => setIsMobileMenuOpen(false)}
+              <button 
+                onClick={() => handleNavClick(item.href)}
+                className="block font-body text-lg text-cyber hover:text-cyber-glow transition-colors duration-300 w-full text-left"
               >
                 {item.label}
-              </a>
+              </button>
             </li>
           ))}
         </ul>

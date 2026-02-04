@@ -103,7 +103,7 @@ const WorkCard = ({ title, category, description, excerpt, index, link, isExtern
           <img 
             src={logo}
             alt={logoAlt || title}
-            className="h-7 w-auto"
+            className="h-10 w-auto"
           />
         </div>
       )}

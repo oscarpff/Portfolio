@@ -87,6 +87,11 @@ const TravnikWorldBuilding = () => {
 
             {/* Header */}
             <header className="mb-12">
+
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-4">
+                Travnik - <span className="text-gradient-gold">Worldbuilding</span>
+              </h1>
+              
               <div className="flex flex-wrap gap-2 mb-4">
                 <Badge variant="outline" className="border-gold/30 text-gold">
                   Worldbuilding
@@ -98,10 +103,6 @@ const TravnikWorldBuilding = () => {
                   2024
                 </Badge>
               </div>
-
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-4">
-                Travnik - <span className="text-gradient-gold">Worldbuilding</span>
-              </h1>
 
               <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl">
                 On a nuclear-scarred Earth, three rival factions fight for survival in a PvP/PvE isometric shooter. 

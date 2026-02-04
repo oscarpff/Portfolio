@@ -93,13 +93,13 @@ const SlaughterhouseProject = () => {
               <Gamepad2 className="w-3 h-3 mr-1" />
               Published Game
             </Badge>
-            <Badge variant="outline" className="border-gold/30 text-gold">Unreal Engine 5</Badge>
             <Badge variant="outline" className="border-gold/30 text-gold">2024</Badge>
+            <Badge variant="outline" className="border-gold/30 text-gold">Team Project</Badge>
           </div>
           
           <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-4xl mb-7 text-center mx-auto">
-            Explore an abandoned facility, uncover its
-            dark secrets through environmental storytelling, and navigate challenging encounters while trying to survive the horrors within.
+            Explore an abandoned facility, uncover its dark secrets and navigate challenging 
+            encounters while trying to survive the horrors within.
           </p>
           
           <div className="flex justify-center">

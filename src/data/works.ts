@@ -19,7 +19,6 @@ export const works: Work[] = [
     link: "/narrative/slaughterhouse",
     logo: "/projects/slaughterhouse/SH_Logo.png",
     logoAlt: "Slaughterhouse Logo",
-    tags: ["Published", "Unreal Engine 5", "Team Project"],
   },
   {
     title: "FOQUES",
@@ -28,23 +27,20 @@ export const works: Work[] = [
     link: "/narrative/foques-quest-system",
     logo: "/TVM_Logo_Text.PNG",
     logoAlt: "TTV Media Studio",
-    tags: ["Obsidian", "Draw.io", "Branching Narrative"],
   },
   {
     title: "Travnik",
     category: "Worldbuilding",
     description: "Worldbuilding documentation for a post-apocalyptic PvP/PvE shooter. Three conflicting factions, fight to survive in a devastated and involved Earth",
     link: "/narrative/travnik-worldbuilding",
-    tags: ["Obsidian", "Worldbuilding"],
   },
   {
     title: "The Day After",
     category: ["Games", "Game Jams"],
-    description: "A narrative-driven exploration game developed for ZamJam 2025. Clean up a messy house and uncover dark secrets guided by a mysterious magical bubble.",
+    description: "A cozy game developed for ZamJam 2025. Clean up a messy house before your parents get home and uncover dark secrets guided by a mysterious magical bubble.",
     link: "/narrative/the-day-after",
     logo: "/projects/thedayafter/Logo.png",
     logoAlt: "The Day After Logo",
-    tags: ["Published", "Game Jam", "Team Project"],
   },
 ];
 

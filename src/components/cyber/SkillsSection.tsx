@@ -4,32 +4,32 @@ const skillCategories = [
   {
     title: "Security Operations",
     icon: Shield,
-    skills: ["SIEM (Splunk, ELK)", "Log Analysis", "Incident Response", "Threat Hunting", "Alert Triage"],
+    skills: ["Splunk", "Velociraptor", "Log Analysis", "Alert Triage"],
   },
   {
     title: "Network Security",
     icon: Network,
-    skills: ["Wireshark", "Tcpdump", "Firewall Configuration", "IDS/IPS", "Network Forensics"],
+    skills: ["Wireshark", "Autopsy","Firewall", "IDS/IPS"],
   },
   {
     title: "Scripting & Automation",
     icon: Code,
-    skills: ["Python", "Bash", "PowerShell", "Regex", "API Integration"],
+    skills: ["Python", "Bash", "PowerShell"],
   },
   {
     title: "Vulnerability Assessment",
     icon: Eye,
-    skills: ["Nmap", "Nessus", "Burp Suite", "OWASP Top 10", "CVE Research"],
+    skills: ["Burp Suite", "OWASP Top 10", "CVE.org"],
   },
   {
     title: "System Administration",
     icon: Database,
-    skills: ["Linux", "Windows Server", "Active Directory", "Virtualization", "Cloud (AWS/Azure)"],
+    skills: ["Linux", "Windows Server", "Virtualization"],
   },
   {
     title: "Penetration Testing",
     icon: Terminal,
-    skills: ["Metasploit", "Kali Linux", "Privilege Escalation", "Web App Testing", "Password Cracking"],
+    skills: ["Metasploit", "Kali Linux", "Privilege Escalation"],
   },
 ];
 

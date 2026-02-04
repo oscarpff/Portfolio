@@ -89,13 +89,7 @@ const FoquesQuestSystem = () => {
 
           {/* Header */}
           <header className="mb-12">
-            <div className="flex flex-wrap gap-2 mb-4">
-              <Badge variant="outline" className="border-gold/30 text-gold">Quest Design</Badge>
-              <Badge variant="outline" className="border-gold/30 text-gold">System Design</Badge>
-              <Badge variant="outline" className="border-gold/30 text-gold">Branching Narrative</Badge>
-              <Badge variant="outline" className="border-gold/30 text-gold">2025</Badge>
-            </div>
-            
+           
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold mb-4">
               Quest Design - <span className="text-gradient-gold">FOQUES (TVM)</span>
             </h1>
@@ -108,6 +102,13 @@ const FoquesQuestSystem = () => {
                 alt="TTV Media Studio" 
                 className="h-24 opacity-80"
               />
+            </div>
+
+            <div className="flex flex-wrap gap-2 mb-4">
+              <Badge variant="outline" className="border-gold/30 text-gold">Quest Design</Badge>
+              <Badge variant="outline" className="border-gold/30 text-gold">System Design</Badge>
+              <Badge variant="outline" className="border-gold/30 text-gold">Branching Narrative</Badge>
+              <Badge variant="outline" className="border-gold/30 text-gold">2025</Badge>
             </div>
             
             <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-5xl">
