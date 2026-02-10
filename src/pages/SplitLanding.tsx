@@ -10,6 +10,7 @@ const SplitLanding = () => {
       {/* Narrative Design Side */}
       <Link
         to="/narrative"
+        onClick={() => window.scrollTo(0, 0)}
         className="relative flex-1 flex items-center justify-center cursor-pointer group overflow-hidden"
         onMouseEnter={() => setHoveredSide("narrative")}
         onMouseLeave={() => setHoveredSide(null)}
@@ -73,6 +74,7 @@ const SplitLanding = () => {
       {/* Cybersecurity Side */}
       <Link
         to="/cybersecurity"
+        onClick={() => window.scrollTo(0, 0)}
         className="relative flex-1 flex items-center justify-center cursor-pointer group overflow-hidden"
         onMouseEnter={() => setHoveredSide("cyber")}
         onMouseLeave={() => setHoveredSide(null)}

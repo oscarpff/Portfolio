@@ -73,7 +73,11 @@ const SlaughterhouseProject = () => {
       {/* Hero Section */}
       <section id="hero" className="pt-24 pb-6">
         <div className="container mx-auto px-6 max-w-5xl">
-          <Link to="/narrative" className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors mb-8">
+          <Link 
+            to="/narrative" 
+            onClick={() => window.scrollTo(0, 0)}
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors mb-8"
+          >
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm font-body">Back to Portfolio</span>
           </Link>

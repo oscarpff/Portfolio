@@ -7,8 +7,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PDFModal from "@/components/PDFModal";
 import FlowchartViewer from "@/components/FlowchartViewer";
-import CharacterCard from "@/components/foques/CharacterCard";
-import QuestConceptCard from "@/components/foques/QuestConceptCard";
+import CharacterCard from "@/components/narrative/foques/CharacterCard";
+import QuestConceptCard from "@/components/narrative/foques/QuestConceptCard";
 import ProjectNavigation from "@/components/ProjectNavigation";
 import { quest1Narrative, quest2Narrative } from "@/data/questNarratives";
 import { quest1Characters, quest2Characters } from "@/data/questCharacters";
@@ -82,7 +82,11 @@ const FoquesQuestSystem = () => {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6 max-w-5xl">
           {/* Back button */}
-          <Link to="/narrative" className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors mb-8">
+          <Link 
+            to="/narrative" 
+            onClick={() => window.scrollTo(0, 0)}
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors mb-8"
+          >
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm font-body">Back to Portfolio</span>
           </Link>

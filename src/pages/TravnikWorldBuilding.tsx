@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
-import { TimelineExpanded } from "@/components/travnik/TimelineExpanded";
-import FactionFeed from "@/components/travnik/FactionFeed";
-import EnemiesGrid from "@/components/travnik/EnemiesGrid";
-import MaterialsGrid from "@/components/travnik/MaterialsGrid";
-import EventsGrid from "@/components/travnik/EventsGrid";
-import LoreTabs from "@/components/travnik/LoreTabs";
-import LocationsGrid from "@/components/travnik/LocationsGrid";
+import { TimelineExpanded } from "@/components/narrative/travnik/TimelineExpanded";
+import FactionFeed from "@/components/narrative/travnik/FactionFeed";
+import EnemiesGrid from "@/components/narrative/travnik/EnemiesGrid";
+import MaterialsGrid from "@/components/narrative/travnik/MaterialsGrid";
+import EventsGrid from "@/components/narrative/travnik/EventsGrid";
+import LoreTabs from "@/components/narrative/travnik/LoreTabs";
+import LocationsGrid from "@/components/narrative/travnik/LocationsGrid";
 import ProjectNavigation from "@/components/ProjectNavigation";
-import WorldMap from "@/components/travnik/WorldMap";
-import { ExplorerProvider } from "@/components/travnik/TravnikExplorer";
+import WorldMap from "@/components/narrative/travnik/WorldMap";
+import { ExplorerProvider } from "@/components/narrative/travnik/TravnikExplorer";
 import {
   timelineEvents,
   factions,
@@ -80,7 +80,11 @@ const TravnikWorldBuilding = () => {
         <main className="pt-24 pb-16">
           <div className="container mx-auto px-6 max-w-5xl">
             {/* Back Button */}
-            <Link to="/narrative" className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors mb-8">
+            <Link 
+              to="/narrative" 
+              onClick={() => window.scrollTo(0, 0)}
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors mb-8"
+            >
               <ArrowLeft className="w-4 h-4" />
               <span className="text-sm font-body">Back to Portfolio</span>
             </Link>

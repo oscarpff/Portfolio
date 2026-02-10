@@ -5,7 +5,7 @@ import React from "react";
 
 interface ProjectCardProps {
   title: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string }> | string;
   description: string;
   technologies: string[];
   index: number;
@@ -30,7 +30,11 @@ const ProjectCard = ({
     <>
       <div className="flex items-start gap-4 mb-4">
         <div className="p-3 rounded-lg bg-cyber/10 border border-cyber/20 group-hover:bg-cyber/20 transition-colors flex-shrink-0">
-          <Icon className="w-6 h-6 text-cyber" />
+          {typeof Icon === 'string' ? (
+            <img src={Icon} alt="" className="w-6 h-6" />
+          ) : (
+            <Icon className="w-6 h-6 text-cyber" />
+          )}
         </div>
         <h3 className="font-display text-2xl font-semibold text-foreground group-hover:text-cyber transition-colors">
           {title}
@@ -113,6 +117,7 @@ const ProjectCard = ({
       return (
         <Link
           to={link}
+          onClick={() => window.scrollTo(0, 0)}
           className="group card-cyber border-gradient-cyber rounded-lg p-8 transition-all duration-300 hover:glow-cyber block"
           style={{ animationDelay: `${index * 0.1}s` }}
         >

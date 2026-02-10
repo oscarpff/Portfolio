@@ -64,6 +64,7 @@ const Ward404CTF = () => {
         <div className="container mx-auto px-6">
           <Link
             to="/cybersecurity"
+            onClick={() => window.scrollTo(0, 0)}
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-cyber transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />

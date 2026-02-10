@@ -40,6 +40,11 @@ const Navigation = () => {
     // OscarPF always goes to /narrative (or stays there)
     if (location.pathname !== "/narrative") {
       navigate("/narrative");
+      // Scroll to top after navigation
+      setTimeout(() => window.scrollTo(0, 0), 0);
+    } else {
+      // If already on narrative, just scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -53,11 +58,15 @@ const Navigation = () => {
         <div className="flex items-center gap-4">
           {/* Home Button - Shown on main portfolio pages */}
           {(location.pathname.startsWith("/narrative") || location.pathname === "/cybersecurity") && (
-            <Link to="/" className={`transition-colors ${
-              location.pathname === "/cybersecurity" 
-                ? "text-cyan-400 hover:text-cyan-300" 
-                : "text-gold hover:text-gold/80"
-            }`}>
+            <Link 
+              to="/" 
+              onClick={() => window.scrollTo(0, 0)}
+              className={`transition-colors ${
+                location.pathname === "/cybersecurity" 
+                  ? "text-cyan-400 hover:text-cyan-300" 
+                  : "text-gold hover:text-gold/80"
+              }`}
+            >
               <Home className="w-5 h-5" />
             </Link>
           )}

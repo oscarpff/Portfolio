@@ -18,7 +18,14 @@ const CyberNavigation = () => {
   const location = useLocation();
 
   const handleLogoClick = () => {
-    navigate("/cybersecurity");
+    if (location.pathname === "/cybersecurity") {
+      // If already on cybersecurity, just scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Navigate to cybersecurity and scroll to top
+      navigate("/cybersecurity");
+      setTimeout(() => window.scrollTo(0, 0), 0);
+    }
   };
 
   const handleNavClick = (href: string) => {
@@ -43,7 +50,11 @@ const CyberNavigation = () => {
     >
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <Link to="/" className="text-cyber hover:text-cyber-glow transition-colors hidden sm:block">
+          <Link 
+            to="/" 
+            onClick={() => window.scrollTo(0, 0)}
+            className="text-cyber hover:text-cyber-glow transition-colors hidden sm:block"
+          >
             <Home className="w-5 h-5" />
           </Link>
           <button 

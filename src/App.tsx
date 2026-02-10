@@ -11,6 +11,7 @@ import TravnikWorldBuilding from "./pages/TravnikWorldBuilding";
 import SlaughterhouseProject from "./pages/SlaughterhouseProject";
 import TheDayAfterProject from "./pages/TheDayAfterProject";
 import Ward404CTF from "./pages/Ward404CTF";
+import SecureWatchProject from "./pages/SecureWatchProject";
 import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/narrative/the-day-after" element={<TheDayAfterProject />} />
           <Route path="/cybersecurity" element={<CybersecurityPortfolio />} />
           <Route path="/cybersecurity/ward404-ctf" element={<Ward404CTF />} />
+          <Route path="/cybersecurity/securewatch" element={<SecureWatchProject />} />
           <Route path="/narrative/travnik-worldbuilding" element={<TravnikWorldBuilding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

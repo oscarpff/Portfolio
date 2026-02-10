@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Shield background -->
+  <defs>
+    <linearGradient id="shieldGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <path
+    d="M128 16c32 22 64 28 96 32v86c0 63-43 98-96 118C75 232 32 197 32 134V48c32-4 64-10 96-32Z"
+    fill="url(#shieldGradient)"
+    stroke="#38bdf8"
+    stroke-width="10"
+    stroke-linejoin="round"
+  />
+
+  <!-- Eye (monitoring) -->
+  <path
+    d="M64 126c18-24 40-36 64-36s46 12 64 36c-18 24-40 36-64 36s-46-12-64-36Z"
+    fill="none"
+    stroke="#38bdf8"
+    stroke-width="10"
+    stroke-linejoin="round"
+  />
+  <circle cx="128" cy="126" r="16" fill="#22d3ee"/>
+
+  <!-- Pulse / incident activity -->
+  <path
+    d="M72 176h34l10-18 14 32 14-26 8 12h38"
+    fill="none"
+    stroke="#22d3ee"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Alert dot (critical incident) -->
+  <circle cx="196" cy="70" r="9" fill="#ef4444"/>
+</svg>

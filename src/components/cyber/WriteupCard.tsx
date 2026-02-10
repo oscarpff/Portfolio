@@ -85,6 +85,7 @@ const WriteupCard = ({ title, platform, difficulty, description, tags, index, li
       return (
         <Link
           to={link}
+          onClick={() => window.scrollTo(0, 0)}
           className="group card-cyber border-gradient-cyber rounded-lg p-6 transition-all duration-300 hover:glow-cyber hover:-translate-y-1 block"
           style={{ animationDelay: `${index * 0.1}s` }}
         >

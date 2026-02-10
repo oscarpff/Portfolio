@@ -130,6 +130,7 @@ const WorkCard = ({ title, category, description, excerpt, index, link, isExtern
     return (
       <Link 
         to={link}
+        onClick={() => window.scrollTo(0, 0)}
         className="block group card-elevated border-gradient-gold rounded-lg p-6 md:p-8 cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:glow-gold relative"
         style={{ animationDelay: `${index * 100}ms` }}
       >

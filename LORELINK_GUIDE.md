@@ -5,7 +5,7 @@ El componente `LoreLink` permite crear links interactivos en textos que abren in
 ## Sintaxis básica
 
 ```tsx
-import LoreLink from "@/components/travnik/LoreLink";
+import LoreLink from "@/components/narrative/travnik/LoreLink";
 
 // Simple link a una facción
 <LoreLink id="esas" type="faction">ESAS</LoreLink>
