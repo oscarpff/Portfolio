@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import PDFModal from "@/components/PDFModal";
-import FlowchartViewer from "@/components/FlowchartViewer";
+import Navigation from "@/components/narrative/Navigation";
+import Footer from "@/components/narrative/Footer";
+import PDFModal from "@/components/narrative/PDFModal";
+import FlowchartViewer from "@/components/narrative/FlowchartViewer";
 import CharacterCard from "@/components/narrative/foques/CharacterCard";
 import QuestConceptCard from "@/components/narrative/foques/QuestConceptCard";
-import ProjectNavigation from "@/components/ProjectNavigation";
+import ProjectNavigation from "@/components/narrative/ProjectNavigation";
 import { quest1Narrative, quest2Narrative } from "@/data/questNarratives";
 import { quest1Characters, quest2Characters } from "@/data/questCharacters";
 

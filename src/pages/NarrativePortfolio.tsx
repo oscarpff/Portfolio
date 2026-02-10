@@ -1,10 +1,10 @@
-import Navigation from "@/components/Navigation";
-import FeaturedWorks from "@/components/FeaturedWorks";
-import WorkSection from "@/components/WorkSection";
-import AboutSection from "@/components/AboutSection";
-import CVSection from "@/components/CVSection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
+import Navigation from "@/components/narrative/Navigation";
+import FeaturedWorks from "@/components/narrative/FeaturedWorks";
+import WorkSection from "@/components/narrative/WorkSection";
+import AboutSection from "@/components/narrative/AboutSection";
+import CVSection from "@/components/narrative/CVSection";
+import ContactSection from "@/components/narrative/ContactSection";
+import Footer from "@/components/narrative/Footer";
 
 const NarrativePortfolio = () => {
   return (

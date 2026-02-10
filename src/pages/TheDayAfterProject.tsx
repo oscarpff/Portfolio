@@ -1,11 +1,11 @@
 import { ArrowLeft, ExternalLink, Brain, Code, Gamepad2, Users, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState, useCallback } from "react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import Navigation from "@/components/narrative/Navigation";
+import Footer from "@/components/narrative/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import ProjectNavigation from "@/components/ProjectNavigation";
+import ProjectNavigation from "@/components/narrative/ProjectNavigation";
 import {
   Carousel,
   CarouselContent,

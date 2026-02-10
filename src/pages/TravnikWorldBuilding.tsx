@@ -1,7 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import Navigation from "@/components/narrative/Navigation";
+import Footer from "@/components/narrative/Footer";
 import { Badge } from "@/components/ui/badge";
 import { TimelineExpanded } from "@/components/narrative/travnik/TimelineExpanded";
 import FactionFeed from "@/components/narrative/travnik/FactionFeed";
@@ -10,7 +10,7 @@ import MaterialsGrid from "@/components/narrative/travnik/MaterialsGrid";
 import EventsGrid from "@/components/narrative/travnik/EventsGrid";
 import LoreTabs from "@/components/narrative/travnik/LoreTabs";
 import LocationsGrid from "@/components/narrative/travnik/LocationsGrid";
-import ProjectNavigation from "@/components/ProjectNavigation";
+import ProjectNavigation from "@/components/narrative/ProjectNavigation";
 import WorldMap from "@/components/narrative/travnik/WorldMap";
 import { ExplorerProvider } from "@/components/narrative/travnik/TravnikExplorer";
 import {
