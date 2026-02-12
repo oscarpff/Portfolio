@@ -12,7 +12,7 @@ export interface Writeup {
 
 export const writeups: Writeup[] = [
   {
-    title: " Brutus ",
+    title: "Brutus",
     platform: "HackTheBox",
     difficulty: "Very Easy",
     description:
@@ -25,7 +25,7 @@ export const writeups: Writeup[] = [
     ],
     link: "/cybersecurity/sherlock-brutus",
     featured: true,
-    machineIcon: "/public/writeups/brutus/brutus_icon.png",
+    machineIcon: "/writeups/brutus/brutus_icon.png",
   },
 ];
 
