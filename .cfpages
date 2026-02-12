@@ -1,2 +1,2 @@
 # Cloudflare Pages configuration
-NODE_VERSION=20.11.0
+NODE_VERSION=22.3.0
