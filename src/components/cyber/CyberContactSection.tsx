@@ -5,7 +5,7 @@ import { Mail, Linkedin, FileText, Github } from "lucide-react";
 
 const CyberContactSection = () => {
   return (
-    <section id="contact" className="py-24 md:py-32">
+    <section id="contact" className="py-20 md:py-24">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}

@@ -4,14 +4,15 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SplitLanding from "./pages/SplitLanding";
-import NarrativePortfolio from "./pages/NarrativePortfolio";
-import CybersecurityPortfolio from "./pages/CybersecurityPortfolio";
-import FoquesQuestSystem from "./pages/FoquesQuestSystem";
-import TravnikWorldBuilding from "./pages/TravnikWorldBuilding";
-import SlaughterhouseProject from "./pages/SlaughterhouseProject";
-import TheDayAfterProject from "./pages/TheDayAfterProject";
-import Ward404CTF from "./pages/Ward404CTF";
-import SecureWatchProject from "./pages/SecureWatchProject";
+import NarrativePortfolio from "./pages/narrative/NarrativePortfolio";
+import CybersecurityPortfolio from "./pages/cyber/CybersecurityPortfolio";
+import FoquesQuestSystem from "./pages/narrative/FoquesQuestSystem";
+import TravnikWorldBuilding from "./pages/narrative/TravnikWorldBuilding";
+import SlaughterhouseProject from "./pages/narrative/SlaughterhouseProject";
+import TheDayAfterProject from "./pages/narrative/TheDayAfterProject";
+import Ward404CTF from "./pages/cyber/Ward404CTF";
+import SecureWatchProject from "./pages/cyber/SecureWatchProject";
+import SherlockBrutus from "./pages/cyber/SherlockBrutus";
 import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/cybersecurity" element={<CybersecurityPortfolio />} />
           <Route path="/cybersecurity/ward404-ctf" element={<Ward404CTF />} />
           <Route path="/cybersecurity/securewatch" element={<SecureWatchProject />} />
+          <Route path="/cybersecurity/sherlock-brutus" element={<SherlockBrutus />} />
           <Route path="/narrative/travnik-worldbuilding" element={<TravnikWorldBuilding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

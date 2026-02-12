@@ -9,7 +9,7 @@ const skills = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 md:py-32 bg-ink-light/30">
+    <section id="about" className="py-20 md:py-24 bg-ink-light/30">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left column - Text */}

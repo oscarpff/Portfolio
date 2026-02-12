@@ -23,7 +23,7 @@ const FeaturedWriteups = () => {
   }
 
   return (
-    <section className="pt-28 pb-16 md:pt-32 md:pb-20">
+    <section className="py-20 md:py-24 bg-ink/30">
       <div className="container mx-auto px-6">
         {/* Compact intro */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
@@ -53,11 +53,11 @@ const FeaturedWriteups = () => {
 
         {/* Featured cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredProjects.map((project, index) => (
-            <ProjectCard key={project.title} {...project} index={index} />
-          ))}
           {featuredWriteups.map((writeup, index) => (
             <WriteupCard key={writeup.title} {...writeup} index={index + featuredProjects.length} />
+          ))}          
+          {featuredProjects.map((project, index) => (
+            <ProjectCard key={project.title} {...project} index={index} />
           ))}
         </div>
       </div>

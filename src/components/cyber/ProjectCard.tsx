@@ -28,14 +28,16 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   const CardContent = (
     <>
-      <div className="flex items-start gap-4 mb-4">
-        <div className="p-3 rounded-lg bg-cyber/10 border border-cyber/20 group-hover:bg-cyber/20 transition-colors flex-shrink-0">
-          {typeof Icon === 'string' ? (
-            <img src={Icon} alt="" className="w-6 h-6" />
-          ) : (
+      <div className="flex items-center gap-4 mb-4">
+        {typeof Icon === 'string' ? (
+          <div className="flex items-center justify-center flex-shrink-0 w-12 h-12">
+            <img src={Icon} alt="" className="w-12 h-12 object-contain" />
+          </div>
+        ) : (
+          <div className="rounded-lg bg-cyber/10 border border-cyber/20 group-hover:bg-cyber/20 transition-colors flex-shrink-0 flex items-center justify-center w-12 h-12">
             <Icon className="w-6 h-6 text-cyber" />
-          )}
-        </div>
+          </div>
+        )}
         <h3 className="font-display text-2xl font-semibold text-foreground group-hover:text-cyber transition-colors">
           {title}
         </h3>
@@ -57,7 +59,7 @@ const ProjectCard = ({
       </div>
 
       {link && (
-        <div className="text-sm text-cyber/70 font-body opacity-0 group-hover:opacity-100 transition-opacity mb-4 flex items-center gap-2">
+        <div className="text-sm text-cyber font-body opacity-0 group-hover:opacity-100 transition-opacity mb-4 flex items-center gap-2">
           {isExternal ? "View Project" : "View Details"}
           {isExternal ? (
             <ExternalLink size={14} />
@@ -107,7 +109,7 @@ const ProjectCard = ({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="group card-cyber border-gradient-cyber rounded-lg p-8 transition-all duration-300 hover:glow-cyber block"
+          className="group card-cyber border-gradient-cyber rounded-lg p-6 transition-all duration-300 hover:glow-cyber hover:-translate-y-1 block h-full flex flex-col"
           style={{ animationDelay: `${index * 0.1}s` }}
         >
           {CardContent}
@@ -118,7 +120,7 @@ const ProjectCard = ({
         <Link
           to={link}
           onClick={() => window.scrollTo(0, 0)}
-          className="group card-cyber border-gradient-cyber rounded-lg p-8 transition-all duration-300 hover:glow-cyber block"
+          className="group card-cyber border-gradient-cyber rounded-lg p-6 transition-all duration-300 hover:glow-cyber hover:-translate-y-1 block h-full flex flex-col"
           style={{ animationDelay: `${index * 0.1}s` }}
         >
           {CardContent}
@@ -129,7 +131,7 @@ const ProjectCard = ({
 
   return (
     <div
-      className="group card-cyber border-gradient-cyber rounded-lg p-8 transition-all duration-300 hover:glow-cyber"
+      className="group card-cyber border-gradient-cyber rounded-lg p-6 transition-all duration-300 hover:glow-cyber hover:-translate-y-1 h-full flex flex-col"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       {CardContent}

@@ -11,7 +11,7 @@ const FeaturedWorks = () => {
   };
 
   return (
-    <section className="pt-28 pb-16 md:pt-32 md:pb-20">
+    <section className="py-20 md:py-24 bg-ink/30">
       <div className="container mx-auto px-6">
         {/* Compact intro */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">

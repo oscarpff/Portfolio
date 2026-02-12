@@ -11,10 +11,12 @@ const CyberFooter = () => {
     // Si estamos en /cybersecurity, ir a split
     if (location.pathname === "/cybersecurity") {
       navigate("/");
+      setTimeout(() => window.scrollTo(0, 0), 0);
     }
     // Si estamos en un proyecto de cybersecurity, ir a /cybersecurity
     else {
       navigate("/cybersecurity");
+      setTimeout(() => window.scrollTo(0, 0), 0);
     }
   };
 
