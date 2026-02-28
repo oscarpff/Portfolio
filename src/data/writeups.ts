@@ -1,3 +1,5 @@
+import { getAssetUrl } from "@/lib/asset-utils";
+
 export interface Writeup {
   title: string;
   platform: string;
@@ -25,7 +27,7 @@ export const writeups: Writeup[] = [
     ],
     link: "/cybersecurity/sherlock-brutus",
     featured: true,
-    machineIcon: "/writeups/brutus/brutus_icon.png",
+    machineIcon: getAssetUrl("/writeups/brutus/brutus_icon.png"),
   },
 ];
 

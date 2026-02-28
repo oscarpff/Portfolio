@@ -6,6 +6,7 @@ import Footer from "@/components/narrative/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ProjectNavigation from "@/components/narrative/ProjectNavigation";
+import { getAssetUrl } from "@/lib/asset-utils";
 import {
   Carousel,
   CarouselContent,
@@ -27,11 +28,11 @@ const navSections = [
 
 const images = [
   { type: "video", videoId: "q_mMmUznelE", alt: "Gameplay Trailer", thumbnail: "https://img.youtube.com/vi/q_mMmUznelE/sddefault.jpg" },
-  { type: "image", src: "/projects/slaughterhouse/Inventory.png", alt: "Inventory screen" },
-  { type: "image", src: "/projects/slaughterhouse/congelador.png", alt: "Freezer area" },
-  { type: "image", src: "/projects/slaughterhouse/laboratorio.png", alt: "Laboratory" },
-  { type: "image", src: "/projects/slaughterhouse/Puzzle.png", alt: "Puzzle" },
-  { type: "image", src: "/projects/slaughterhouse/boss.png", alt: "Boss fight" },
+  { type: "image", src: getAssetUrl("/projects/slaughterhouse/Inventory.png"), alt: "Inventory screen" },
+  { type: "image", src: getAssetUrl("/projects/slaughterhouse/congelador.png"), alt: "Freezer area" },
+  { type: "image", src: getAssetUrl("/projects/slaughterhouse/laboratorio.png"), alt: "Laboratory" },
+  { type: "image", src: getAssetUrl("/projects/slaughterhouse/Puzzle.png"), alt: "Puzzle" },
+  { type: "image", src: getAssetUrl("/projects/slaughterhouse/boss.png"), alt: "Boss fight" },
 ];
 
 const SlaughterhouseProject = () => {

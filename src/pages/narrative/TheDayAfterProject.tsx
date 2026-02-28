@@ -6,6 +6,7 @@ import Footer from "@/components/narrative/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ProjectNavigation from "@/components/narrative/ProjectNavigation";
+import { getAssetUrl } from "@/lib/asset-utils";
 import {
   Carousel,
   CarouselContent,
@@ -26,9 +27,9 @@ const navSections = [
 
 const images = [
   { type: "video", videoId: "Bo40HdKVuG0", alt: "Gameplay Trailer", thumbnail: "https://img.youtube.com/vi/Bo40HdKVuG0/sddefault.jpg" },
-  { type: "image", src: "/projects/thedayafter/Bubbly.png", alt: "Magical bubble companion" },
-  { type: "image", src: "/projects/thedayafter/Counter.png", alt: "Kitchen" },
-  { type: "image", src: "/projects/thedayafter/LivingRoom.png", alt: "Cleaning system" },
+  { type: "image", src: getAssetUrl("/projects/thedayafter/Bubbly.png"), alt: "Magical bubble companion" },
+  { type: "image", src: getAssetUrl("/projects/thedayafter/Counter.png"), alt: "Kitchen" },
+  { type: "image", src: getAssetUrl("/projects/thedayafter/LivingRoom.png"), alt: "Cleaning system" },
 ];
 
 const TheDayAfterProject = () => {
