@@ -11,10 +11,12 @@ export interface CyberProject {
   icon: typeof Flag | string;
 }
 
+import { getAssetUrl } from "@/lib/asset-utils";
+
 export const cyberProjects: CyberProject[] = [
     {
     title: "SecureWatch",
-    icon: "/projects/icon.svg",
+    icon: getAssetUrl("/projects/icon.svg"),
     description:
       "Professional incident management system with real-time metrics, filtering, and comprehensive tracking for security incidents",
     technologies: ["React", "TypeScript", "Incident Response"],

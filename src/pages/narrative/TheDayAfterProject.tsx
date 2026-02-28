@@ -82,7 +82,7 @@ const TheDayAfterProject = () => {
           {/* Game Logo */}
           <div className="mb-6 flex justify-center">
             <img 
-              src="/projects/thedayafter/FullLogo.png" 
+              src={getAssetUrl("/projects/thedayafter/FullLogo.png")} 
               alt="The Day After Logo" 
               className="h-38 md:h-38 w-auto"
               style={{ imageRendering: 'crisp-edges' }}

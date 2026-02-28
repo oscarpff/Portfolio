@@ -85,7 +85,7 @@ const SlaughterhouseProject = () => {
           {/* Game Logo */}
           <div className="mb-6 flex justify-center">
             <img 
-              src="/projects/slaughterhouse/Prueba2.svg" 
+              src={getAssetUrl("/projects/slaughterhouse/Prueba2.svg")} 
               alt="Slaughterhouse Logo" 
               className="h-28 md:h-38 w-auto"
               style={{ imageRendering: 'crisp-edges' }}

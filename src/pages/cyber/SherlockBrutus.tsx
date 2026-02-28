@@ -28,7 +28,7 @@ const SherlockBrutus = () => {
           {/* Header */}
           <header className="mb-12">
             <div className="flex items-center gap-3 mb-4">
-               <img src="/writeups/brutus/brutus_icon.png" alt="Brutus Icon" className="w-20 h-20 object-contain" />
+               <img src={getAssetUrl("/writeups/brutus/brutus_icon.png")} alt="Brutus Icon" className="w-20 h-20 object-contain" />
             <h1 className="font-display text-4xl md:text-5xl font-semibold mb-4 text-gradient-cyber">
               Brutus
             </h1>
@@ -86,7 +86,7 @@ const SherlockBrutus = () => {
 
             {/* Image */}
             <div className="rounded-xl overflow-hidden border border-border">
-              <img src="/writeups/brutus/brute_force.png" alt="Auth.log showing brute force attempts" className="w-full h-auto" />
+              <img src={getAssetUrl("/writeups/brutus/brute_force.png")} alt="Auth.log showing brute force attempts" className="w-full h-auto" />
             </div>
           </section>
 
@@ -140,7 +140,7 @@ const SherlockBrutus = () => {
 
             {/* Image */}
             <div className="rounded-xl overflow-hidden border border-border">
-              <img src="/writeups/brutus/wtmp_artifact.png" alt="Parsed wtmp output showing login session" className="w-full h-auto" />
+              <img src={getAssetUrl("/writeups/brutus/wtmp_artifact.png")} alt="Parsed wtmp output showing login session" className="w-full h-auto" />
             </div>
             
           </section>

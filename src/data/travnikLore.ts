@@ -1,4 +1,5 @@
 // Travnik Worldbuilding Lore Data
+import { getAssetUrl } from "@/lib/asset-utils";
 
 // ==================== TYPES ====================
 
@@ -258,8 +259,8 @@ export const characters: Character[] = [
         "Yesterday's Memories (Active) → +X% attack speed and extra damage",
       passive: "Resilience (Passive) → +X% life steal in melee combat",
     },
-    imageUrl: "/projects/characters/Mandril.png",
-    skinImages: ["/projects/characters/Mandril.png"],
+    imageUrl: getAssetUrl("/projects/characters/Mandril.png"),
+    skinImages: [getAssetUrl("/projects/characters/Mandril.png")],
     color: "#000000",
     background:
       "Blood, tears, and screams. Reminiscences of a tormented past marked in Quasar's memory haunt his sleep every night, gripping his knives tightly in a vain attempt to rest. Marked as the best of his promotion, Quasar leads ESAS operations on Earth, directing his members and sending information to the ISS. Though he worries about his comrades' well-being, he would not hesitate for a second to eliminate them if they endangered the mission's success. The only thing that matters now is returning to space—they need him there. Though excellent with almost any weapon, Quasar enjoys working with his knives, light and silent weapons for eliminating Hoomans without alerting the rest, an ideal option for conserving ammunition, scarce on the blue planet. Quasar possesses great agility, allowing him to infiltrate enemy ranks unseen and quickly eliminate his targets, opening a path for his squad to advance into Hooman burrows and collect Element 444, as well as into enemy bases to plunder other valuable resources like Compound-T.",
@@ -284,8 +285,8 @@ export const characters: Character[] = [
       passive:
         "Hardness (Passive) → Gains X armor points, resists control when outnumbered",
     },
-    imageUrl: "/projects/characters/Escarabajo.png",
-    skinImages: ["/projects/characters/Escarabajo.png"],
+    imageUrl: getAssetUrl("/projects/characters/Escarabajo.png"),
+    skinImages: [getAssetUrl("/projects/characters/Escarabajo.png")],
     color: "#000000",
     background:
       "Not the biggest, nor the smartest, nor the strongest. But perhaps the most persevering. When life hung by a thread, Bugve was the first to push himself and repeat trial simulations, determined to climb the rankings and be selected to join ESAS. Capable of withstanding blows and extreme situations, Bugve managed to surpass difficult trials like skirmishes among aspirants or radiation simulations, taking shelter under his shell until the test ended while his comrades collapsed unconscious. Once selected, Bugve decided to specialize in explosives, capable of surviving accidents that would kill any other squad member. His passion for discovering new explosives and improving them using Compound-T makes him seem like a mad scientist, with irrational expressions and attitudes. However, beneath that eccentric and hyperactive mask hides a shy and insecure creature, fearful of failing his team and being expelled from ESAS.",
@@ -310,8 +311,8 @@ export const characters: Character[] = [
       passive:
         "Advanced Knowledge → Requires fewer materials to craft objects",
     },
-    imageUrl: "/projects/characters/Ave.png",
-    skinImages: ["/projects/characters/Ave.png"],
+    imageUrl: getAssetUrl("/projects/characters/Ave.png"),
+    skinImages: [getAssetUrl("/projects/characters/Ave.png")],
     color: "#4B8BBE",
     background:
       "Descendant of a family of falcons sheltered by the engineers at the underground base, Palaptica is the pilot of the ship that carries the Engineers from the base to Travnik. During the evolution of animals, Palaptica lost her ability to fly but sharpened her senses to an extreme level, capable of visualizing distant targets with ease or hearing the slightest sound that alerts Hoomans or other creatures. During her training with the engineers, she specialized in designing and maintaining aeronautical structures, becoming responsible for investigating ship improvements and repairing it when it crashes on Travnik. As she usually works in the base, she has no great weapons training, so she uses a simple pistol and various custom gadgets that ensure her survival against Hoomans and possibility of escape against other enemies. She is a pioneer in working with Compound-T, investigating its properties and conducting tests to create new materials resistant to radiation.",
@@ -335,8 +336,8 @@ export const characters: Character[] = [
         "Diligent Student (Active) → Harnesses air to charge at speed, lifting enemies",
       passive: "+X% damage dealt / +X% damage received",
     },
-    imageUrl: "/projects/characters/Antilope.png",
-    skinImages: ["/projects/characters/Antilope.png"],
+    imageUrl: getAssetUrl("/projects/characters/Antilope.png"),
+    skinImages: [getAssetUrl("/projects/characters/Antilope.png")],
     color: "#4B8BBE",
     background:
       "Blitz is a young antelope from the radioactive wastelands surrounding the city of Travnik. It is unknown how his family survived the radiation and mutated to resist it. During the Wild Awakening, Blitz and his herd discover Travnik's command center while the Engineers are in the midst of reform and construction work to build a safe base to work and operate from. Seeking food and resources, Blitz's group infiltrates the base to steal valuable supplies, but after triggering an alarm they are forced to flee, pursued by the Engineers. Swift but inexperienced, Blitz becomes trapped in the facility, surrounded by Engineers who, instead of finishing him, propose that he join them. Blitz accepts and becomes a brilliant apprentice, standing out among the rest of the students, and earning a place in the Engineers' exploration squad, where he hopes to find his herd and convince them to join the Engineers to settle and live a better life. Blitz specializes in aerodynamics, studying better ways to leverage his innate high speed.",
@@ -359,8 +360,8 @@ export const characters: Character[] = [
       active: "Playtime (Active) → Camouflages with surroundings",
       passive: "+X% damage using sniper rifle",
     },
-    imageUrl: "/projects/characters/Pulpo.png",
-    skinImages: ["/projects/characters/Pulpo.png"],
+    imageUrl: getAssetUrl("/projects/characters/Pulpo.png"),
+    skinImages: [getAssetUrl("/projects/characters/Pulpo.png")],
     color: "#228B22",
     background:
       "From an early age, Oct-Vi-O always stood out for his ability to hide around the house, camouflaging himself with the surroundings and scaring his siblings to laugh at them. When his parents worked in the field, he roamed the perimeter of the base, asking guards posted at the entrances what the outside world was like. The guards usually ignored him, but that made Oct-Vi-O's curiosity grow increasingly. During a period of resource scarcity, the Supreme Priest decided to sacrifice a family to save resources, convincing the faithful by saying they were chosen for premature Ascension. Oct-Vi-O's family was selected. His parents and siblings went to the Temple, eager to receive the Ascension, but Oct-Vi-O wanted to know the outside world, so when the guards were about to light the pyre, he shot the Supreme Priest in cold blood with a sniper rifle he had stolen from the armory. As everyone present stood in shock, Oct-Vi-O walked slowly toward the Supreme Priest's corpse, took his scepter, and sat on the throne, while his family and temple members knelt in respect.",
@@ -385,8 +386,8 @@ export const characters: Character[] = [
       passive:
         "Faith (Passive) → Gains X% resistance to control effects and mutations",
     },
-    imageUrl: "/projects/characters/mantis.png",
-    skinImages: ["/projects/characters/mantis.png"],
+    imageUrl: getAssetUrl("/projects/characters/mantis.png"),
+    skinImages: [getAssetUrl("/projects/characters/mantis.png")],
     color: "#228B22",
     background:
       "Lysander has served the Proselytes since the base's founding, tending to the underground gardens where Element 444 is cultivated in sacred ritual. She was not born into the faith but converted after discovering that the gardens' growth seemed to accelerate under her touch, which the elders interpreted as divine blessing. As the primary cultivator of resources, Lysander maintains the delicate balance between harvesting materials for survival and preserving the sacred groves. She is Oct-Vi-O's most trusted advisor, offering spiritual guidance while managing the base's agricultural operations. Despite her devotion to ascension theology, Lysander harbors secret doubts about the sacrificial practices, believing that the faithful should ascend through spiritual evolution rather than ceremonial fire. Her relationship with the new Supreme Priest is one of respectful obedience mixed with subtle resistance, as she quietly steers temple policy toward sustainable resource management.",
@@ -453,7 +454,7 @@ export const enemies: Enemy[] = [
     ],
     behaviors:
       "Primitive, guided by instincts. Attacks in groups. Seeks shelter in caves.",
-    imageUrl: "/projects/characters/Hooman.png",
+    imageUrl: getAssetUrl("/projects/characters/Hooman.png"),
   },
   {
     id: "hooman-advanced",
@@ -469,7 +470,7 @@ export const enemies: Enemy[] = [
     ],
     behaviors:
       "More aggressive. Minimal intelligence. Extremely dangerous in groups. Protects hibernation cocoons.",
-    imageUrl: "/projects/characters/Hooman2.png",
+    imageUrl: getAssetUrl("/projects/characters/Hooman2.png"),
   },
   {
     id: "alzado-bailarina",
@@ -486,7 +487,7 @@ export const enemies: Enemy[] = [
     ],
     behaviors:
       "Extremely dangerous incursion boss. Leads conclaves. Requires coordinated group to defeat. Reward: Abundant Compound-T and Element 444.",
-    imageUrl: "/projects/characters/Hooman Bailarina.jpg",
+    imageUrl: getAssetUrl("/projects/characters/Hooman Bailarina.jpg"),
   },
   {
     id: "alzado-sectario",
@@ -503,7 +504,7 @@ export const enemies: Enemy[] = [
     ],
     behaviors:
       "Defensive incursion boss. Protects conclave core. Constantly summons reinforcements. Reward: Abundant Compound-T and Element 444.",
-    imageUrl: "/projects/characters/Hooman sectario.jpg",
+    imageUrl: getAssetUrl("/projects/characters/Hooman sectario.jpg"),
   },
 ];
 

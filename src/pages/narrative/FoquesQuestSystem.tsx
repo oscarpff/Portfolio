@@ -121,7 +121,7 @@ const FoquesQuestSystem = () => {
 
             <div className="flex flex-wrap gap-4 mt-6">
               <Button asChild className="bg-gold hover:bg-gold/90">
-                <a href="/projects/oscarpf_OPF_Documentation.pdf" download>
+                <a href={`${import.meta.env.BASE_URL}projects/oscarpf_OPF_Documentation.pdf`} download>
                   <Download className="w-4 h-4 mr-2" />
                   Download Full Documentation
                 </a>

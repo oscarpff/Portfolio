@@ -11,13 +11,15 @@ export interface Work {
   thumbnail?: string;
 }
 
+import { getAssetUrl } from "@/lib/asset-utils";
+
 export const works: Work[] = [
   {
     title: "Slaughterhouse",
     category: "Games",
     description: "A survival horror game built in Unreal Engine 5. Lead narrative design, AI systems, combat mechanics, and movement programming. Published on Itch.io.",
     link: "/narrative/slaughterhouse",
-    logo: "/projects/slaughterhouse/SH_Logo.png",
+    logo: getAssetUrl("/projects/slaughterhouse/SH_Logo.png"),
     logoAlt: "Slaughterhouse Logo",
   },
   {
@@ -25,7 +27,7 @@ export const works: Work[] = [
     category: "Quest Design",
     description: "A complete side quest system featuring 12 interconnected quests with branching narratives, moral choices, and consequence-based storytelling.",
     link: "/narrative/foques-quest-system",
-    logo: "/TVM_Logo_Text.PNG",
+    logo: getAssetUrl("/TVM_Logo_Text.PNG"),
     logoAlt: "TTV Media Studio",
   },
   {
@@ -39,7 +41,7 @@ export const works: Work[] = [
     category: ["Games", "Game Jams"],
     description: "A cozy game developed for ZamJam 2025. Clean up a messy house before your parents get home and uncover dark secrets guided by a mysterious magical bubble.",
     link: "/narrative/the-day-after",
-    logo: "/projects/thedayafter/Logo.png",
+    logo: getAssetUrl("/projects/thedayafter/Logo.png"),
     logoAlt: "The Day After Logo",
   },
 ];

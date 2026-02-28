@@ -70,7 +70,7 @@ const SecureWatchProject = () => {
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 rounded-lg bg-cyber/10 border border-cyber/20">
-                    <img src="/projects/icon.svg" alt="SecureWatch Icon" className="w-6 h-6" />
+                    <img src={getAssetUrl("/projects/icon.svg")} alt="SecureWatch Icon" className="w-6 h-6" />
                   </div>
                   <p className="text-cyber font-mono text-xs tracking-[0.3em] uppercase">
                     Incident Manager
