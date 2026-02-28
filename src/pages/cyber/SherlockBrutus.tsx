@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import CyberNavigation from "@/components/cyber/CyberNavigation";
 import CyberFooter from "@/components/cyber/CyberFooter";
 import { Badge } from "@/components/ui/badge";
+import { getAssetUrl } from "@/lib/asset-utils";
 
 const SherlockBrutus = () => {
   useEffect(() => {
