@@ -21,7 +21,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/ND_Portfolio">
         <Routes>
           <Route path="/" element={<SplitLanding />} />
           <Route path="/narrative" element={<NarrativePortfolio />} />
