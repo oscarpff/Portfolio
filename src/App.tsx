@@ -8,6 +8,7 @@ import NarrativePortfolio from "./pages/narrative/NarrativePortfolio";
 import CybersecurityPortfolio from "./pages/cyber/CybersecurityPortfolio";
 import FoquesQuestSystem from "./pages/narrative/FoquesQuestSystem";
 import TravnikWorldBuilding from "./pages/narrative/TravnikWorldBuilding";
+import ReincarnateWorldBuilding from "./pages/narrative/ReincarnateWorldBuilding";
 import SlaughterhouseProject from "./pages/narrative/SlaughterhouseProject";
 import TheDayAfterProject from "./pages/narrative/TheDayAfterProject";
 import Ward404CTF from "./pages/cyber/Ward404CTF";
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/cybersecurity/securewatch" element={<SecureWatchProject />} />
           <Route path="/cybersecurity/sherlock-brutus" element={<SherlockBrutus />} />
           <Route path="/narrative/travnik-worldbuilding" element={<TravnikWorldBuilding />} />
+          <Route path="/narrative/reincarnate" element={<ReincarnateWorldBuilding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

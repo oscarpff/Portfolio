@@ -24,7 +24,7 @@ const AboutSection = () => {
               <p>
                 I'm a game & narrative designer passionate about creating interactive stories 
                 that resonate with players long after they've put down the controller. 
-                My work focuses on creating immersive narratives and making the players part of them.
+                My personal work focuses on creating immersive narratives and making the players part of them.
               </p>
               <p>
                 With experience in quest design, world-building, and character development, 

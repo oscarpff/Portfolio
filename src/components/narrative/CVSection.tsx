@@ -38,6 +38,20 @@ const CVSection = () => {
               
               <div className="space-y-6 ml-16">
                 <div className="border-l-2 border-gold/30 pl-6 pb-6">
+                  <p className="text-gold font-body text-sm mb-1">Apr. 2026 - Present</p>
+                  <h4 className="font-display text-xl font-semibold mb-2">Cybersecurity Consultant</h4>
+                  <p className="text-muted-foreground font-body text-sm mb-3">ISDEFE </p>
+                  <ul className="text-muted-foreground font-body text-sm space-y-2 list-disc list-outside pl-5">
+                    <li>
+                      Cybersecurity Consultant specializing in Governance, Risk and Compliance (GRC), supporting security governance and regulatory compliance initiatives.                    </li>
+                    <li>
+                      Experienced in implementing and assessing compliance with the Spanish National Security Framework (ENS), GDPR requirements, and information security policies                    </li>
+                    <li>
+                    Conduct risk assessments, develop security documentation, and provide guidance to ensure alignment with cybersecurity standards, regulations, and best practices.                    </li>
+                  </ul>
+                </div>
+
+                <div className="border-l-2 border-gold/30 pl-6 pb-6">
                   <p className="text-gold font-body text-sm mb-1">Feb. 2025 - Aug. 2025</p>
                   <h4 className="font-display text-xl font-semibold mb-2">Innovation Software Developer</h4>
                   <p className="text-muted-foreground font-body text-sm mb-3">Renault Technology Spain</p>

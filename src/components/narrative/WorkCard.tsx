@@ -58,15 +58,13 @@ const WorkCard = ({ title, category, description, excerpt, index, link, isExtern
       </h3>
       
       {/* Tags for games */}
-      {tags && tags.length > 0 && (
-        <div className="flex flex-wrap gap-2 mb-3">
-          {tags.map((tag) => (
-            <Badge key={tag} variant="outline" className="text-xs border-gold/30 text-gold/80 bg-gold/5">
-              {tag}
-            </Badge>
-          ))}
-        </div>
-      )}
+      <div className="min-h-7 mb-3 flex flex-wrap gap-2">
+        {tags && tags.length > 0 && tags.map((tag) => (
+          <Badge key={tag} variant="outline" className="text-xs border-gold/30 text-gold/80 bg-gold/5">
+            {tag}
+          </Badge>
+        ))}
+      </div>
       
       <p className="text-muted-foreground font-body leading-relaxed mb-4">
         {description}

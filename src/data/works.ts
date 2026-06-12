@@ -37,6 +37,13 @@ export const works: Work[] = [
     link: "/narrative/travnik-worldbuilding",
   },
   {
+    title: "Reincarnate",
+    category: "Worldbuilding",
+    description: "A city of robots searching for vanished humans. Two warrior guilds, six principal characters, and the question of what it means to be human when humanity is gone.",
+    link: "/narrative/reincarnate",
+    tags: ["In Development"],
+  },
+  {
     title: "The Day After",
     category: ["Games", "Game Jams"],
     description: "A cozy game developed for ZamJam 2025. Clean up a messy house before your parents get home and uncover dark secrets guided by a mysterious magical bubble.",
