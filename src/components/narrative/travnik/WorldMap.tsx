@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, HelpCircle, AlertTriangle, Skull, Building2, Mountain, ZoomOut } from "lucide-react";
+import { getAssetUrl } from "@/lib/asset-utils";
 
 interface MapLocation {
   id: string;
@@ -231,7 +232,7 @@ export default function WorldMap() {
         >
           {/* World Map Background */}
           <img
-            src={zoomedRegion === "europe" ? "/projects/Travnik/bosnia.png" : "/projects/Travnik/mapamundi.png"}
+            src={getAssetUrl(zoomedRegion === "europe" ? "/projects/Travnik/bosnia.png" : "/projects/Travnik/mapamundi.png")}
             alt={zoomedRegion === "europe" ? "Bosnia Map" : "World Continents Map"}
             className="absolute inset-0 w-full h-full object-contain"
             style={{ filter: 'invert(1) brightness(0.8)', opacity: 0.6 }}

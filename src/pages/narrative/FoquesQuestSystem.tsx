@@ -12,6 +12,7 @@ import QuestConceptCard from "@/components/narrative/foques/QuestConceptCard";
 import ProjectNavigation from "@/components/narrative/ProjectNavigation";
 import { quest1Narrative, quest2Narrative } from "@/data/questNarratives";
 import { quest1Characters, quest2Characters } from "@/data/questCharacters";
+import { getAssetUrl } from "@/lib/asset-utils";
 
 const foquesNavSections = [
   { id: "overview", label: "Overview" },
@@ -102,7 +103,7 @@ const FoquesQuestSystem = () => {
             <div className="flex items-center gap-3 mb-6">
               <span className="text-sm text-muted-foreground font-body">Developed for</span>
               <img 
-                src="/TVM_Logo_Text.PNG" 
+                src={getAssetUrl("/TVM_Logo_Text.PNG")} 
                 alt="TTV Media Studio" 
                 className="h-24 opacity-80"
               />
@@ -548,7 +549,7 @@ const FoquesQuestSystem = () => {
       <PDFModal
         isOpen={pdfModalOpen === "quest1"}
         onClose={() => setPdfModalOpen(null)}
-        pdfFile="/projects/oscarpf_OPF_SideQuest1.pdf"
+        pdfFile={getAssetUrl("/projects/oscarpf_OPF_SideQuest1.pdf")}
         title="Quest 1: Pacts Beneath the Snow - Full Narrative"
         downloadName="FOQUES_Quest1_FullNarrative.pdf"
       />
@@ -556,7 +557,7 @@ const FoquesQuestSystem = () => {
       <PDFModal
         isOpen={pdfModalOpen === "quest2"}
         onClose={() => setPdfModalOpen(null)}
-        pdfFile="/projects/oscarpf_OPF_SideQuest2.pdf"
+        pdfFile={getAssetUrl("/projects/oscarpf_OPF_SideQuest2.pdf")}
         title="Quest 2: Echoes in the Gorge - Full Narrative"
         downloadName="FOQUES_Quest2_FullNarrative.pdf"
       />
@@ -564,7 +565,7 @@ const FoquesQuestSystem = () => {
       <FlowchartViewer
         isOpen={pdfModalOpen === "flowchart1"}
         onClose={() => setPdfModalOpen(null)}
-        pdfFile="/projects/oscarpf_OPF_SideQuest1.pdf"
+        pdfFile={getAssetUrl("/projects/oscarpf_OPF_SideQuest1.pdf")}
         title="Quest 1: Decision Flowchart"
         downloadName="FOQUES_Quest1_Flowchart.pdf"
       />
@@ -572,7 +573,7 @@ const FoquesQuestSystem = () => {
       <FlowchartViewer
         isOpen={pdfModalOpen === "flowchart2"}
         onClose={() => setPdfModalOpen(null)}
-        pdfFile="/projects/oscarpf_OPF_SideQuest2.pdf"
+        pdfFile={getAssetUrl("/projects/oscarpf_OPF_SideQuest2.pdf")}
         title="Quest 2: Decision Flowchart"
         downloadName="FOQUES_Quest2_Flowchart.pdf"
       />

@@ -1,6 +1,7 @@
 // Reincarnate Worldbuilding Lore Data
 // Source documents: GREMIOS.docx, PERSONAJES.docx, Storyline previsto.docx
 import type { TimelineEvent } from "@/data/travnikLore";
+import { getAssetUrl } from "@/lib/asset-utils";
 
 // ==================== TYPES ====================
 
@@ -156,7 +157,7 @@ export const characters: ReinCharacter[] = [
       "The child's death at the bastion — innocence lost, alliance forged",
       "Arrival at the Iron City — learning what it means to be part of a society",
     ],
-    imageUrl: "/projects/reincarnate/nadir.png", // TODO: add to public/projects/reincarnate/
+    imageUrl: getAssetUrl("/projects/reincarnate/nadir.png"), // TODO: add to public/projects/reincarnate/
     color: "#D4AF37",
   },
   {
@@ -181,7 +182,7 @@ export const characters: ReinCharacter[] = [
       "Journey to the Iron City — gradual shift from authority to collaboration",
       "Learning, alongside Nadir, what it means to want something rather than be programmed for it",
     ],
-    imageUrl: "/projects/reincarnate/hakim.png", // TODO: add to public/projects/reincarnate/
+    imageUrl: getAssetUrl("/projects/reincarnate/hakim.png"), // TODO: add to public/projects/reincarnate/
     color: "#94a3b8",
   },
   {
@@ -205,7 +206,7 @@ export const characters: ReinCharacter[] = [
       "Questioning whether perfection should be the only criterion for belonging",
       "Evolving perspective on human–robot coexistence",
     ],
-    imageUrl: "/projects/reincarnate/maximus.png", // TODO: add to public/projects/reincarnate/
+    imageUrl: getAssetUrl("/projects/reincarnate/maximus.png"), // TODO: add to public/projects/reincarnate/
     color: "#D4AF37",
   },
   {
@@ -229,7 +230,7 @@ export const characters: ReinCharacter[] = [
       "Revelation as a living human — proof that humans still exist on Earth",
       "Reckoning with the weight of being the last keeper of living human memory",
     ],
-    imageUrl: "/projects/reincarnate/amanaki.png", // TODO: add to public/projects/reincarnate/
+    imageUrl: getAssetUrl("/projects/reincarnate/amanaki.png"), // TODO: add to public/projects/reincarnate/
     color: "#4ade80",
   },
   {
@@ -251,7 +252,7 @@ export const characters: ReinCharacter[] = [
     developmentArcs: [
       "Deepening role as the guild's tactical intelligence",
     ],
-    imageUrl: "/projects/reincarnate/atreus.png", // TODO: add to public/projects/reincarnate/
+    imageUrl: getAssetUrl("/projects/reincarnate/atreus.png"), // TODO: add to public/projects/reincarnate/
     color: "#60a5fa",
   },
   {
@@ -274,7 +275,7 @@ export const characters: ReinCharacter[] = [
       "Injury in the Tournament — vulnerability revealed",
       "Recovery and return to active duty",
     ],
-    imageUrl: "/projects/reincarnate/cyrus.png", // TODO: add to public/projects/reincarnate/
+    imageUrl: getAssetUrl("/projects/reincarnate/cyrus.png"), // TODO: add to public/projects/reincarnate/
     color: "#4ade80",
   },
 ];

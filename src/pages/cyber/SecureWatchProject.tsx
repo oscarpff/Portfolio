@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { ArrowLeft, ShieldAlert, BarChart3, Filter, Bell, Clock, FileText, ExternalLink, Download } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getAssetUrl } from "@/lib/asset-utils";
 import CyberNavigation from "@/components/cyber/CyberNavigation";
 import CyberFooter from "@/components/cyber/CyberFooter";
 import { Badge } from "@/components/ui/badge";
