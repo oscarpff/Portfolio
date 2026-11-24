@@ -1,6 +1,15 @@
 import { Award, ExternalLink, Calendar } from "lucide-react";
 
-const certifications = [
+type CertStatus = "completed" | "ongoing" | "upcoming";
+
+const certifications: {
+  name: string;
+  issuer: string;
+  date: string;
+  status: CertStatus;
+  description: string;
+  link?: string;
+}[] = [
   {
     name: "ISO/IEC 27001 Information Security Associate™",
     issuer: "SkillFront",
@@ -22,20 +31,6 @@ const certifications = [
     date: "Planned",
     status: "upcoming" as const,
     description: "Preparing for ISACA's CISA to validate skills in information systems auditing, control, governance and assurance.",
-  },
-  {
-    name: "HackTheBox Academy",
-    issuer: "Hack The Box",
-    date: "Ongoing",
-    status: "ongoing" as const,
-    description: "Trying to beat machines, scaling from beginner to intermediate levels in penetration testing.",
-  },
-  {
-    name: "CompTIA Security+",
-    issuer: "CompTIA",
-    date: "Planned",
-    status: "upcoming" as const,
-    description: "Preparing for the CompTIA Security+ certification to validate foundational skills in cybersecurity.",
   },
 ];
 
