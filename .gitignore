@@ -25,3 +25,6 @@ dist-ssr
 
 # Temporary files
 temp/
+
+# Private design docs (kept locally, not published)
+Documentacion_Reincarnate/
