@@ -41,7 +41,7 @@ const CyberHero = () => {
           </h1>
           
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 leading-tight">
-            Defending Systems <span className="text-gradient-cyber">With Precision</span>  
+            Securing Organizations <span className="text-gradient-cyber">Through Governance &amp; Control</span>  
           </h2>
           
           <p className="font-body text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
