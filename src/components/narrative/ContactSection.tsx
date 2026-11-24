@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Linkedin, FileText } from "lucide-react";
+import { Mail, Linkedin, FileText, Loader2 } from "lucide-react";
+import { useFormspree } from "@/hooks/use-formspree";
 
 const GitHubIcon = () => (
   <svg 
@@ -24,6 +25,8 @@ const ItchIoIcon = () => (
 );
 
 const ContactSection = () => {
+  const { handleSubmit, isSending } = useFormspree();
+
   return (
     <section id="contact" className="py-16 md:py-20">
       <div className="container mx-auto px-6">
@@ -41,8 +44,8 @@ const ContactSection = () => {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Contact Form */}
             <div className="card-elevated border-gradient-gold rounded-lg p-8">
-              <form action="https://formspree.io/f/mvzkonzz" method="POST" className="space-y-6">
-                <input type="hidden" name="_next" value="https://oscarpff.netlify.app/narrative" />
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <input type="hidden" name="_subject" value="Portfolio contact (Narrative)" />
                 <div>
                   <label htmlFor="name" className="block font-body text-sm font-medium text-foreground mb-2">
                     Name
@@ -85,9 +88,13 @@ const ContactSection = () => {
                   />
                 </div>
 
-                <Button type="submit" variant="hero" size="lg" className="w-full">
-                  <Mail className="mr-2" size={20} />
-                  Send Message
+                <Button type="submit" variant="hero" size="lg" className="w-full" disabled={isSending}>
+                  {isSending ? (
+                    <Loader2 className="mr-2 animate-spin" size={20} />
+                  ) : (
+                    <Mail className="mr-2" size={20} />
+                  )}
+                  {isSending ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
