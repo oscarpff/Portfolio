@@ -102,7 +102,7 @@ const ContactSection = () => {
                 
                 <div className="space-y-3">
                   <Button variant="goldOutline" size="lg" asChild className="w-full justify-start">
-                    <a href="https://www.linkedin.com/in/oscarperez-cybersecurity/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/oscarpff/" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="mr-2" size={20} />
                       LinkedIn Profile
                     </a>
