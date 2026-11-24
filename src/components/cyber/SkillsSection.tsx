@@ -1,35 +1,35 @@
-import { Shield, Network, Code, Database, Terminal, Eye } from "lucide-react";
+import { Shield, Network, Code, Database, ClipboardCheck, FolderKanban } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Security Operations",
+    title: "GRC & Compliance",
     icon: Shield,
-    skills: ["Splunk", "Velociraptor", "Log Analysis", "Alert Triage"],
+    skills: ["ENS", "GDPR", "ISO/IEC 27001", "Risk Assessment"],
   },
   {
-    title: "Network Security",
-    icon: Network,
-    skills: ["Wireshark", "Autopsy","Firewall", "IDS/IPS"],
+    title: "Audit & Assurance",
+    icon: ClipboardCheck,
+    skills: ["ISMS Audits", "Controls Review", "Evidence Management"],
   },
   {
-    title: "Scripting & Automation",
-    icon: Code,
-    skills: ["Python", "Bash", "PowerShell"],
+    title: "Project Management / PMO",
+    icon: FolderKanban,
+    skills: ["Project Tracking", "Reporting", "Escalations", "Jira", "Confluence"],
   },
   {
-    title: "Vulnerability Assessment",
-    icon: Eye,
-    skills: ["Burp Suite", "OWASP Top 10", "CVE.org"],
-  },
-  {
-    title: "System Administration",
+    title: "Asset Management",
     icon: Database,
-    skills: ["Linux", "Windows Server", "Virtualization"],
+    skills: ["CMDB", "Inventory", "Change Control"],
   },
   {
-    title: "Penetration Testing",
-    icon: Terminal,
-    skills: ["Metasploit", "Kali Linux", "Privilege Escalation"],
+    title: "Scripting & Data",
+    icon: Code,
+    skills: ["Python", "SQL"],
+  },
+  {
+    title: "Systems & Networks",
+    icon: Network,
+    skills: ["Linux", "Windows", "Wireshark"],
   },
 ];
 

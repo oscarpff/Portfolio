@@ -10,11 +10,18 @@ const certifications = [
     link: "https://www.skillfront.com/Badges/15234947469275",
   },
   {
-    name: "TryHackMe SOC Level 1",
-    issuer: "TryHackMe",
-    date: "Ongoing",
-    status: "ongoing" as const,
-    description: "Learning the fundamentals, tools, and techniques used in Security Operations Centers (SOC).",
+    name: "ISO/IEC 27001 Lead Auditor",
+    issuer: "Accredited certification body",
+    date: "Planned",
+    status: "upcoming" as const,
+    description: "Preparing to plan, lead and report on ISMS audits against ISO/IEC 27001, building on the Information Security Associate certification.",
+  },
+  {
+    name: "CISA – Certified Information Systems Auditor",
+    issuer: "ISACA",
+    date: "Planned",
+    status: "upcoming" as const,
+    description: "Preparing for ISACA's CISA to validate skills in information systems auditing, control, governance and assurance.",
   },
   {
     name: "HackTheBox Academy",
@@ -23,10 +30,10 @@ const certifications = [
     status: "ongoing" as const,
     description: "Trying to beat machines, scaling from beginner to intermediate levels in penetration testing.",
   },
-    {
+  {
     name: "CompTIA Security+",
     issuer: "CompTIA",
-    date: "upcoming",
+    date: "Planned",
     status: "upcoming" as const,
     description: "Preparing for the CompTIA Security+ certification to validate foundational skills in cybersecurity.",
   },
