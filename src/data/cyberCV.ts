@@ -1,7 +1,7 @@
 import { getAssetUrl } from "@/lib/asset-utils";
 
 // ============================================================
-// CV shown in the Cybersecurity section (#cv).
+// CV data shared by the Cybersecurity and Narrative CV sections (#cv).
 // To update the downloadable PDF, replace the file:
 //   public/cv/OscarPerezFernandez_CV.pdf
 // (keep the same file name). Edit the text below if the

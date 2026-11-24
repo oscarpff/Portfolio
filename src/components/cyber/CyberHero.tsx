@@ -33,7 +33,7 @@ const CyberHero = () => {
         <div className="animate-fade-up">
           <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyber/30 bg-cyber/5">
             <Shield className="w-4 h-4 text-cyber" />
-            <span className="font-mono text-sm text-cyber">Security Analyst</span>
+            <span className="font-mono text-sm text-cyber">Cybersecurity Consultant · GRC &amp; PMO</span>
           </div>
           
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold mb-6 leading-tight">
@@ -45,8 +45,8 @@ const CyberHero = () => {
           </h2>
           
           <p className="font-body text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-            SOC analysis, penetration testing, and security research. 
-            Passionate about protecting digital assets and hunting threats.
+            Governance, risk &amp; compliance, security project management
+            and hands-on technical research.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

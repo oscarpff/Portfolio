@@ -77,7 +77,7 @@ const CyberContactSection = () => {
               <div className="card-cyber border-gradient-cyber rounded-lg p-8">
                 <h3 className="font-display text-2xl font-semibold mb-4">Connect With Me</h3>
                 <p className="text-muted-foreground font-body mb-6">
-                  Looking for SOC Analyst opportunities. Feel free to reach out!
+                  Looking for GRC and PMO / Technical Office opportunities in cybersecurity. Feel free to reach out!
                 </p>
                 
                 <div className="space-y-3">
@@ -103,7 +103,7 @@ const CyberContactSection = () => {
                   <span className="font-mono text-sm text-terminal">Available for opportunities</span>
                 </div>
                 <p className="mt-3 text-muted-foreground text-sm">
-                  Actively seeking SOC L1 / Junior Security Analyst positions.
+                  Actively seeking GRC (Governance, Risk &amp; Compliance) and PMO / Technical Office positions in cybersecurity.
                 </p>
               </div>
             </div>

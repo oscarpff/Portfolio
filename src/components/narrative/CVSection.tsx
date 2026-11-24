@@ -1,5 +1,13 @@
 import { Download, Briefcase, Wrench, Award, GraduationCap, ExternalLink } from "lucide-react";
-import { CV_PDF_FILENAME, CV_PDF_URL } from "@/data/cyberCV";
+import {
+  CV_PDF_FILENAME,
+  CV_PDF_URL,
+  cvCertificates,
+  cvEducation,
+  cvExperience,
+  cvLanguages,
+  cvSkills,
+} from "@/data/cyberCV";
 
 const CVSection = () => {
   return (
@@ -56,38 +64,21 @@ const CVSection = () => {
                 </div>
               </div>
               
-              <div className="space-y-6 ml-16">
-                <div className="border-l-2 border-gold/30 pl-6 pb-6">
-                  <p className="text-gold font-body text-sm mb-1">Apr. 2026 - Present</p>
-                  <h4 className="font-display text-xl font-semibold mb-2">Cybersecurity Consultant</h4>
-                  <p className="text-muted-foreground font-body text-sm mb-3">ISDEFE </p>
-                  <ul className="text-muted-foreground font-body text-sm space-y-2 list-disc list-outside pl-5">
-                    <li>
-                      Cybersecurity Consultant specializing in Governance, Risk and Compliance (GRC), supporting security governance and regulatory compliance initiatives.                    </li>
-                    <li>
-                      Experienced in implementing and assessing compliance with the Spanish National Security Framework (ENS), GDPR requirements, and information security policies                    </li>
-                    <li>
-                    Conduct risk assessments, develop security documentation, and provide guidance to ensure alignment with cybersecurity standards, regulations, and best practices.                    </li>
-                  </ul>
-                </div>
+              <div className="space-y-6 md:ml-16">
+                {cvExperience.map((job) => (
+                  <div key={job.company + job.period} className="border-l-2 border-gold/30 pl-6 pb-6">
+                    <p className="text-gold font-body text-sm mb-1">{job.period}</p>
+                    <h4 className="font-display text-xl font-semibold mb-2">{job.role}</h4>
+                    <p className="text-muted-foreground font-body text-sm mb-3">{job.company}</p>
+                    <ul className="text-muted-foreground font-body text-sm space-y-2 list-disc list-outside pl-5">
+                      {job.bullets.map((b) => (
+                        <li key={b}>{b}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
 
-                <div className="border-l-2 border-gold/30 pl-6 pb-6">
-                  <p className="text-gold font-body text-sm mb-1">Feb. 2025 - Aug. 2025</p>
-                  <h4 className="font-display text-xl font-semibold mb-2">Innovation Software Developer</h4>
-                  <p className="text-muted-foreground font-body text-sm mb-3">Renault Technology Spain</p>
-                  <ul className="text-muted-foreground font-body text-sm space-y-2 list-disc list-outside pl-5">
-                    <li>
-                      Implementation and maintenance of secure middleware for bidirectional communication in autonomous vehicle teleoperation systems
-                    </li>
-                    <li>
-                      Software development and validation in Python and Linux environments. Implementation of data collection and analysis systems using Python and SQL
-                    </li>
-                    <li>
-                      Configuration and maintenance of CAN/MQTT communication for critical data transmission
-                    </li>
-                  </ul>
-                </div>
-                
+                {/* Narrative-only experience (not in the cybersecurity CV PDF) */}
                 <div className="border-l-2 border-gold/30 pl-6">
                   <p className="text-gold font-body text-sm mb-1">Apr 2024 - Aug. 2024</p>
                   <h4 className="font-display text-xl font-semibold mb-2">Narrative Designer</h4>
@@ -115,20 +106,17 @@ const CVSection = () => {
                 </div>
               </div>
               
-              <div className="space-y-6 ml-16 mb-8">
-                <div className="border-l-2 border-gold/30 pl-6">
-                  <p className="text-gold font-body text-sm mb-1">2025 - 2026</p>
-                  <h4 className="font-display text-xl font-semibold mb-2">Master´s in Cybersecurity</h4>
-                  <p className="text-muted-foreground font-body text-sm">University of Salamanca</p>
-                </div>
-              </div>
-
-              <div className="space-y-6 ml-16">
-                <div className="border-l-2 border-gold/30 pl-6">
-                  <p className="text-gold font-body text-sm mb-1">2021 - 2025</p>
-                  <h4 className="font-display text-xl font-semibold mb-2">Bachelor’s Degree in Interactive 3D Applications and Video Game Development </h4>
-                  <p className="text-muted-foreground font-body text-sm">University of Salamanca</p>
-                </div>
+              <div className="space-y-6 md:ml-16">
+                {cvEducation.map((ed) => (
+                  <div key={ed.degree} className="border-l-2 border-gold/30 pl-6">
+                    <p className="text-gold font-body text-sm mb-1">{ed.period}</p>
+                    <h4 className="font-display text-xl font-semibold mb-2">{ed.degree}</h4>
+                    <p className="text-muted-foreground font-body text-sm mb-2">{ed.school}</p>
+                    <p className="text-muted-foreground font-body text-sm">
+                      <span className="text-foreground font-semibold">{ed.thesisLabel}:</span> {ed.thesis}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -145,14 +133,24 @@ const CVSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="space-y-6 ml-16 mb-8">
+              <div className="space-y-6 md:ml-16 mb-6">
+                {cvCertificates.map((c) => (
+                  <div key={c.name} className="border-l-2 border-gold/30 pl-6">
+                    <p className="text-gold font-body text-sm mb-1">{c.year}</p>
+                    <h4 className="font-display text-xl font-semibold mb-2">{c.name}</h4>
+                    <p className="text-muted-foreground font-body text-sm">{c.issuer}</p>
+                  </div>
+                ))}
+              </div>
+              {/* Narrative-only courses (not in the cybersecurity CV PDF) */}
+              <div className="space-y-6 md:ml-16 mb-6">
                 <div className="border-l-2 border-gold/30 pl-6">
                   <p className="text-gold font-body text-sm mb-1">2024</p>
                   <h4 className="font-display text-xl font-semibold mb-2">Briefing & Script Creation</h4>
                   <p className="text-muted-foreground font-body text-sm">El Jap! (Salamanca)</p>
                 </div>
               </div>
-              <div className="space-y-6 ml-16">
+              <div className="space-y-6 md:ml-16">
                 <div className="border-l-2 border-gold/30 pl-6">
                   <p className="text-gold font-body text-sm mb-1">2023</p>
                   <h4 className="font-display text-xl font-semibold mb-2">Narrative in Videogames</h4>
@@ -175,8 +173,8 @@ const CVSection = () => {
                 </div>
               </div>
               
-              <div className="ml-16">
-                <div className="grid sm:grid-cols-2 gap-4">
+              <div className="md:ml-16">
+                <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-display text-lg font-semibold mb-3 text-gold">Writing Tools</h4>
                     <ul className="text-muted-foreground font-body text-sm space-y-2">
@@ -190,6 +188,22 @@ const CVSection = () => {
                     <ul className="text-muted-foreground font-body text-sm space-y-2">
                       <li>• Unreal Engine 5</li>
                       <li>• Unity</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-display text-lg font-semibold mb-3 text-gold">Programming & Data</h4>
+                    <ul className="text-muted-foreground font-body text-sm space-y-2">
+                      {(cvSkills.find((s) => s.area === "Programming & Data")?.items ?? []).map((item) => (
+                        <li key={item}>• {item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-display text-lg font-semibold mb-3 text-gold">Languages</h4>
+                    <ul className="text-muted-foreground font-body text-sm space-y-2">
+                      {cvLanguages.map((l) => (
+                        <li key={l.language}>• {l.language} ({l.level})</li>
+                      ))}
                     </ul>
                   </div>
                 </div>

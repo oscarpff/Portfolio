@@ -112,7 +112,7 @@ const SplitLanding = () => {
           <p className={`font-body text-muted-foreground max-w-xs mx-auto transition-all duration-300 ${
             hoveredSide === "cyber" ? "opacity-100" : "opacity-70"
           }`}>
-            SOC analysis, CTF challenges, and security research projects.
+            GRC, security project management, CTF challenges and research projects.
           </p>
           
           <div className={`mt-8 font-body text-sm text-cyber tracking-widest uppercase transition-all duration-300 ${
