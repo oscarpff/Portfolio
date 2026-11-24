@@ -4,6 +4,7 @@ import WriteupSection from "@/components/cyber/WriteupSection";
 import ProjectsSection from "@/components/cyber/ProjectsSection";
 import SkillsSection from "@/components/cyber/SkillsSection";
 import CertificationsSection from "@/components/cyber/CertificationsSection";
+import CyberCVSection from "@/components/cyber/CyberCVSection";
 import CyberContactSection from "@/components/cyber/CyberContactSection";
 import CyberFooter from "@/components/cyber/CyberFooter";
 
@@ -16,6 +17,7 @@ const CybersecurityPortfolio = () => {
       <ProjectsSection />
       <SkillsSection />
       <CertificationsSection />
+      <CyberCVSection />
       <CyberContactSection />
       <CyberFooter />
     </div>

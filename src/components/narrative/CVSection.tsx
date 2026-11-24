@@ -1,5 +1,5 @@
-import { Download, Briefcase, Wrench, Award, GraduationCap} from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Download, Briefcase, Wrench, Award, GraduationCap, ExternalLink } from "lucide-react";
+import { CV_PDF_FILENAME, CV_PDF_URL } from "@/data/cyberCV";
 
 const CVSection = () => {
   return (
@@ -18,6 +18,26 @@ const CVSection = () => {
               A comprehensive overview of my journey trying to become a game & narrative designer, 
               including education, work experience, and achievements.
             </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={CV_PDF_URL}
+                download={CV_PDF_FILENAME}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gold text-background font-body font-semibold hover:opacity-90 transition-opacity"
+              >
+                <Download size={18} />
+                Download CV (PDF)
+              </a>
+              <a
+                href={CV_PDF_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-gold/40 text-gold font-body hover:bg-gold/10 transition-colors"
+              >
+                <ExternalLink size={18} />
+                View online
+              </a>
+            </div>
           </div>
 
           {/* Experience Timeline */}
