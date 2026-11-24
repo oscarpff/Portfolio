@@ -22,13 +22,13 @@ export default function FactionFeed({ factions, characters, loreSections = [] }:
   const getImageUrl = (path: string) => {
     if (!path) return "";
     if (/^https?:\/\//i.test(path)) return path;
+    const encode = (p: string) =>
+      p.split("/").map((segment) => encodeURIComponent(segment)).join("/");
+    const baseUrl = import.meta.env.BASE_URL || "/";
+    // Paths from getAssetUrl() already include the base URL — don't prefix it twice.
+    if (path.startsWith(baseUrl)) return encode(path);
     const normalized = path.startsWith("/") ? path : `/${path}`;
-    const encoded = normalized
-      .split("/")
-      .map((segment) => encodeURIComponent(segment))
-      .join("/");
-    const base = (import.meta.env.BASE_URL || "").replace(/\/$/, "");
-    return `${base}${encoded}`;
+    return `${baseUrl.replace(/\/$/, "")}${encode(normalized)}`;
   };
 
   const factionMap: Record<string, string> = {
