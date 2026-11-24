@@ -41,7 +41,7 @@ export const works: Work[] = [
     category: "Worldbuilding",
     description: "A city of robots searching for vanished humans. Two warrior guilds, six principal characters, and the question of what it means to be human when humanity is gone.",
     link: "/narrative/reincarnate",
-    tags: ["In Development"],
+    tags: ["Work in Progress"],
   },
   {
     title: "The Day After",

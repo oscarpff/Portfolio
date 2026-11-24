@@ -74,7 +74,7 @@ const ReincarnateWorldBuilding = () => {
                 Worldbuilding
               </Badge>
               <Badge className="bg-amber-500/20 text-amber-300 border border-amber-500/40">
-                In Development
+                Work in Progress
               </Badge>
             </div>
 
@@ -298,15 +298,36 @@ function CharacterCard({
   isExpanded: boolean;
   onToggle: () => void;
 }) {
+  // Shows the artwork once public/projects/reincarnate/<id>.png exists; until then, a WIP placeholder.
+  const [artworkMissing, setArtworkMissing] = useState(false);
+
   return (
     <div
-      className={`rounded-lg border transition-colors cursor-pointer ${
+      className={`rounded-lg border transition-colors cursor-pointer overflow-hidden ${
         isExpanded
           ? "border-gold/40 bg-gradient-to-br from-gold/10 to-muted/30"
           : "border-gold/20 bg-gradient-to-br from-gold/5 to-muted/20 hover:border-gold/30"
       }`}
       onClick={onToggle}
     >
+      <div className="aspect-[16/9] border-b border-gold/10 bg-muted/20">
+        {artworkMissing ? (
+          <div className="w-full h-full flex flex-col items-center justify-center gap-2 bg-[repeating-linear-gradient(45deg,transparent,transparent_12px,rgba(245,158,11,0.06)_12px,rgba(245,158,11,0.06)_24px)]">
+            <span className="font-display text-5xl font-bold text-gold/30">{character.name[0]}</span>
+            <Badge className="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs">
+              Artwork — Work in Progress
+            </Badge>
+          </div>
+        ) : (
+          <img
+            src={character.imageUrl}
+            alt={`${character.name} artwork`}
+            className="w-full h-full object-cover"
+            loading="lazy"
+            onError={() => setArtworkMissing(true)}
+          />
+        )}
+      </div>
       <div className="p-6">
         <div className="flex items-start justify-between gap-3 mb-3">
           <div>
