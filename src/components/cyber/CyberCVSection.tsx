@@ -52,7 +52,7 @@ function CVCard({
 
 const CyberCVSection = () => {
   return (
-    <section id="cv" className="py-20 md:py-24">
+    <section id="cv" className="py-20 md:py-24 bg-ink/30">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}

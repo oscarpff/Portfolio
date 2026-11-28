@@ -4,11 +4,11 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useScrolled } from "@/hooks/use-scrolled";
 
 const navItems = [
-  { label: "Writeups", href: "#writeups" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
+  { label: "Competencies", href: "#skills" },
+  { label: "Experience", href: "#cv" },
   { label: "Certifications", href: "#certifications" },
-  { label: "CV", href: "#cv" },
+  { label: "Projects", href: "#projects" },
+  { label: "Lab", href: "#lab" },
   { label: "Contact", href: "#contact" },
 ];
 

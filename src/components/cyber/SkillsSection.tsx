@@ -22,14 +22,14 @@ const skillCategories = [
     skills: ["CMDB", "Inventory", "Change Control"],
   },
   {
-    title: "Scripting & Data",
+    title: "Automation & Reporting",
     icon: Code,
-    skills: ["Python", "SQL"],
+    skills: ["Python", "SQL", "Data Processing"],
   },
   {
-    title: "Systems & Networks",
+    title: "Technical Background",
     icon: Network,
-    skills: ["Linux", "Windows", "Wireshark"],
+    skills: ["Linux", "Windows", "Networks", "Log Analysis"],
   },
 ];
 
@@ -39,11 +39,15 @@ const SkillsSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-up">
           <p className="text-cyber font-mono text-sm tracking-[0.3em] uppercase mb-4">
-            Technical Skills
+            What I Do
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold">
-            Skills & <span className="text-gradient-cyber">Tools</span>
+            Core <span className="text-gradient-cyber">Competencies</span>
           </h2>
+          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
+            Regulatory frameworks, control oversight and security project management,
+            supported by the technical knowledge to understand what is behind each control.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

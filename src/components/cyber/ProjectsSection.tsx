@@ -1,10 +1,13 @@
 import ProjectCard from "./ProjectCard";
 import { cyberProjects } from "@/data/cyberProjects";
 
-const featuredProjects = cyberProjects.filter((project) => project.featured);
-const projectsToShow = featuredProjects.length > 0 ? featuredProjects : cyberProjects;
+const projects = cyberProjects.filter((project) => !project.lab);
 
 const ProjectsSection = () => {
+  if (projects.length === 0) {
+    return null;
+  }
+
   return (
     <section id="projects" className="py-20 md:py-24 bg-ink/30">
       <div className="container mx-auto px-6">
@@ -13,15 +16,21 @@ const ProjectsSection = () => {
             Projects
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold">
-            Security <span className="text-gradient-cyber">Projects</span>
+            Selected <span className="text-gradient-cyber">Projects</span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Hands-on projects that demonstrate practical security skills and tool development.
+            Work focused on oversight, tracking and reporting for security operations.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projectsToShow.map((project, index) => (
+        <div
+          className={
+            projects.length === 1
+              ? "max-w-2xl mx-auto"
+              : "grid md:grid-cols-2 gap-8"
+          }
+        >
+          {projects.map((project, index) => (
             <ProjectCard key={project.title} {...project} index={index} />
           ))}
         </div>
