@@ -1,9 +1,8 @@
 import { defineConfig } from "vite";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   // Si tu repo es username.github.io, usa base: '/'
   // Si tu repo tiene otro nombre (ej: Portfolio), usa base: '/Portfolio/'
   base: '/Portfolio/',
@@ -14,10 +13,9 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  plugins: [mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+});
